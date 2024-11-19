@@ -1,56 +1,111 @@
+/* Grundlegende Reset-Regeln */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Body-Styling */
 body {
-  font-family: Arial, Helvetica, sans-serif; /* Setzt die Schriftart für den gesamten Body */
-  background-color: blueviolet; /* Hintergrundfarbe für den Body */
-  text-align: center; /* Zentriert den Text im Body */
-  margin: auto; /* Setzt die Margen auf automatisch, um den Inhalt zu zentrieren */
-  max-width: 600px; /* Maximale Breite des Body auf 600px festlegen */
-  width: 100vw;
-  height: 100vh; /* Höhe des Body auf 100% des Browsers festlegen */
-  color: whitesmoke; /* Textfarbe für den Body */
-  border: 2px solid black; /* Schwarz gefärbter Rand um den Body */
+  font-family: 'Roboto', Arial, sans-serif; /* Moderne Schriftart */
+  background: linear-gradient(135deg, #7b2cbf, #4a148c); /* Moderner Farbverlauf */
+  color: #f0f0f0; /* Angenehme, lesbare Textfarbe */
+  display: flex; /* Flexbox-Zentrierung */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Vollbildhöhe */
+  padding: 20px; /* Abstand vom Rand */
 }
 
-.fieldset-one {
-  height: 250px; /* Höhe des ersten Fieldsets */
-  border: none; /* Entfernt den Standardrand des Fieldsets */
+/* Formular-Styling */
+form {
+  background: #ffffff10; /* Transparenter Hintergrund mit Farbton */
+  backdrop-filter: blur(10px); /* Glas-Effekt */
+  border-radius: 15px; /* Abgerundete Ecken */
+  padding: 30px; /* Innenabstand */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Schatten für den Container */
+  width: 100%;
+  max-width: 500px; /* Maximale Breite des Formulars */
 }
 
-label {
-  display: block; /* Labels als Blockelemente darstellen */
-  margin: 20px 0; /* Margin oberhalb und unterhalb des Labels */
-  text-align: center; /* Zentriert den Text in den Labels */
-}
-
-#name, #email, #number, #dropdown {
-  display: block; /* Diese Eingabeelemente als Blockelemente darstellen */
-  text-align: center; /* Zentriert den Text in diesen Eingabeelementen */
-  margin: auto; /* Setzt die Margen automatisch, um sie zu zentrieren */
-  margin-top: 2px; /* Margin oben für die Eingabeelemente */
-  background-color: blue; /* Hintergrundfarbe für die Eingabeelemente */
-  color: white; /* Textfarbe für die Eingabeelemente */
-}
-
-input[type="submit"] {
-  display: block; /* Submit-Button als Blockelement darstellen */
-  padding: 20px; /* Innenabstand für den Button */
-  margin: auto; /* Setzt die Margen automatisch, um den Button zu zentrieren */
-  margin-top: 10px; /* Margin oben für den Button */
-  background-color: blueviolet; /* Hintergrundfarbe für den Submit-Button */
-  font-size: 16px; /* Schriftgröße für den Button */
-  border: 1px solid; /* Rand um den Button */
-}
-
+/* Fieldset und Legend */
 fieldset {
-  border: none; /* Entfernt den Standardrand des Fieldsets */
+  border: none; /* Kein Rand */
+  margin-bottom: 20px;
 }
 
 legend {
-  font-size: 30px; /* Schriftgröße für das Legend-Element */
-  margin: 2px; /* Margin um das Legend-Element */
+  font-size: 1.8rem; /* Größere Schrift für die Legende */
+  color: #fff; /* Helle Farbe */
+  margin-bottom: 15px;
+  text-align: center; /* Zentrierte Legende */
+}
+
+/* Labels */
+label {
+  display: block; /* Labels als Blockelement */
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #e0e0e0; /* Leichtes Grau */
+}
+
+/* Eingabeelemente */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%; /* Volle Breite */
+  padding: 10px 15px; /* Innenabstand */
+  margin-bottom: 15px; /* Abstand nach unten */
+  font-size: 1rem;
+  color: #333;
+  background: #fff; /* Weißer Hintergrund */
+  border: none;
+  border-radius: 5px; /* Abgerundete Kanten */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+/* Eingabeelement Hover & Fokus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #7b2cbf; /* Fokusrand */
+  background: #f9f9ff; /* Leichtes Grau */
+}
+
+/* Submit-Button */
+input[type="submit"] {
+  width: 100%; /* Volle Breite */
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: #7b2cbf; /* Farbverlauf für Button */
+  border: none;
+  border-radius: 8px; /* Abgerundete Kanten */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: #5a189a; /* Dunklere Farbe bei Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form {
+    padding: 20px; /* Weniger Padding auf kleineren Bildschirmen */
+  }
+
+  legend {
+    font-size: 1.5rem;
+  }
+
+  input[type="submit"] {
+    font-size: 1rem;
+  }
 }

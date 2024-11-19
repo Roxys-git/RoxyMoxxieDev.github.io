@@ -139,51 +139,115 @@ input[type="submit"]:hover {
 }
 
 /* Tablet Optimierungen Hochformat */
-@media (min-width: 601px) and (max-width: 1024px) {
-  section {
-    min-width: 100vw;
-  }
-  form {
-    padding: 10px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 1rem; /* Etwas größere Schrift auf Tablets */
-  }
-
-  input[type="submit"] {
-    padding: 10px 0;
-  }
-
-  #title {
-    margin: 5vh;
-    font-size: 2.2rem;
-  }
-
-  .fieldset-first-page {
-    height: 90vh;
-    margin-bottom: 5vh;
-  }
+@media (orientation: portrait) {
+  @media (min-width: 601px) and (max-width: 1024px)  {
+    section {
+      min-width: 100vw;
+    }
+    form {
+      padding: 10px;
+    }
   
-  .fieldset-others {
-    height: 100vh;
-  }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      font-size: 1rem; /* Etwas größere Schrift auf Tablets */
+    }
   
-  #fieldset-two, #fieldset-three {
-    height: 24vh;
-  }
+    button {
+      padding: 12px 43vw;
+    }
   
-  #fieldset-four, #fieldset-five {
-    height: 20vh;
-  }
+    input[type="submit"] {
+      padding: 10px 0;
+    }
   
-  #textarea {
-    height: 92vh;
-    text-align: center;
+    #title {
+      margin: 5vh;
+      font-size: 2.2rem;
+    }
+  
+    .fieldset-first-page {
+      height: 90vh;
+      margin-bottom: 5vh;
+    }
+    
+    .fieldset-others {
+      height: 100vh;
+    }
+    
+    #fieldset-two, #fieldset-three {
+      height: 24vh;
+    }
+    
+    #fieldset-four, #fieldset-five {
+      height: 20vh;
+    }
+    
+    #textarea {
+      height: 92vh;
+      text-align: center;
+    }
+  }  
+}
+
+/* Tablet Optimierungen Querformat */
+@media (orientation: landscape) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    section {
+      min-width: 100vw;
+    }
+    body {
+      padding: 0;
+    }
+    
+    form {
+      padding: 20px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      font-size: 1.1rem; /* Etwas größere Schrift auf Tablets */
+    }
+  
+    button {
+      padding: 12px 49vw;
+    }
+  
+    input[type="submit"] {
+      padding: 12px 20px;
+    }
+  
+    #title {
+      margin: 5vh;
+      font-size: 2.2rem;
+    }
+  
+    .fieldset-first-page {
+      height: 84vh;
+    }
+    
+    .fieldset-others {
+      height: 100vh;
+    }
+    
+    #fieldset-two, #fieldset-three {
+      height: 24vh;
+    }
+    
+    #fieldset-four, #fieldset-five {
+      height: 20vh;
+    }
+    
+    #textarea {
+      height: 92vh;
+      text-align: center;
+    }
   }
 }
 
@@ -218,4 +282,3 @@ input[type="submit"]:hover {
     padding: 15px 30px; /* Etwas größere Fläche für den Submit-Button */
   }
 }
-  

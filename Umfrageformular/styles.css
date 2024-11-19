@@ -9,6 +9,7 @@ body {
   background-color: blueviolet; /* Hintergrundfarbe */
   color: whitesmoke; /* Textfarbe */
   height: 100vh;
+  margin: 0;
 }
 
 section {
@@ -26,6 +27,7 @@ form {
   border-radius: 8px; /* Abgerundete Ecken */
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Weiches Schatten */
+  align-items: center;
 }
 
 h1 {
@@ -73,29 +75,36 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
-button {
-  border: 1px solid black;
+.submit-container {
   background-color: blueviolet;
-  padding: 12px 40vw;
+  padding: 12px;
+  text-align: center; /* Zentriert den Text im Container */
+  cursor: pointer; /* Zeigt, dass der Container klickbar ist */
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
-input[type="submit"] {
-  background-color: blueviolet;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
+.submit-container input[type="submit"] {
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Unsichtbar, aber klickbar */
+  position: absolute; /* Positionierung um sicherzustellen, dass es die ganze Fläche abdeckt */
+  left: 0;
+  top: 0;
+  cursor: pointer; /* Zeigt einen klickbaren Bereich an */
 }
+
+.submit-container:hover {
+  background-color: #7a4de9; /* Hover-Effekt für den Container */
+}
+
 
 input[type="submit"]:hover {
   background-color: #7a4de9; /* Dunklerer Lila-Ton für Hover-Effekt */
 }
 
-/* Smartphone Optimierungen */
-@media (max-width: 600px) {
+/* Smartphone im Hochformat*/
+@media (orientation: portrait) and (max-width: 600px) {
   form {
     padding: 15px;
   }
@@ -138,116 +147,190 @@ input[type="submit"]:hover {
   }
 }
 
+/* Smartphone im Querformat (funktioniert noch nicht)*/
+@media (orientation: landscape) and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100vh; /* Nutzt die gesamte Bildschirmhöhe */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Verhindert Scrollen */
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem; /* Reduzierte Schriftgröße */
+    margin: 0;
+    padding: 10px 0; /* Abstand ohne Margin */
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Elemente gleichmäßig verteilen */
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* Bezieht Padding in die Breite/Höhe ein */
+  }
+
+  fieldset {
+    flex-grow: 1; /* Lässt Fieldsets den verfügbaren Platz nutzen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Inhalte mittig ausrichten */
+    align-items: stretch;
+    margin: 5px 0; /* Abstand zwischen Fieldsets */
+    padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  textarea {
+    flex-grow: 1; /* Passt sich dynamisch an den Platz an */
+    width: 100%; /* Füllt die Breite */
+    resize: none; /* Verhindert manuelles Ändern der Größe */
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  .submit-container {
+    flex-shrink: 0; /* Behält feste Höhe */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: blueviolet;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+
+  .submit-container input[type="submit"] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+}
+
 /* Tablet Optimierungen Hochformat */
-@media (orientation: portrait) {
-  @media (min-width: 601px) and (max-width: 1024px)  {
-    section {
-      min-width: 100vw;
-    }
-    form {
-      padding: 10px;
-    }
+@media (orientation: portrait) and (min-width: 601px) and (max-width: 1024px) {
+  section {
+    min-width: 100vw;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 1rem; /* Etwas größere Schrift auf Tablets */
+  }
+
+  button {
+    padding: 12px 43vw;
+  }
+
+  input[type="submit"] {
+    padding: 10px 0;
+  }
+
+  #title {
+    margin: 5vh;
+    font-size: 2.2rem;
+  }
+
+  .fieldset-first-page {
+    height: 90vh;
+    margin-bottom: 5vh;
+  }
   
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    select,
-    textarea {
-      font-size: 1rem; /* Etwas größere Schrift auf Tablets */
-    }
+  .fieldset-others {
+    height: 100vh;
+  }
   
-    button {
-      padding: 12px 43vw;
-    }
+  #fieldset-two, #fieldset-three {
+    height: 24vh;
+  }
   
-    input[type="submit"] {
-      padding: 10px 0;
-    }
+  #fieldset-four, #fieldset-five {
+    height: 20vh;
+  }
   
-    #title {
-      margin: 5vh;
-      font-size: 2.2rem;
-    }
-  
-    .fieldset-first-page {
-      height: 90vh;
-      margin-bottom: 5vh;
-    }
-    
-    .fieldset-others {
-      height: 100vh;
-    }
-    
-    #fieldset-two, #fieldset-three {
-      height: 24vh;
-    }
-    
-    #fieldset-four, #fieldset-five {
-      height: 20vh;
-    }
-    
-    #textarea {
-      height: 92vh;
-      text-align: center;
-    }
-  }  
+  #textarea {
+    height: 92vh;
+    text-align: center;
+  }
 }
 
 /* Tablet Optimierungen Querformat */
-@media (orientation: landscape) {
-  @media (min-width: 768px) and (max-width: 1024px) {
-    section {
-      min-width: 100vw;
-    }
-    body {
-      padding: 0;
-    }
-    
-    form {
-      padding: 20px;
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    select,
-    textarea {
-      font-size: 1.1rem; /* Etwas größere Schrift auf Tablets */
-    }
-  
-    button {
-      padding: 12px 49vw;
-    }
-  
-    input[type="submit"] {
-      padding: 12px 20px;
-    }
-  
-    #title {
-      margin: 5vh;
-      font-size: 2.2rem;
-    }
-  
-    .fieldset-first-page {
-      height: 84vh;
-    }
-    
-    .fieldset-others {
-      height: 100vh;
-    }
-    
-    #fieldset-two, #fieldset-three {
-      height: 24vh;
-    }
-    
-    #fieldset-four, #fieldset-five {
-      height: 20vh;
-    }
-    
-    #textarea {
-      height: 92vh;
-      text-align: center;
-    }
+@media (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
+  section {
+    width: 100vw; /* Füllt die gesamte Breite */
+    height: 100vh; /* Füllt die gesamte Höhe */
+    margin: 0; /* Entfernt äußeren Rand */
+    border-radius: 0; /* Entfernt abgerundete Ecken */
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  form {
+    padding: 20px;
+    height: 100%; /* Formular nimmt den gesamten Platz ein */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 1.1rem; /* Etwas größere Schrift auf Tablets */
+  }
+
+  button {
+    padding: 12px 49vw;
+  }
+
+  input[type="submit"] {
+    padding: 12px 20px;
+  }
+
+  #title {
+    margin: 5vh;
+    font-size: 2.2rem;
+  }
+
+  .fieldset-first-page,
+  .fieldset-others {
+    height: 100%;
   }
 }
 
@@ -263,7 +346,7 @@ input[type="submit"]:hover {
 
   form {
     padding: 30px;
-    max-width: 800px; /* Größeres Formular auf größeren Bildschirmen */
+    max-width: 100vw; /* Größeres Formular auf größeren Bildschirmen */
   }
 
   h1 {

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
     <meta charset="utf-8"> <!-- Setzt die Zeichencodierung auf UTF-8 -->
-    <meta name="viewport" content=""width=device-with, initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Für responsives Design -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Umfrageformular</title> <!-- Titel der Webseite -->
     <link rel="stylesheet" href="styles.css"> <!-- Verknüpft die externe CSS-Datei für das Styling -->
@@ -11,68 +11,78 @@
     <h1 id="title">Umfrageformular für einen Camperausbau</h1> <!-- Hauptüberschrift des Formulars -->
     <form method="post" action="https://survey-form.camperausbau.org" id="survey-form"> <!-- Beginnt das Formular, POST-Methode, Ziel-URL -->
       <fieldset class="fieldset-one"> <!-- Erstes Fieldset für persönliche Informationen -->
-        <label id="name-label" for="name">Name: 
-          <input id="name" name="name" type="text" placeholder="Gib dein Name ein" required> <!-- Eingabefeld für den Namen, Pflichtfeld -->
-        </label>
-        <label id="email-label" for="email">Email: 
-          <input id="email" name="email" type="email" placeholder="Gib deine Email ein" required> <!-- Eingabefeld für die E-Mail-Adresse, Pflichtfeld -->
-        </label>
-        <label id="number-label" for="number">Alter: 
-          <input id="number" name="age" type="number" min="18" max="99" placeholder="Wähle"> <!-- Eingabefeld für das Alter, mit Mindest- und Höchstgrenze -->
-        </label>
-        <label id="configuration-label" for="dropdown">Konfiguration:
-          <select id="dropdown" name="configuration"> <!-- Dropdown-Menü für die Konfiguration des Campers -->
-            <option value="">(Wählen Sie)</option> <!-- Standardoption -->
-            <option value="1">Vollintegriert</option> <!-- Option 1 -->
-            <option value="2">Teilintegriert</option> <!-- Option 2 -->
-            <option value="3">Kastenwagen</option> <!-- Option 3 -->
-          </select>
-        </label>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" placeholder="Gib dein Name ein" required> <!-- Eingabefeld für den Namen, Pflichtfeld -->
+        
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" placeholder="Gib deine Email ein" required> <!-- Eingabefeld für die E-Mail-Adresse, Pflichtfeld -->
+        
+        <label for="number">Alter:</label>
+        <input id="number" name="age" type="number" min="18" max="99" placeholder="Wähle"> <!-- Eingabefeld für das Alter, mit Mindest- und Höchstgrenze -->
+        
+        <label for="dropdown">Konfiguration:</label>
+        <select id="dropdown" name="configuration"> <!-- Dropdown-Menü für die Konfiguration des Campers -->
+          <option value="">(Wählen Sie)</option> <!-- Standardoption -->
+          <option value="1">Vollintegriert</option> <!-- Option 1 -->
+          <option value="2">Teilintegriert</option> <!-- Option 2 -->
+          <option value="3">Kastenwagen</option> <!-- Option 3 -->
+        </select>
       </fieldset>
+      
       <fieldset>
         <legend>Batterientyp</legend> <!-- Überschrift für das Fieldset Batterientyp -->
-        <p id="description">Ich möchte Litiumbatterien 
-          <input type="checkbox" value="1"> <!-- Checkbox für Lithiumbatterien -->
-        </p>
-        <p id="description">Ich möchte AGM-Batterien 
-          <input type="checkbox" value="2"> <!-- Checkbox für AGM-Batterien -->
-        </p>
-        <p id="description">Ich möchte Gelbatterien 
-          <input type="checkbox" value="3"> <!-- Checkbox für Gelbatterien -->
-        </p>
+        <label>
+          <input type="checkbox" value="1"> Ich möchte Litiumbatterien
+        </label>
+        <label>
+          <input type="checkbox" value="2"> Ich möchte AGM-Batterien
+        </label>
+        <label>
+          <input type="checkbox" value="3"> Ich möchte Gelbatterien
+        </label>
       </fieldset>
+
       <fieldset>
         <legend>Heizung</legend> <!-- Überschrift für das Fieldset Heizung -->
-        <p id="description">Ich möchte mit Gas heizen 
-          <input type="checkbox" value="1"> <!-- Checkbox für Gasheizung -->
-        </p>
-        <p id="description">Ich möchte mit Strom heizen 
-          <input type="checkbox" value="2"> <!-- Checkbox für Elektroheizung -->
-        </p>
-        <p id="description">Ich möchte mit Diesel heizen 
-          <input type="checkbox" value="3"> <!-- Checkbox für Dieselheizung -->
-        </p>
+        <label>
+          <input type="checkbox" value="1"> Ich möchte mit Gas heizen
+        </label>
+        <label>
+          <input type="checkbox" value="2"> Ich möchte mit Strom heizen
+        </label>
+        <label>
+          <input type="checkbox" value="3"> Ich möchte mit Diesel heizen
+        </label>
       </fieldset>
+
       <fieldset>
         <legend>Kochen</legend> <!-- Überschrift für das Fieldset Kochen -->
-        <p id="description">Ich möchte mit Gas kochen 
-          <input type="checkbox" value="1"> <!-- Checkbox für Gaskochfeld -->
-        </p>
-        <p id="description">Ich möchte mit Strom kochen 
-          <input type="checkbox" value="2"> <!-- Checkbox für Elektrokochfeld -->
-        </p>
+        <label>
+          <input type="checkbox" value="1"> Ich möchte mit Gas kochen
+        </label>
+        <label>
+          <input type="checkbox" value="2"> Ich möchte mit Strom kochen
+        </label>
       </fieldset>
+
       <fieldset>
         <legend>Solar</legend> <!-- Überschrift für das Fieldset Solar -->
-        <input type="radio" value="1" name="solar-type"> mit Solar <!-- Radiobutton für Solarbetrieb -->
-        <input type="radio" value="2" name="solar-type"> ohne Solar <!-- Radiobutton für ohne Solarbetrieb -->
+        <label>
+          <input type="radio" value="1" name="solar-type"> mit Solar
+        </label>
+        <label>
+          <input type="radio" value="2" name="solar-type"> ohne Solar
+        </label>
       </fieldset>
-      <p id="description">Deine Vorstellung des Grundrisses</p> <!-- Beschreibung für das Textfeld -->
-      <textarea rows="7" cols="49" placeholder="Gib deinen Text ein"></textarea> <!-- Textarea für zusätzliche Informationen -->
+
+      <label for="description">Deine Vorstellung des Grundrisses:</label> <!-- Beschreibung für das Textfeld -->
+      <textarea id="description" rows="7" cols="49" placeholder="Gib deinen Text ein"></textarea> <!-- Textarea für zusätzliche Informationen -->
+
       <input id="submit" type="submit" value="Submit"> <!-- Submit-Button zum Absenden des Formulars -->
     </form>
   </body>
 </html>
+
 
 <!--Erklärung der Hauptstruktur:
 

@@ -1,0 +1,80 @@
+/* 1. Basis-CSS für Box-Sizing (Standardmäßig für alle Elemente und deren Pseudoelemente) */
+*,                 /* Alle Elemente der Seite */
+*::before,         /* Pseudo-Elemente '::before' */
+*::after {         /* Pseudo-Elemente '::after' */
+  box-sizing: border-box; /* Definiert, dass die Größenberechnung Höhe und Breite des Inhalts sowie Padding und Border umfasst */
+}
+
+/* 2. Stilregeln für das Body-Element */
+body {
+  /* Hintergrundbild und -layout für die gesamte Seite */
+  background-image: url(https://images.hdqwalls.com/download/the-pikachu-zj-3840x2160.jpg); /* Hintergrundbild-URL */
+  background-size: cover;       /* Deckt die gesamte Breite und Höhe des Viewports ab */
+  background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
+  background-position: center;  /* Zentriert das Bild innerhalb des Viewports */
+
+  /* Text- und Schriftartstile */
+  color: black;                 /* Standardtextfarbe */
+  font-family: Arial, sans-serif; /* Schriftart, als Fallback Arial und eine generische serifenlose Schrift */
+  font-size: 20px;              /* Schriftgröße */
+  -webkit-text-stroke: 1px yellow; /* Gelber Rand um den Text, nur in Webkit-basierten Browsern sichtbar */
+
+  /* Seitenlayout */
+  width: 100vw;                 /* Vollständige Breite des Viewports */
+  height: 100vh;                /* Vollständige Höhe des Viewports */
+  text-align: center;           /* Zentriert den Text horizontal */
+}
+
+/* 3. Gemeinsame Stile für .search-options und input */
+.search-options, input {
+  margin: 0; /* Entfernt den Standardabstand um die Elemente */
+}
+
+/* 4. Stilregeln für das Eingabefeld */
+input {
+  background-color: black; /* Schwarzer Hintergrund für das Eingabefeld */
+}
+
+/* 5. Stilregeln für die Schaltfläche */
+button {
+  margin: 30px;             /* Abstand um die Schaltfläche herum */
+  background-color: black;  /* Schwarzer Hintergrund */
+}
+
+/* 6. Stile für die .table-Klasse */
+.table {
+  display: flex;            /* Verwendet Flexbox für flexibles Layout */
+  justify-content: center;  /* Zentriert den Inhalt horizontal */
+  text-align: left;         /* Richtet den Text innerhalb der Tabelle links aus */
+}
+
+/*
+Erklärung der Syntax und Hauptkomponenten:
+
+    Universelle Box-Sizing-Regel (*, *::before, *::after):
+        Der *-Selektor betrifft alle Elemente, während *::before und *::after auf Pseudo-Elemente abzielt.
+        box-sizing: border-box; sorgt dafür, dass die Breite und Höhe der Elemente das Padding und den Rahmen einbeziehen. Dies vereinfacht das Layout, da die tatsächliche Breite/Höhe des Elements nicht durch Padding oder Border beeinflusst wird.
+
+    Stilregeln für das <body>-Element:
+        background-image: Gibt die URL des Hintergrundbildes an.
+        background-size: cover: Skaliert das Hintergrundbild so, dass es den gesamten Viewport ohne Verzerrung abdeckt.
+        background-repeat: no-repeat: Verhindert eine Wiederholung des Bildes, falls es kleiner als der Viewport ist.
+        background-position: center: Zentriert das Bild im Hintergrund.
+        font-family: Definiert die Schriftart als Arial oder eine generische serifenlose Alternative.
+        -webkit-text-stroke: Erzeugt einen gelben Rand um den Text. Dies ist eine Webkit-spezifische Eigenschaft und funktioniert nur in Chrome und Safari.
+
+    Stil für .search-options und input:
+        margin: 0; entfernt Standardabstände, sodass diese Elemente bündig im Layout sitzen.
+
+    input-Stilregel:
+        background-color: black; sorgt für einen schwarzen Hintergrund im Eingabefeld, was es optisch von der Seite abhebt.
+
+    button-Stilregel:
+        margin: 30px; fügt Abstand um die Schaltfläche herum hinzu.
+        background-color: black; sorgt für einen schwarzen Hintergrund, um zur Seitenästhetik zu passen.
+
+    Stil für .table:
+        display: flex; wendet Flexbox an, was eine flexible Anordnung der Inhalte ermöglicht.
+        justify-content: center; zentriert die Tabelle horizontal auf der Seite.
+        text-align: left; richtet den Text innerhalb der Tabelle linksbündig aus.
+*/

@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box; /* Setzt die Box-Modell-Option für alle Elemente, sodass Padding und Border zur Gesamtbreite und -höhe gehören */
+}
+
+body {
+  font-size: 16px; /* Setzt die Standard-Schriftgröße auf 16px */
+  font-weight: normal; /* Setzt das Schriftgewicht auf normal */
+  background: linear-gradient(#000088, black); /* Setzt einen linearen Farbverlauf als Hintergrund von Blau zu Schwarz */
+  color: whitesmoke; /* Setzt die Textfarbe auf ein helles Grau */
+  text-align: center; /* Zentriert den Text im Körper */
+}
+
+img {
+  width: 1200px; /* Setzt die Breite der Bilder auf 1200px */
+  height: 400px; /* Setzt die Höhe der Bilder auf 400px */
+  display: flex; /* Setzt die Anzeige des Bildes auf Flexbox */
+  margin: 0 auto; /* Zentriert das Bild horizontal */
+}
+
+#nav-bar {
+  display: flex; /* Setzt die Anzeige der Navigationsleiste auf Flexbox */
+  flex-direction: column; /* Stellt die Flex-Richtung auf Spalte ein */
+  top: 0; /* Positioniert die Navigationsleiste am oberen Rand */
+  position: fixed; /* Fixiert die Navigationsleiste, sodass sie beim Scrollen sichtbar bleibt */
+  z-index: 100; /* Setzt den z-Index, um sicherzustellen, dass die Navigationsleiste über anderen Elementen liegt */
+  margin: 0; /* Entfernt den äußeren Abstand */
+}
+
+button {
+  font-size: 20px; /* Setzt die Schriftgröße der Buttons auf 20px */
+  padding: 20px; /* Fügt Padding von 20px hinzu */
+  background-color: whitesmoke; /* Setzt die Hintergrundfarbe der Buttons auf ein helles Grau */
+  border-radius: 40px; /* Macht die Ecken der Buttons abgerundet */
+}
+
+a {
+  text-decoration: none; /* Entfernt die Unterstreichung von Links */
+  color:  #000088; /* Setzt die Textfarbe der Links auf Dunkelblau */
+}
+
+h1 {
+  font-size: 32px; /* Setzt die Schriftgröße der Hauptüberschrift auf 32px */
+}
+
+#email {
+  width: 300px; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
+  height: 20px; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
+  font-size: 16px; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
+  color: #000088; /* Setzt die Textfarbe des E-Mail-Eingabefeldes auf Dunkelblau */
+}
+
+.features {
+  max-width: 300px; /* Setzt die maximale Breite der Features auf 300px */
+  margin: auto; /* Zentriert das Feature-Element horizontal */
+}
+
+h2 {
+  font-size: 24px; /* Setzt die Schriftgröße der Unterüberschrift auf 24px */
+  text-decoration: underline; /* Unterstreicht die Unterüberschrift */
+}
+
+p {
+  font-size: 16px; /* Setzt die Schriftgröße für Absätze auf 16px */
+  font-weight: 900; /* Setzt das Schriftgewicht auf 900 (fett) */
+}
+
+li {
+  list-style-type: none; /* Entfernt die Standard-Aufzählungszeichen von Listen */
+  text-align: left; /* Setzt die Textausrichtung der Listenpunkte auf links */
+}
+
+br {
+  margin: 50px 0; /* Fügt einen vertikalen Abstand von 50px über und unter dem Zeilenumbruch hinzu */
+}
+
+.prices {
+  display: flex; /* Setzt die Anzeige für die Preisinformationen auf Flexbox */
+  justify-content: space-evenly; /* Verteilt die Preise gleichmäßig innerhalb des Containers */
+  flex-direction: row; /* Setzt die Flex-Richtung auf Zeile */
+  flex-wrap: wrap; /* Ermöglicht, dass die Elemente umgebrochen werden, wenn der Platz nicht ausreicht */
+  max-width: 900px; /* Setzt die maximale Breite auf 900px */
+  margin: 0 auto; /* Zentriert den Container horizontal */
+}
+
+.pricing {
+  border: 1px solid whitesmoke; /* Fügt eine Rahmenlinie um die Preisinformationen hinzu */
+  width: 240px; /* Setzt die Breite der Preisbox auf 240px */
+  padding: 30px; /* Fügt Padding von 30px innerhalb der Preisbox hinzu */
+  display: grid; /* Setzt die Anzeige der Preisbox auf Grid */
+}
+
+@media (max-width: 4000px) and (min-width: 200px) {
+  /* Media-Query für responsive Design, kann hier bei Bedarf angepasst werden */
+}

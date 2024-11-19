@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Das Dokument wird als HTML5 deklariert -->
+  <head>
+    <!-- Legt die anfängliche Breite des Viewports auf die Gerätebreite fest, für eine gute Darstellung auf mobilen Geräten -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Zeichensatz wird auf UTF-8 gesetzt, um Sonderzeichen korrekt darzustellen -->
+    <meta charset="utf-8">
+    <!-- Verlinkung einer externen CSS-Datei zur Gestaltung der Webseite -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Titel des Dokuments, der in der Registerkarte des Browsers angezeigt wird -->
+    <title>Palindrome Checker Project</title>
+  </head>
+
+  <body>
+    <!-- Überschrift der Seite -->
+    <h1>Palindrome Checker</h1>
+
+    <!-- Eingabefeld, in dem der Benutzer einen möglichen Palindrom-Text eingeben kann -->
+    <input id="text-input" placeholder="Write the palindrome">
+
+    <!-- Button, der bei einem Klick den Palindrom-Check auslöst -->
+    <button id="check-btn">check</button>
+
+    <!-- Bereich zur Anzeige des Ergebnisses, ob der eingegebene Text ein Palindrom ist -->
+    <div id="result">
+      <!-- Enthält den Titel "Result", das Ergebnis wird später per JavaScript hier eingefügt -->
+      <span><p>Result</p></span>
+    </div>
+
+    <!-- Verlinkung der externen JavaScript-Datei, die die Logik für die Palindrom-Prüfung enthält -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--Erläuterungen zu den HTML-Elementen:
+
+    <meta name="viewport">: Stellt sicher, dass die Seite auf mobilen Geräten korrekt skaliert wird, indem die Breite des Viewports auf die Gerätebreite festgelegt wird.
+
+    <meta charset="utf-8">: Stellt sicher, dass die Seite alle gängigen Zeichen (wie Umlaute und Sonderzeichen) korrekt anzeigt, indem der Zeichensatz auf UTF-8 gesetzt wird.
+
+    <link rel="stylesheet" href="styles.css">: Verlinkt eine externe CSS-Datei namens styles.css zur Steuerung des Seitenlayouts und Designs.
+
+    <title>Palindrome Checker Project</title>: Der Titel der Webseite, der in der Browser-Registerkarte angezeigt wird.
+
+    <h1>: Überschrift auf der Seite, die dem Benutzer zeigt, dass es sich um ein Palindrom-Prüfungstool handelt.
+
+    <input id="text-input">: Ein Eingabefeld für den Benutzer, um einen Text einzugeben. Das placeholder-Attribut zeigt als Hinweistext „Write the palindrome“ an, wenn das Feld leer ist.
+
+    <button id="check-btn">: Ein Button, den der Benutzer anklicken kann, um den eingegebenen Text zu überprüfen.
+
+    <div id="result">: Ein Bereich zur Anzeige des Ergebnisses, das angibt, ob der eingegebene Text ein Palindrom ist oder nicht. Der Platzhaltertext „Result“ wird angezeigt, bis das Ergebnis per JavaScript eingefügt wird.
+
+    <script src="script.js">: Verlinkt eine externe JavaScript-Datei (script.js), die die Logik für die Palindrom-Prüfung enthält.-->

@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: black;
+  --background-color: linear-gradient(chartreuse, black);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: var(--background-color);
+  height: 100vh;
+  text-align: center;
+}
+
+button {
+  padding: 20px;
+}
+
+#text-over-input {
+  margin: 0px;
+}

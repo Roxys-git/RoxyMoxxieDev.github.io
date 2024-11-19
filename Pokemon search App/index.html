@@ -1,0 +1,146 @@
+<!DOCTYPE html> <!-- Deklariert den Dokumenttyp als HTML5 -->
+<html lang="en"> <!-- Beginn des HTML-Dokuments, festgelegt auf die Sprache Englisch -->
+  
+  <head>
+    <!-- Kopfbereich des Dokuments, der Metadaten, Titel und Links enthält -->
+    <meta charset="utf-8"> <!-- Festlegung des Zeichensatzes auf UTF-8, um die Zeichenunterstützung zu maximieren -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Kompatibilität mit älteren Internet Explorer-Versionen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsives Design: skaliert auf Gerätegröße -->
+    
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinkt die externe CSS-Datei für das Design -->
+    <title>Pokémon Search App</title> <!-- Titel des Dokuments, der im Browser-Tab angezeigt wird -->
+  </head>
+
+  <body>
+    <!-- Hauptinhalt des Dokuments -->
+    <main>
+      <!-- Hauptbereich der Anwendung -->
+
+      <header>
+        <!-- Kopfbereich der Anwendung -->
+        <h1>Pokémon Search App</h1> <!-- Überschrift der Anwendung -->
+      </header>
+
+      <section>
+        <!-- Eingabebereich für die Pokémon-Suche -->
+        <div class="search-options">
+          <p>Search with Pokémon Name or ID:</p> <!-- Anweisung für den Benutzer -->
+        </div>
+        <input id="search-input" required> <!-- Eingabefeld für den Pokémon-Namen oder die ID, "required" stellt sicher, dass es ausgefüllt werden muss -->
+        <button id="search-button">Search</button> <!-- Schaltfläche zum Auslösen der Suche -->
+      </section>
+
+      <section class="table">
+        <!-- Bereich für die Ergebnisanzeige in einer Tabelle -->
+        <table>
+          <thead>
+            <!-- Tabellenkopf für die Spaltenüberschriften -->
+            <th scope="col" colspan="2">Base</th> <!-- Spalte "Base", die sich auf grundlegende Informationen bezieht -->
+            <th scope="col">Stats</th> <!-- Spalte "Stats" für die statistischen Daten -->
+          </thead>
+
+          <tbody>
+            <!-- Tabellenkörper, der die Datenzeilen enthält -->
+            <!-- Jede Zeile zeigt eine Eigenschaft des gesuchten Pokémon an -->
+
+            <tr>
+              <th scope="row" colspan="2" id="pokemon-name">Name</th>
+              <!-- Zeile für den Pokémon-Namen -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="pokemon-id">ID</th>
+              <!-- Zeile für die Pokémon-ID -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="weight">Weight</th>
+              <!-- Zeile für das Gewicht des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="height">Height</th>
+              <!-- Zeile für die Höhe des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="types">Type</th>
+              <!-- Zeile für die Typen des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="hp">HP</th>
+              <!-- Zeile für die HP (Lebenspunkte) des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="attack">Attack</th>
+              <!-- Zeile für den Angriffswert des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="defense">Defense</th>
+              <!-- Zeile für den Verteidigungswert des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="special-attack">Special-Attack</th>
+              <!-- Zeile für den Spezialangriff des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="special-defense">Special-Defense</th>
+              <!-- Zeile für die Spezialverteidigung des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+
+            <tr>
+              <th scope="row" colspan="2" id="speed">Speed</th>
+              <!-- Zeile für die Geschwindigkeit des Pokémon -->
+              <td rowspawn="2"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script> <!-- Verlinkt die JavaScript-Datei, die die Logik der App steuert -->
+  </body>
+</html>
+
+<!--
+Erklärung der Syntax und Hauptkomponenten:
+
+    DOCTYPE-Deklaration (<!DOCTYPE html>): Definiert, dass das Dokument im HTML5-Standard geschrieben ist.
+
+    <html lang="en">: Der lang-Attributwert gibt die Dokumentensprache an und verbessert die Barrierefreiheit und SEO.
+
+    Meta-Tags im <head>-Bereich:
+        <meta charset="utf-8">: Setzt den Zeichensatz auf UTF-8, was die Darstellung vieler internationaler Zeichen unterstützt.
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">: Stellt sicher, dass Internet Explorer die neueste Rendering-Engine verwendet.
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">: Ermöglicht responsives Design für mobile Geräte, indem das Layout an die Gerätebreite angepasst wird.
+
+    CSS-Verlinkung (<link rel="stylesheet" href="styles.css">): Diese Zeile verknüpft die Seite mit einer externen CSS-Datei (styles.css) für die visuelle Gestaltung.
+
+    Inhaltsstruktur (<main>, <header>, <section>, <table>):
+        <main> markiert den Hauptinhalt der Seite.
+        <header> und <section> helfen, den Inhalt semantisch zu gliedern.
+        <table> enthält die Pokémon-Daten; die Unterelemente <thead> und <tbody> strukturieren die Daten weiter in Kopf- und Datenbereiche.
+
+    Tabellenstruktur:
+        <th> (Table Header) definiert Spalten- und Zeilenüberschriften.
+        colspan und rowspan (Spalten- und Zeilenüberspannung) werden verwendet, um eine Überschrift über mehrere Spalten hinweg anzuzeigen oder eine Zelle über mehrere Zeilen zu erstrecken.
+
+    JavaScript-Einbindung (<script src="script.js">): Verknüpft die JavaScript-Datei script.js, die die Suchfunktion und Interaktionen steuert.
+
+Diese Struktur bildet das Grundgerüst der "Pokémon Search App" und zeigt gleichzeitig bewährte Praktiken im HTML-Aufbau.
+-->

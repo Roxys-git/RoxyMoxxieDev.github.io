@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Definiert den Dokumenttyp und die Sprache (Englisch) -->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Stellt sicher, dass die Seite auf mobilen Geräten richtig angezeigt wird -->
+    <meta charset="utf-8"> <!-- Setzt die Zeichenkodierung auf UTF-8 -->
+    <title>Landingpage</title> <!-- Titel der Seite -->
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinkt das externe Stylesheet -->
+  </head>
+  <body>
+    
+    <header id="header"> <!-- Header-Bereich der Seite -->
+      <img id="header-img" src="https://jessup.edu/wp-content/uploads/2024/01/Is-Web-Development-Oversaturated.jpg"> <!-- Bild im Header -->
+      <nav id="nav-bar"> <!-- Navigationsleiste -->
+        <button><a class="nav-link" href="#features">Features</a></button> <!-- Link zu den Features -->
+        <button><a class="nav-link" href="#how-it-works">How it works</a></button> <!-- Link zur Funktionsbeschreibung -->
+        <button><a class="nav-link" href="#pricing">Pricing</a></button> <!-- Link zu den Preisen -->
+      </nav>
+    </header>
+    
+    <form id="form" method="post" action="https://www.freecodecamp.com/email-submit"> <!-- Formular zur Eingabe der E-Mail -->
+      <section>
+        <h1>Web development for your Page</h1> <!-- Hauptüberschrift -->
+
+        <input id="email" name="email" type="email" placeholder="Type your email here"> <!-- Eingabefeld für die E-Mail -->
+
+        <h2 id="features">Features</h2> <!-- Überschrift für die Features -->
+        <div class="features"> <!-- Container für die Features -->
+          <p>Support for your web presence</p> <!-- Beschreibung des Supports -->
+          <li>SEO</li> <!-- Feature: SEO -->
+          <li>Responsive Web Design</li> <!-- Feature: Responsives Webdesign -->
+          <li>Modern structure</li> <!-- Feature: Moderne Struktur -->
+        </div>
+        <div class="features"> <!-- Weitere Feature-Gruppe -->
+          <p>Contact with the developer is direct</p> <!-- Beschreibung -->
+          <li>Directmail (details by contact)</li> <!-- Feature: Direkte Kontaktaufnahme -->
+          <li>Demo publish</li> <!-- Feature: Demo-Veröffentlichung -->
+          <li>Linked In</li> <!-- Feature: Kontakt über LinkedIn -->
+        </div>
+        <div class="features"> <!-- Weitere Feature-Gruppe -->
+          <p>Fast email reaction for clients</p> <!-- Beschreibung -->
+          <li>Daily Mailchecking</li> <!-- Feature: Tägliche E-Mail-Überprüfung -->
+          <li>Mailclient is always open</li> <!-- Feature: Mail-Client ist immer geöffnet -->
+          <li>Developer will be messaged by mail coming in</li> <!-- Feature: Benachrichtigung bei eingehenden E-Mails -->
+        </div>
+        <div class="features"> <!-- Weitere Feature-Gruppe -->
+          <p>Host support included</p> <!-- Beschreibung -->
+          <li>Publish service</li> <!-- Feature: Veröffentlichungsservice -->
+          <li>Webhost service</li> <!-- Feature: Webhosting-Service -->
+          <li>Changins are made fastly</li> <!-- Feature: Änderungen werden schnell vorgenommen -->
+        </div>
+        <div class="features"> <!-- Weitere Feature-Gruppe -->
+          <p>Cloud based data support</p> <!-- Beschreibung -->
+          <li>Clouds for your datas are installed</li> <!-- Feature: Cloud-Datenlagerung -->
+          <li>Every cloud is specified to the client</li> <!-- Feature: Angepasste Cloud-Lösungen -->
+          <li>Clouds have much free space without paying extra</li> <!-- Feature: Viel Speicherplatz ohne zusätzliche Kosten -->
+        </div>
+      </section>
+      
+      <section>
+        <h2 id="how-it-works">How it works</h2> <!-- Überschrift für die Funktionsbeschreibung -->
+        
+        <video id="video" src="https://www.youtube.com/watch?v=zJSY8tbf_ys&t=10s"></video> <!-- Video zur Erklärung, wie es funktioniert -->
+      </section>
+      
+      <section>
+        <h2 id="pricing">Pricing</h2> <!-- Überschrift für die Preisübersicht -->
+        <div class="prices"> <!-- Container für die Preisinformationen -->
+          <div>
+            <p class="pricing">Onepager<br>2000 Chf</p> <!-- Preis für eine Onepager-Website -->
+          </div>  
+          <div>
+            <p class="pricing">Company website<br>5000 Chf</p> <!-- Preis für eine Unternehmenswebsite -->
+          </div>
+          <div>
+            <p class="pricing">Webshop<br>8000 Chf</p> <!-- Preis für einen Webshop -->
+          </div>
+          <div>
+            <p class="pricing">Website with CMS<br>11000 Chf</p> <!-- Preis für eine Website mit CMS -->
+          </div>
+          <div>
+            <p class="pricing">Plattform<br>20000 Chf</p> <!-- Preis für eine Plattform -->
+          </div>
+        </div>
+      </section>
+      
+      <input type="submit" id="submit" href="https://www.freecodecamp.com/email-submit"> <!-- Submit-Button für das Formular -->
+    </form>
+  </body>
+</html>
+
+
+<!--
+1. Dokumenttyp und Sprache
+
+    <!DOCTYPE html>: Dies ist die erste Zeile des Dokuments und informiert den Browser, dass es sich um ein HTML5-Dokument handelt.
+    <html lang="en">: Dieser Tag umschließt das gesamte HTML-Dokument und legt die Sprache auf Englisch fest, was für die Barrierefreiheit und Suchmaschinenoptimierung wichtig ist.
+
+2. Kopfbereich (<head>)
+
+Der Kopfbereich enthält Metainformationen über das Dokument, die für den Benutzer nicht direkt sichtbar sind, aber für die Funktionalität und das Layout wichtig sind.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">: Diese Zeile sorgt dafür, dass die Seite auf mobilen Geräten korrekt skaliert wird, indem die Breite des Anzeigebereichs auf die Bildschirmbreite des Geräts eingestellt wird.
+    <meta charset="utf-8">: Dieser Tag definiert die Zeichenkodierung des Dokuments als UTF-8, was sicherstellt, dass alle Zeichen korrekt angezeigt werden, einschließlich Sonderzeichen.
+    <title>Landingpage</title>: Hier wird der Titel der Seite festgelegt, der in der Titelleiste des Browsers angezeigt wird.
+    <link rel="stylesheet" href="styles.css">: Dieser Link verbindet das Dokument mit einem externen Stylesheet (CSS-Datei), das das visuelle Design und Layout der Seite steuert.
+
+3. Körperbereich (<body>)
+
+Der Körperbereich enthält den sichtbaren Inhalt der Seite, einschließlich Text, Bilder und Formulare.
+3.1 Header
+
+    <header id="header">: Dieser Bereich enthält das Kopfteil der Seite, das oft das Logo, die Navigation und andere wichtige Informationen enthält.
+        <img id="header-img">: Ein Bild, das im Header angezeigt wird, um visuelles Interesse zu schaffen oder das Branding zu unterstützen.
+        <nav id="nav-bar">: Die Navigationsleiste, die Links zu den Hauptabschnitten der Seite enthält. Die Links sind in Buttons integriert, was die Benutzerfreundlichkeit erhöht.
+
+3.2 Formularbereich
+
+    <form id="form">: Dieser Abschnitt ist für die Eingabe von Daten durch den Benutzer vorgesehen, in diesem Fall für die Eingabe einer E-Mail-Adresse.
+        <input>: Ein Eingabefeld für die E-Mail-Adresse, das dem Benutzer ermöglicht, seine E-Mail-Adresse einzugeben.
+        <h1> und <h2>: Überschriften, die die wichtigsten Informationen und Abschnitte der Seite strukturieren. Sie helfen bei der Navigation und bieten eine klare Hierarchie der Informationen.
+
+3.3 Features
+
+    <section> mit verschiedenen <div class="features">: In diesem Bereich werden die Hauptmerkmale und Vorteile des angebotenen Webentwicklungssupports aufgelistet. Jeder Feature-Block hat eine kurze Beschreibung und spezifische Punkte, die die jeweiligen Features erläutern.
+
+3.4 Funktionsweise
+
+    <section> mit einem Video: Diese Sektion bietet ein Video, das erklärt, wie die Dienstleistungen funktionieren. Dies kann dazu beitragen, das Angebot anschaulicher und verständlicher zu machen.
+
+3.5 Preise
+
+    <section> für die Preisübersicht: Dieser Bereich listet die verschiedenen Preisoptionen für die angebotenen Dienstleistungen auf.
+        Die Preisgestaltung ist klar strukturiert, sodass potenzielle Kunden die Kosten leicht verstehen können.
+
+4. Abschluss des Formulars
+
+    <input type="submit">: Ein Submit-Button, der das Formular absendet. Dieser Button leitet die Eingabedaten an die im action-Attribut angegebene URL weiter, wenn der Benutzer darauf klickt.
+
+Zusammenfassung
+
+Die Struktur dieser HTML-Seite ist klar und übersichtlich, was eine benutzerfreundliche Navigation ermöglicht. Der Header und die Navigation bieten sofortigen Zugriff auf die Hauptinhalte der Seite, während die Abschnitte die wichtigsten Informationen über Dienstleistungen und Preise präsentieren. Das Formular zur E-Mail-Eingabe ist zentral platziert, um das Engagement der Benutzer zu fördern.-->

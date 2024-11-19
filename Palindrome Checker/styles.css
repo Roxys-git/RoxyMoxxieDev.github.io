@@ -1,0 +1,63 @@
+/* Setzt das Box-Modell auf "border-box" für alle Elemente, 
+   sodass Padding und Border zur gesamten Elementbreite beitragen */
+   * {
+    box-sizing: border-box;
+  }
+  
+  /* Stil für das <body>-Element, das den gesamten Seitenhintergrund und Text beeinflusst */
+  body {
+    text-align: center; /* Zentriert den gesamten Text auf der Seite */
+    background: linear-gradient(yellow, blue); /* Verwendet einen Farbverlauf von Gelb zu Blau als Hintergrund */
+    height: 100vh; /* Setzt die Höhe des <body> auf 100% der Höhe des Viewports (Ansichtsfenster) */
+    width: 100vw; /* Setzt die Breite des <body> auf 100% der Breite des Viewports */
+    font-family: Arial, sans-serif; /* Wählt die Schriftart Arial und eine generische serifenlose Schriftart */
+    font-weight: 400; /* Normalgewicht der Schrift */
+    font-size: 16px; /* Grundgröße der Schrift */
+  }
+  
+  /* Stil für die Hauptüberschrift <h1> */
+  h1 {
+    margin: 5vh; /* Setzt einen oberen und unteren Rand von 5% der Höhe des Viewports */
+    font-size: 32px; /* Festlegung der Schriftgröße für die Überschrift */
+  }
+  
+  /* Stil für das Texteingabefeld mit der ID "text-input" */
+  #text-input {
+    width: 260px; /* Festlegung der Breite des Eingabefelds auf 260px */
+    margin: 0; /* Entfernt äußere Abstände */
+  }
+  
+  /* Stil für den Button mit der ID "check-btn" */
+  #check-btn {
+    padding: 2px 20px 2px 20px; /* Innenabstand: oben und unten 2px, links und rechts 20px */
+    display: flex; /* Stellt den Button als Flexbox-Element dar (erleichtert Zentrierung) */
+    margin: 20px auto; /* Setzt oben und unten 20px Abstand und zentriert den Button horizontal */
+  }
+
+/*
+Erläuterungen zu den CSS-Selektoren und Eigenschaften:
+
+    *:
+        Der Universalselektor * gilt für alle Elemente.
+        box-sizing: border-box;: Setzt das Box-Modell auf border-box, sodass Padding und Border in der Breite und Höhe des Elements enthalten sind. Dadurch wird das Layout besser kontrollierbar.
+
+    body:
+        text-align: center;: Zentriert den Textinhalt in allen Elementen innerhalb des body.
+        background: linear-gradient(yellow, blue);: Verleiht dem Hintergrund einen Farbverlauf von Gelb zu Blau.
+        height: 100vh; width: 100vw;: Setzt die Höhe und Breite des body auf die volle Ansichtshöhe und -breite des Browsers.
+        font-family: Arial, sans-serif;: Bestimmt die Schriftart als Arial, mit einer serifenlosen Alternative, falls Arial nicht verfügbar ist.
+        font-weight: 400; font-size: 16px;: Festlegung des normalen Schriftgewichts (400) und der Schriftgröße (16px).
+
+    h1:
+        margin: 5vh;: Fügt einen Rand von 5% der Höhe des Viewports hinzu, wodurch die Überschrift vertikal zentriert wird.
+        font-size: 32px;: Definiert die Schriftgröße der Hauptüberschrift auf 32px.
+
+    #text-input:
+        width: 260px;: Setzt die Breite des Eingabefelds auf 260px.
+        margin: 0;: Entfernt äußere Abstände, sodass das Element nicht vom Standard-Rand beeinflusst wird.
+
+    #check-btn:
+        padding: 2px 20px 2px 20px;: Setzt einen inneren Abstand (Padding) von 2px oben und unten sowie 20px links und rechts.
+        display: flex;: Verwendet Flexbox, was die Handhabung der Positionierung innerhalb von Flex-Containern vereinfacht.
+        margin: 20px auto;: Setzt oben und unten einen Abstand von 20px und zentriert den Button horizontal durch auto links und rechts.
+*/

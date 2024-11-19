@@ -1,0 +1,34 @@
+body {
+  font-size: 16px; /* Setzt die Schriftgröße des gesamten Textes im Body auf 16px. Dies ist der Basiswert, von dem aus andere Schriftgrößen relativ angepasst werden können. */
+  font-family: Arial, sans-serif; /* Legt die Schriftart für den gesamten Text im Body auf Arial fest. Falls Arial nicht verfügbar ist, wird eine generische sans-serif-Schriftart verwendet. */
+  background: linear-gradient(darkred, black); /* Erzeugt einen linearen Farbverlauf als Hintergrund, der von "darkred" (dunkelrot) zu "black" (schwarz) verläuft. */
+  height: 100vh; /* Setzt die Höhe des Body auf 100% der Viewport-Höhe (der sichtbare Bereich des Browsers), sodass der gesamte Bildschirm genutzt wird. */
+  max-width: 100vw; /* Setzt die maximale Breite des Body auf 100% der Viewport-Breite, sodass der Body nicht breiter als der Bildschirm wird. */
+  text-align: center; /* Zentriert den gesamten Text im Body horizontal. Alle Textelemente innerhalb des Body werden somit zentriert angezeigt. */
+}
+
+input {
+  margin: 20px; /* Fügt einen Abstand von 20px rund um das Eingabefeld hinzu, um es von anderen Elementen zu trennen. */
+}
+
+button {
+  padding: 10px; /* Fügt Innenabstand (Padding) von 10px rund um den Text des Buttons hinzu, um den Button größer und benutzerfreundlicher zu machen. */
+}
+
+/*
+Detaillierte Erklärung der Syntax:
+
+    body:
+        font-size: 16px;: Definiert die Grundschriftgröße des Textes im gesamten body. Der Wert 16px stellt eine standardmäßige Lesbarkeit dar, die auf den meisten Geräten gut funktioniert.
+        font-family: Arial, sans-serif;: Setzt die Schriftart auf Arial, eine serifenlose Schrift, die häufig in Webdesigns verwendet wird. Falls Arial nicht verfügbar ist, wird eine generische sans-serif-Schriftart verwendet.
+        background: linear-gradient(darkred, black);: Ein Hintergrundverlauf, der die Farben von darkred (dunkelrot) zu black (schwarz) über die Seite zieht. Das erzeugt einen schönen visuellen Effekt.
+        height: 100vh;: Setzt die Höhe des body-Elements auf 100% der Höhe des Viewports, was bedeutet, dass es den gesamten sichtbaren Bereich des Bildschirms abdeckt.
+        max-width: 100vw;: Begrenzung der maximalen Breite des body-Elements auf 100% der Viewport-Breite (d.h. der sichtbare Bereich des Browsers), um zu verhindern, dass die Seite horizontal gescrollt wird.
+        text-align: center;: Zentriert den Text und andere inline-Elemente wie Links und Schaltflächen horizontal innerhalb des body-Elements.
+
+    input:
+        margin: 20px;: Fügt allen input-Feldern einen äußeren Abstand (Margin) von 20px hinzu. Dies sorgt dafür, dass das Eingabefeld von anderen Elementen auf der Seite Abstand hält und nicht zu nah an anderen Elementen liegt.
+
+    button:
+        padding: 10px;: Fügt allen button-Elementen einen inneren Abstand von 10px hinzu, um den Button visuell größer und benutzerfreundlicher zu gestalten. Dies sorgt dafür, dass der Text innerhalb des Buttons genug Raum hat, um besser sichtbar und klickbarer zu sein.
+/*

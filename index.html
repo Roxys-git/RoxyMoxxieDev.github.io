@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Definiert die Sprache der Seite als Englisch -->
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Setzt die Ansichtsgröße für responsive Design -->
+    <meta charset="utf-8"> <!-- Definiert den Zeichensatz der Seite -->
+    <link rel="stylesheet" href="styles.css"> <!-- Verknüpft das Stylesheet mit der HTML-Seite -->
+    <title>My portfolio</title> <!-- Setzt den Titel der Seite, der im Browser angezeigt wird -->
+  </head>
+  <body>
+    <div class="navbar"> <!-- Container für die Navigationsleiste -->
+      <nav id="navbar"> <!-- Navigationsmenü -->
+        <a href="#welcome-section">About</a> <!-- Link zur Sektion über mich -->
+        <a href="#projects">Work</a> <!-- Link zur Projektssektion -->
+        <a href="#contact">Contact</a> <!-- Link zur Kontaktsektion -->
+      </nav>
+    </div>
+    <section id="welcome-section"> <!-- Willkommenssektion -->
+      <h1>Hey I am Roxy</h1> <!-- Hauptüberschrift -->
+      <p>a developer</p> <!-- Beschreibung -->
+    </section>
+    <section id="projects"> <!-- Projektssektion -->
+      <div class="project-tile">Project Overview</div> <!-- Überschrift für die Projekte -->
+      <div class="project"> <!-- Container für die Projekte -->
+        <div class="pin"> <!-- Projekt 1 -->
+          <a href="Umfrageformular/index.html">Project 1</a>
+        </div>
+        <div class="pin"> <!-- Projekt 2 -->
+          <a href="Tribut-Seite/index.html">Project 2</a>
+        </div>
+        <div class="pin"> <!-- Projekt 3 -->
+          <a href="Technische Dokumentation/index.html">Project 3</a>
+        </div>
+        <div class="pin"> <!-- Projekt 4 -->
+          <a href="Landing Page/index.html">Project 4</a>
+        </div>
+        <div class="pin"> <!-- Projekt 5 -->
+          <a href="Palindrome Checker/index.html">Project 5</a>
+        </div>
+        <div class="pin"> <!-- Projekt 6 -->
+          <a href="Roman Numeral Converter/index.html">Project 6</a>
+        </div>
+        <div class="pin"> <!-- Projekt 7 -->
+          <a href="Telephone Number Validator/index.html">Project 7</a>
+        </div>
+        <div class="pin"> <!-- Projekt 8 -->
+          <a href="Cash Register/index.html">Project 8</a>
+        </div>
+        <div class="pin"> <!-- Projekt 9 -->
+          <a href="Pokemon search App/index.html">Project 9</a>
+        </div>
+      </div>
+      <div>
+        <button id="see-more-projects">More Projects</button>
+      </div>
+    </section>
+    <section id="contact"> <!-- Kontaktsektion -->
+      <div class="buttons-container">
+        <button id="profile-link-btn">
+          <a id="profile-link" href="https://github.com/RoxyMoxxxie" target="_blank"> <!-- Link zu GitHub-Profil -->
+            <img id="github" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png"><br>GitHub
+          </a>
+        </button>
+      </div>
+      <div>
+        <button id="profile-link-btn">
+          <a id="profile-link" href="www.linkedin.com/in/roxana-anastasia-zwicky-544a1b32b" target="_blank"> <!-- Link zu LinkedIn-Profil -->
+            <img id="linkedin" src="https://www.vectorkhazana.com/assets/images/products/Linkedin_ico.jpg"><br>LinkedIn
+          </a>
+        </button>
+      </div>
+      <div>
+        <button id="profile-link-btn">
+          <a id="profile-link" href="mailto:roxanaanastasiazwicky@gmail.com"> <!-- Link zum Versenden einer E-Mail -->
+            <img id="mail" src="https://www.redirect301.de/wp-content/uploads/at-zeichen-klammeraffe.png"><br>Send a mail
+          </a>
+        </button>
+      </div>
+      <div>
+        <button id="profile-link-btn">
+          <a id="profile-link" href="tel:+41-79-138-29-28"> <!-- Link zum Anrufen -->
+            <img id="phone" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB7760Q-6KQke4pTjKKmp3g9lbhwP_opkFgOMSt3qGhQnOd_FKN_jsH-n5OUXApvGT74Q&usqp=CAU"><br>Call me
+          </a>
+        </button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--
+1. Dokumenttyp und Sprache
+
+    <!DOCTYPE html>: Diese Zeile definiert den Dokumenttyp und informiert den Browser darüber, dass es sich um ein HTML5-Dokument handelt. Dies ist entscheidend für die korrekte Interpretation des HTML-Codes.
+    <html lang="en">: Dieser Tag umschließt den gesamten Inhalt des HTML-Dokuments. Das Attribut lang="en" zeigt an, dass die Sprache des Dokuments Englisch ist, was für Barrierefreiheit und Suchmaschinenoptimierung wichtig ist.
+
+2. Kopfbereich (<head>)
+
+Der Kopfbereich enthält Metainformationen über das Dokument, die für die Benutzer nicht sichtbar sind, jedoch für die Darstellung und die Funktionalität der Seite wichtig sind.
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">: Diese Zeile sorgt dafür, dass die Seite auf mobilen Geräten korrekt skaliert wird. Sie definiert, dass die Breite des Ansichtsfensters (Viewport) der Breite des Geräts entspricht und der Zoom-Faktor bei 1.0 beginnt.
+    <meta charset="utf-8">: Diese Zeile legt die Zeichencodierung auf UTF-8 fest, was sicherstellt, dass internationale Zeichen korrekt dargestellt werden.
+    <link rel="stylesheet" href="styles.css">: Diese Zeile verknüpft eine externe CSS-Datei, die für das Styling der Seite verantwortlich ist. Diese Datei enthält die CSS-Regeln, die das Aussehen und Layout der HTML-Elemente bestimmen.
+    <title>My portfolio</title>: Der Titel der Seite, der im Browser-Tab angezeigt wird. Dies gibt den Benutzern einen Hinweis auf den Inhalt der Seite.
+
+3. Körperbereich (<body>)
+
+Der Körperbereich enthält den gesamten sichtbaren Inhalt der Seite.
+3.1 Navigationsleiste
+
+    <div class="navbar">: Dieser Container umschließt die Navigationsleiste, die Links zu den verschiedenen Sektionen der Seite enthält.
+        <nav id="navbar">: Dies ist das eigentliche Navigationsmenü.
+            <a href="#welcome-section">About</a>: Dieser Link führt zur Willkommenssektion.
+            <a href="#projects">Work</a>: Dieser Link führt zur Projektssektion.
+            <a href="#contact">Contact</a>: Dieser Link führt zur Kontaktsektion.
+
+3.2 Willkommenssektion
+
+    <section id="welcome-section">: Dieser Abschnitt dient als Einführung oder Begrüßung.
+        <h1>Hey I am Roxy</h1>: Dies ist die Hauptüberschrift, die den Namen des Entwicklers präsentiert.
+        <p>a developer</p>: Dieser Paragraph bietet eine kurze Beschreibung oder Berufsbezeichnung des Entwicklers.
+
+3.3 Projektssektion
+
+    <section id="projects">: Dieser Abschnitt ist dem Portfolio der Projekte gewidmet.
+        <div class="project-tile">These are some of my projects</div>: Diese div stellt eine Überschrift für die Projekte dar.
+        <div class="project">: Dieser Container umschließt alle einzelnen Projekte.
+            Projekte: Jedes Projekt wird in einem div mit der Klasse pin dargestellt, und jeder Link führt zu einem bestimmten Projekt:
+                <div class="pin">: Enthält den Link für Projekt 1.
+                <div class="pin">: Enthält den Link für Projekt 2.
+                <div class="pin">: Enthält den Link für Projekt 3.
+                <div class="pin">: Enthält den Link für Projekt 4.
+                <div class="pin">: Enthält den Link für Projekt 5.
+                <div class="pin">: Enthält den Link für Projekt 6.
+
+3.4 Kontaktsektion
+
+    <section id="contact">: Dieser Abschnitt ist für Kontaktinformationen gedacht.
+        Links zu sozialen Medien und Kontaktmöglichkeiten: Jede Kontaktmöglichkeit wird in einem div dargestellt, das einen Link und ein zugehöriges Bild enthält:
+            GitHub:
+                <a id="profile-link" href="https://github.com/RoxyMoxxxie" target="_blank">: Dieser Link führt zum GitHub-Profil.
+                <img id="github" src="...">: Das Bild des GitHub-Logos.
+                <br>GitHub: Text, der unter dem Bild angezeigt wird.
+            LinkedIn:
+                <a id="profile-link" href="www.linkedin.com/in/roxana-anastasia-zwicky-544a1b32b" target="_blank">: Link zu LinkedIn.
+                <img id="linkedin" src="...">: Bild des LinkedIn-Logos.
+                <br>LinkedIn: Text unter dem Bild.
+            E-Mail:
+                <a id="profile-link" href="mailto:roxanaanastasiazwicky@gmail.com">: Link zum Versenden einer E-Mail.
+                <img id="mail" src="...">: Bild eines E-Mail-Symbols.
+                <br>Send a mail: Text unter dem Bild.
+            Telefon:
+                <a id="profile-link" href="tel:+41-79-138-29-28">: Link zum Anrufen.
+                <img id="phone" src="...">: Bild eines Telefons.
+                <br>Call me: Text unter dem Bild.
+
+Zusammenfassung
+
+Die Struktur des HTML-Dokuments ist klar und funktional aufgebaut. Der Kopfbereich enthält wichtige Metainformationen und Links zu Stylesheets, während der Körperbereich die Inhalte in logisch strukturierte Sektionen untert
+
+eilt. Die Navigationsleiste ermöglicht eine einfache Navigation zu den verschiedenen Abschnitten der Seite. Die Willkommenssektion stellt den Entwickler vor, während die Projektssektion eine Übersicht über die Arbeiten bietet. Die Kontaktsektion ermöglicht es Benutzern, den Entwickler über verschiedene Plattformen zu erreichen. Durch diese strukturierte Herangehensweise wird sichergestellt, dass die Seite sowohl benutzerfreundlich als auch optisch ansprechend ist.
+-->

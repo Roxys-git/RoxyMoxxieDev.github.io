@@ -1,0 +1,91 @@
+/* Setzt das Box-Modell für alle Elemente auf border-box, damit Padding und Border in die Gesamtbreite und -höhe einfließen */
+* {
+  box-sizing: border-box;
+}
+
+/* Hintergrundfarbe des Body auf dunkles Violett setzen und Textfarbe auf ein leuchtendes Gelb einstellen */
+body {
+  background-color: darkviolet;
+  color: #dfff00;
+}
+
+/* Hauptbereich der Webseite: Schriftart und -größe festlegen */
+main {
+  font-family: Arial, sans-serif; /* Verwendung von Arial oder einer ähnlichen Schriftart */
+  font-size: 16px; /* Standard-Schriftgröße für den Hauptinhalt */
+}
+
+/* Schriftgröße für die Hauptüberschrift festlegen */
+.main-title {
+  font-size: 32px; /* Größe der Hauptüberschrift */
+}
+
+/* Schriftgröße für Header-Elemente festlegen */
+header {
+  font-size: 24px; /* Größe der Überschriften innerhalb der Abschnitte */
+}
+
+/* Navigation Links stilisieren */
+.nav-link {
+  display: flex; /* Flexbox verwenden, um die Links anzuordnen */
+  color: #dfff00; /* Textfarbe auf leuchtendes Gelb setzen */
+  text-decoration: none; /* Unterstreichung der Links entfernen */
+}
+
+/* Navigationsleiste zentrieren */
+#navbar {
+  text-align: center; /* Text in der Navigationsleiste zentrieren */
+}
+
+/* Flexbox-Eigenschaften für die Links in der Navigationsleiste */
+.links {
+  display: flex; /* Flexbox verwenden, um die Links nebeneinander anzuordnen */
+  justify-content: space-between; /* Gleiche Abstände zwischen den Links */
+  margin-top: 20px; /* Abstand nach oben */
+  margin-bottom: 50px; /* Abstand nach unten */
+}
+
+/* Stil für Abschnitte innerhalb der Hauptinhaltsbereiche */
+.main-section {
+  margin-bottom: 20px; /* Abstand nach unten für die Abschnitte */
+  margin: 0 10px; /* Abstand links und rechts */
+  border-bottom: 1px solid #dfff00; /* Untere Rahmenlinie in leuchtendem Gelb */
+}
+
+/* Zusätzliche Stilregeln für den horizontalen Trenner */
+hr {
+  color: #dfff00; /* Farbe des Trenners auf leuchtendes Gelb setzen */
+  height: 8px; /* Höhe des Trenners festlegen */
+  background-color: #dfff00; /* Hintergrundfarbe des Trenners */
+  margin-bottom: 0; /* Abstand nach unten auf 0 setzen */
+}
+
+/* Stil für Navigation Links erweitern */
+.nav-link {
+  display: flex; /* Flexbox verwenden für die Links */
+  color: #dfff00; /* Textfarbe auf leuchtendes Gelb setzen */
+  text-decoration: none; /* Unterstreichung entfernen */
+  border: 2px solid #dfff00; /* Rahmen um die Links in leuchtendem Gelb */
+  padding: 34.575px 138.3px; /* Innenabstand für die Links */
+  font-size: 24px; /* Schriftgröße für die Links festlegen */
+}
+
+/* Flexbox-Eigenschaften für die Links in der Navigationsleiste */
+.links {
+  display: flex; /* Flexbox verwenden, um die Links nebeneinander anzuordnen */
+  justify-content: space-between; /* Gleiche Abstände zwischen den Links */
+  margin-top: 0; /* Abstand nach oben */
+  margin-bottom: 20px; /* Abstand nach unten */
+}
+
+/* Stil für Abschnitte innerhalb der Hauptinhaltsbereiche */
+.main-section {
+  margin-bottom: 20px; /* Abstand nach unten für die Abschnitte */
+  margin: 0 10px; /* Abstand links und rechts */
+  border-bottom: 1px solid #dfff00; /* Untere Rahmenlinie in leuchtendem Gelb */
+}
+
+/* Media-Query für responsive Design */
+@media (max-width: 5000px) and (min-width: 200px) {
+  /* Hier können spezifische Stilregeln für verschiedene Bildschirmgrößen hinzugefügt werden */
+}

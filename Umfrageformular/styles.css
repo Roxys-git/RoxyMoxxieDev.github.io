@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Setzt die Schriftart für den gesamten Body */
+  background-color: blueviolet; /* Hintergrundfarbe für den Body */
+  text-align: center; /* Zentriert den Text im Body */
+  margin: auto; /* Setzt die Margen auf automatisch, um den Inhalt zu zentrieren */
+  max-width: 600px; /* Maximale Breite des Body auf 600px festlegen */
+  width: 100vw;
+  height: 100vh; /* Höhe des Body auf 100% des Browsers festlegen */
+  color: whitesmoke; /* Textfarbe für den Body */
+  border: 2px solid black; /* Schwarz gefärbter Rand um den Body */
+}
+
+.fieldset-one {
+  height: 250px; /* Höhe des ersten Fieldsets */
+  border: none; /* Entfernt den Standardrand des Fieldsets */
+}
+
+label {
+  display: block; /* Labels als Blockelemente darstellen */
+  margin: 20px 0; /* Margin oberhalb und unterhalb des Labels */
+  text-align: center; /* Zentriert den Text in den Labels */
+}
+
+#name, #email, #number, #dropdown {
+  display: block; /* Diese Eingabeelemente als Blockelemente darstellen */
+  text-align: center; /* Zentriert den Text in diesen Eingabeelementen */
+  margin: auto; /* Setzt die Margen automatisch, um sie zu zentrieren */
+  margin-top: 2px; /* Margin oben für die Eingabeelemente */
+  background-color: blue; /* Hintergrundfarbe für die Eingabeelemente */
+  color: white; /* Textfarbe für die Eingabeelemente */
+}
+
+input[type="submit"] {
+  display: block; /* Submit-Button als Blockelement darstellen */
+  padding: 20px; /* Innenabstand für den Button */
+  margin: auto; /* Setzt die Margen automatisch, um den Button zu zentrieren */
+  margin-top: 10px; /* Margin oben für den Button */
+  background-color: blueviolet; /* Hintergrundfarbe für den Submit-Button */
+  font-size: 16px; /* Schriftgröße für den Button */
+  border: 1px solid; /* Rand um den Button */
+}
+
+fieldset {
+  border: none; /* Entfernt den Standardrand des Fieldsets */
+}
+
+legend {
+  font-size: 30px; /* Schriftgröße für das Legend-Element */
+  margin: 2px; /* Margin um das Legend-Element */
+}

@@ -1,0 +1,94 @@
+/* Universelle Selektoren und Pseudoelemente */
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* box-sizing: border-box; sorgt dafür, dass Padding und Border in die Breite und Höhe der Elemente eingerechnet werden, 
+     anstatt die Gesamtgröße des Elements zu vergrößern. Dies erleichtert das Layout und sorgt für ein konsistentes Verhalten der Größen. */
+}
+
+/* :root-Selektor für CSS-Variablen */
+:root {
+  --background-color: linear-gradient(darkviolet, black);
+  /* Definiert eine CSS-Variable für den Hintergrund als Farbverlauf von Darkviolet nach Schwarz */
+  
+  --text-color: chartreuse;
+  /* Definiert eine CSS-Variable für die Textfarbe als Chartreuse (grünlich-gelb) */
+}
+
+/* Styling für das body-Element */
+body {
+  font-family: Times New Roman, serif;
+  /* Setzt die Schriftart für die gesamte Seite auf "Times New Roman", eine Serifenschriftart */
+
+  font-size: 24px;
+  /* Grundschriftgröße für den Text im body-Bereich */
+
+  color: var(--text-color);
+  /* Verwendet die CSS-Variable --text-color, die in :root definiert ist, für die Textfarbe */
+
+  background: var(--background-color);
+  /* Verwendet die CSS-Variable --background-color als Hintergrund, um den definierten Farbverlauf anzuzeigen */
+
+  height: 100vh;
+  /* Setzt die Höhe des body-Elements auf die volle Höhe des Viewports (100% der Bildschirmhöhe) */
+
+  width: 100vw;
+  /* Setzt die Breite des body-Elements auf die volle Breite des Viewports (100% der Bildschirmbreite) */
+}
+
+/* Hauptbereichs-Styles */
+main {
+  display: flex;
+  /* Setzt das Layout des main-Elements auf Flexbox, um die flexible Anordnung von Kind-Elementen zu ermöglichen */
+
+  flex-direction: column;
+  /* Ordnet die Kind-Elemente in einer Spalte (vertikal) an */
+
+  align-items: center;
+  /* Zentriert die Kind-Elemente horizontal im Container */
+
+  justify-content: center;
+  /* Zentriert die Kind-Elemente vertikal im Container */
+}
+
+/* Überschrift-Styles */
+h1 {
+  font-size: 36px;
+  /* Setzt die Schriftgröße für h1-Überschriften */
+
+  text-align: center;
+  /* Zentriert den Text innerhalb des h1-Elements */
+}
+
+/* Gemeinsame Styles für input- und button-Elemente */
+input, button {
+  background: var(--background);
+  /* Setzt den Hintergrund für die input- und button-Elemente. Vermutlich soll hier `var(--background-color)` stehen, 
+     um den gleichen Farbverlauf wie der Hintergrund des body zu verwenden. */
+
+  color: var(--text-color);
+  /* Setzt die Textfarbe auf die vordefinierte CSS-Variable --text-color */
+
+  font-size: 24px;
+  /* Setzt die Schriftgröße auf 24px, passend zur body-Schriftgröße */
+}
+
+/* Input-spezifische Styles */
+input {
+  width: 70vw;
+  /* Setzt die Breite des Eingabefelds auf 70% der Viewport-Breite */
+
+  max-width: 425px;
+  /* Begrenzung der Breite auf maximal 425px, um das Layout auf großen Bildschirmen stabil zu halten */
+
+  height: 36px;
+  /* Setzt die Höhe des Eingabefelds */
+
+  margin: 3px;
+  /* Fügt einen kleinen Außenabstand hinzu, um das Eingabefeld von benachbarten Elementen leicht zu trennen */
+}
+
+/* Button-spezifische Styles */
+button {
+  padding: 8px 20px;
+  /* Fügt Innenabstände hinzu: 8px oben/unten und 20px links/rechts für besseren Klickbereich und visuellen Komfort */
+}

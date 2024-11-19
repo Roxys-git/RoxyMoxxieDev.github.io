@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Definiert den Dokumenttyp als HTML5 -->
+<html>
+  <head>
+    <!-- Definiert die Zeichenkodierung als UTF-8, die gängige Kodierung für Sonderzeichen -->
+    <meta charset="utf-8">
+    <!-- Ermöglicht die Skalierung der Seite auf mobilen Geräten für eine responsive Ansicht -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stellt sicher, dass der Seiteninhalt in Internet Explorer im Standard-Modus gerendert wird -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Verknüpft das Stylesheet für CSS-Stile, die im Dokument verwendet werden -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Legt den Titel des Dokuments fest, der im Browser-Tab angezeigt wird -->
+    <title>Cash Register</title>
+  </head>
+
+  <body>
+    <!-- Hauptinhaltsbereich der Seite -->
+    <main>
+      <!-- Header-Bereich der Seite mit Titel -->
+      <header>
+        <h1>Cash Register</h1> <!-- Überschrift der Seite -->
+      </header>
+
+      <!-- Sektion für Benutzerinteraktionen -->
+      <section>
+        <!-- Beschreibender Text über dem Eingabefeld -->
+        <p id="text-over-input">Cash from customer:</p>
+        
+        <!-- Eingabefeld, in das der Benutzer den gezahlten Betrag eingeben kann -->
+        <input id="cash" placeholder="Enter your cash">
+        
+        <!-- Bereich zur Anzeige des Wechselgeldes -->
+        <div>
+          <p id="change-due"></p> <!-- Leeres Element zur späteren Anzeige des Wechselgeldes -->
+        </div>
+
+        <!-- Button, der die Berechnung des Wechselgeldes auslöst -->
+        <button id="purchase-btn">Purchase</button>
+      </section>
+    </main>
+
+    <!-- Verknüpfung des JavaScript-Codes für Interaktionen -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!--
+Erklärung der Elemente und Attribute
+
+    <!DOCTYPE html>
+        Definiert das Dokument als HTML5 und hilft dem Browser, den HTML5-Standard anzuwenden.
+
+    <html> und <head>
+        Das <html>-Tag umschließt das gesamte HTML-Dokument.
+        Der <head>-Bereich enthält Metadaten und Links zu Ressourcen, die das Dokument nutzen wird.
+
+    Meta-Tags (<meta>)
+        charset="utf-8": Stellt sicher, dass der Text des Dokuments mit der UTF-8-Zeichenkodierung interpretiert wird, was internationale Zeichen unterstützt.
+        name="viewport": Passt das Layout an die Bildschirmgröße an, insbesondere für mobile Geräte.
+        http-equiv="X-UA-Compatible" content="IE=edge": Stellt sicher, dass Internet Explorer das Dokument im Edge-Modus rendert und die neueste Rendering-Engine verwendet.
+
+    Stylesheet-Link (<link rel="stylesheet" href="styles.css">)
+        Verlinkt eine externe CSS-Datei (styles.css), die das Design und Layout des Dokuments bestimmt.
+
+    <title>-Tag
+        Der Text im <title>-Tag wird im Browser-Tab und bei Suchmaschinen als Titel angezeigt.
+
+    <body>-Tag
+        Der Hauptteil des Dokuments. Alles innerhalb des <body> wird im Browser dargestellt.
+
+    <main>, <header>, und <section> Tags
+        <main>: Der Hauptinhalt der Seite.
+        <header>: Der Kopfbereich, in diesem Fall enthält er die Hauptüberschrift <h1>.
+        <section>: Definiert einen eigenständigen Abschnitt für Benutzerinteraktionen.
+
+    <input id="cash" placeholder="Enter your cash">
+        Ein Eingabefeld mit der ID cash und dem Platzhaltertext „Enter your cash“, der dem Benutzer anzeigt, dass er hier den gezahlten Betrag eingeben soll.
+
+    <div><p id="change-due"></p></div>
+        Ein leerer Paragraph (<p>) mit der ID change-due, in dem später das Wechselgeld oder Statusmeldungen angezeigt werden.
+
+    <button id="purchase-btn">Purchase</button>
+
+    Ein Button mit der ID purchase-btn. Wenn darauf geklickt wird, wird die Funktion zur Berechnung des Wechselgelds aufgerufen (definiert in script.js).
+
+    <script src="script.js"></script>
+
+    Bindet eine JavaScript-Datei (script.js) ein, die das Verhalten und die Funktionalität der Seite steuert.
+
+Dieser HTML-Code stellt eine einfache Benutzeroberfläche für ein Kassenregister dar, bei dem der Benutzer einen Betrag eingeben und durch Klicken auf „Purchase“ das Wechselgeld ermitteln kann.
+
+-->

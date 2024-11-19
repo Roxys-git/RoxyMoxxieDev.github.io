@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Deklaration des HTML-Dokuments und Festlegung der Sprachangabe für den Inhalt als Englisch -->
+  <head>
+    <!-- Der <head>-Bereich enthält Metadaten und Verknüpfungen zu externen Dateien -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Stellt sicher, dass die Webseite auf mobilen Geräten korrekt angezeigt wird, indem sie sich der Bildschirmbreite anpasst -->
+    
+    <meta charset="utf-8" />
+    <!-- Definiert die Zeichencodierung als UTF-8, was alle gängigen Zeichen und Symbole unterstützt -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Weist den Browser an, den besten verfügbaren Darstellungsmodus zu verwenden, besonders für ältere Internet Explorer-Versionen -->
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Verknüpft eine externe CSS-Datei, die das Layout und das Design der Seite definiert -->
+    
+    <title>Roman Numeral Converter</title>
+    <!-- Der Titel der Webseite, wie er im Browser-Tab angezeigt wird -->
+  </head>
+  
+  <body>
+    <!-- Der Hauptinhalt der Webseite befindet sich im <body>-Bereich -->
+    
+    <main>
+      <!-- <main> ist ein semantisches Element, das den Hauptinhalt der Seite kennzeichnet -->
+      
+      <header>
+        <!-- <header> enthält Kopfzeileninhalte oder ein Einführungselement für die Seite -->
+        
+        <h1>Roman Numeral Converter</h1>
+        <!-- <h1> ist die Hauptüberschrift der Seite -->
+      </header>
+      
+      <div>
+        <!-- Ein <div> ist ein Container-Element, das hier als Umhüllung für das Eingabefeld dient -->
+        
+        <input id="number" />
+        <!-- Ein Eingabefeld, in das der Benutzer eine Zahl zur Umrechnung in eine römische Zahl eingeben kann -->
+        <!-- Das Attribut id="number" ermöglicht die Identifizierung des Eingabefelds im JavaScript-Code -->
+      </div>
+      
+      <div>
+        <!-- Ein weiterer <div>-Container für den Button -->
+        
+        <button id="convert-btn">Convert</button>
+        <!-- Ein Button, der die Umrechnung startet -->
+        <!-- Das Attribut id="convert-btn" wird verwendet, um den Button in JavaScript zu identifizieren -->
+      </div>
+      
+      <p id="output"></p>
+      <!-- Ein Absatz-Element (<p>), das das Ergebnis oder eine Nachricht anzeigt -->
+      <!-- Das Attribut id="output" erlaubt die Zielauswahl für den Text, der hier durch JavaScript eingefügt wird -->
+      
+      <script src="script.js"></script>
+      <!-- Verknüpft die JavaScript-Datei, die die Logik zur Umrechnung in römische Zahlen enthält -->
+    </main>
+  </body>
+</html>
+
+<!--Erklärung der Struktur und Syntax
+
+    Grundstruktur:
+        <!DOCTYPE html> legt fest, dass das Dokument HTML5 verwendet.
+        <html lang="en"> beginnt das HTML-Dokument und gibt die Sprache des Inhalts als Englisch an.
+
+    Meta-Tags im <head>:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />: Aktiviert das responsive Design, sodass die Webseite auf verschiedenen Bildschirmgrößen (z. B. Mobilgeräten) gut aussieht.
+        <meta charset="utf-8" />: Legt die Zeichencodierung fest, um internationale Zeichen zu unterstützen.
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />: Optimiert die Darstellung auf älteren Versionen des Internet Explorers.
+        <link rel="stylesheet" href="styles.css">: Verknüpft die CSS-Datei zur Gestaltung der Seite.
+
+    Kopfzeile und Hauptüberschrift:
+        <header> und <h1> bilden die Kopfzeile mit einer Titelzeile für die Anwendung.
+
+    Eingabe und Button:
+        <input id="number">: Ein Eingabefeld, in das der Benutzer eine Zahl eingeben kann, die umgewandelt wird.
+        <button id="convert-btn">Convert</button>: Ein Button, der die Konvertierungsfunktion aufruft, wenn er geklickt wird.
+
+    Ausgabe-Absatz:
+        <p id="output"></p>: Ein Absatz-Element zur Anzeige der Konvertierung oder eventueller Fehlermeldungen.
+
+    JavaScript-Datei:
+        <script src="script.js"></script> lädt das JavaScript mit der Konvertierungslogik.-->

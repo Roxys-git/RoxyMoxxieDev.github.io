@@ -1,0 +1,25 @@
+body {
+  font-family: Verdana, Arial, sans-serif; /* Setzt die Schriftart für den gesamten Body; falls Verdana nicht verfügbar ist, wird Arial und dann eine generische sans-serif Schriftart verwendet */
+  font-size: 20px; /* Legt die Schriftgröße auf 20 Pixel fest */
+  display: flex; /* Aktiviert das Flexbox-Modell für den Body */
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+}
+
+h1 {
+  text-align: center; /* Zentriert den Text in der h1-Überschrift */
+} 
+
+#image {
+  display: block; /* Setzt das Bild als Blockelement, damit Margin-Eigenschaften wirken */
+  margin: auto; /* Zentriert das Bild horizontal innerhalb seines Containers */
+  margin-bottom: 20px; /* Fügt einen Abstand von 20 Pixeln unter dem Bild hinzu */
+  max-width: 100%; /* Stellt sicher, dass das Bild nicht breiter als sein Container wird */
+  height: auto; /* Beibehaltung des Seitenverhältnisses des Bildes */
+  justify-content: center; /* (Überflüssig, da justify-content nicht auf Blockelemente anwendbar ist) */
+  position: static; /* Setzt die Position des Bildes auf den Standardwert; es hat keinen besonderen Einfluss */
+}
+
+#tribute-info {
+  width: 720px; /* Setzt die Breite des Absatzes auf 720 Pixel */
+  text-align: center; /* Zentriert den Text innerhalb des Absatzes */
+}

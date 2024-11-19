@@ -9,77 +9,84 @@
   </head>
   <body>
     <h1 id="title">Umfrageformular für einen Camperausbau</h1> <!-- Hauptüberschrift des Formulars -->
-    <form method="post" action="https://survey-form.camperausbau.org" id="survey-form"> <!-- Beginnt das Formular, POST-Methode, Ziel-URL -->
-      <fieldset class="fieldset-one"> <!-- Erstes Fieldset für persönliche Informationen -->
-        <label for="name">Name:</label>
-        <input id="name" name="name" type="text" placeholder="Gib dein Name ein" required> <!-- Eingabefeld für den Namen, Pflichtfeld -->
+    <section>
+      <form method="post" action="https://survey-form.camperausbau.org" id="survey-form"> <!-- Beginnt das Formular, POST-Methode, Ziel-URL -->
+        <fieldset class="fieldset-first-page" id="fieldset-one"> <!-- Erstes Fieldset für persönliche Informationen -->
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Gib dein Name ein" required> <!-- Eingabefeld für den Namen, Pflichtfeld -->
+          
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" placeholder="Gib deine Email ein" required> <!-- Eingabefeld für die E-Mail-Adresse, Pflichtfeld -->
+          
+          <label for="number">Alter:</label>
+          <input id="number" name="age" type="number" min="18" max="99" placeholder="Wähle"> <!-- Eingabefeld für das Alter, mit Mindest- und Höchstgrenze -->
+          
+          <label for="dropdown">Konfiguration:</label>
+          <select id="dropdown" name="configuration"> <!-- Dropdown-Menü für die Konfiguration des Campers -->
+            <option value="">(Wählen Sie)</option> <!-- Standardoption -->
+            <option value="1">Vollintegriert</option> <!-- Option 1 -->
+            <option value="2">Teilintegriert</option> <!-- Option 2 -->
+            <option value="3">Kastenwagen</option> <!-- Option 3 -->
+          </select>
+        </fieldset>
+        <div class="fieldset-others">
+          <fieldset id="fieldset-two">
+            <legend>Batterientyp</legend> <!-- Überschrift für das Fieldset Batterientyp -->
+            <label>
+              <input type="checkbox" value="1"> Ich möchte Litiumbatterien
+            </label>
+            <label>
+              <input type="checkbox" value="2"> Ich möchte AGM-Batterien
+            </label>
+            <label>
+              <input type="checkbox" value="3"> Ich möchte Gelbatterien
+            </label>
+          </fieldset>
+    
+          <fieldset id="fieldset-three">
+            <legend>Heizung</legend> <!-- Überschrift für das Fieldset Heizung -->
+            <label>
+              <input type="checkbox" value="1"> Ich möchte mit Gas heizen
+            </label>
+            <label>
+              <input type="checkbox" value="2"> Ich möchte mit Strom heizen
+            </label>
+            <label>
+              <input type="checkbox" value="3"> Ich möchte mit Diesel heizen
+            </label>
+          </fieldset>
+    
+          <fieldset id="fieldset-four">
+            <legend>Kochen</legend> <!-- Überschrift für das Fieldset Kochen -->
+            <label>
+              <input type="checkbox" value="1"> Ich möchte mit Gas kochen
+            </label>
+            <label>
+              <input type="checkbox" value="2"> Ich möchte mit Strom kochen
+            </label>
+          </fieldset>
+    
+          <fieldset id="fieldset-five">
+            <legend>Solar</legend> <!-- Überschrift für das Fieldset Solar -->
+            <label>
+              <input type="radio" value="1" name="solar-type"> mit Solar
+            </label>
+            <label>
+              <input type="radio" value="2" name="solar-type"> ohne Solar
+            </label>
+          </fieldset>
+        </div>
         
-        <label for="email">Email:</label>
-        <input id="email" name="email" type="email" placeholder="Gib deine Email ein" required> <!-- Eingabefeld für die E-Mail-Adresse, Pflichtfeld -->
+        <div id="textarea">
+          <label for="description"><h3>Deine Vorstellung des Grundrisses:</h3><br></label> <!-- Beschreibung für das Textfeld -->
+          <textarea id="description" rows="21" cols="49" placeholder="Gib deinen Text ein"></textarea> <!-- Textarea für zusätzliche Informationen -->
+          <br><br><button><input id="submit" type="submit" value="Submit"></button> <!-- Submit-Button zum Absenden des Formulars -->
+        </div>
         
-        <label for="number">Alter:</label>
-        <input id="number" name="age" type="number" min="18" max="99" placeholder="Wähle"> <!-- Eingabefeld für das Alter, mit Mindest- und Höchstgrenze -->
+  
         
-        <label for="dropdown">Konfiguration:</label>
-        <select id="dropdown" name="configuration"> <!-- Dropdown-Menü für die Konfiguration des Campers -->
-          <option value="">(Wählen Sie)</option> <!-- Standardoption -->
-          <option value="1">Vollintegriert</option> <!-- Option 1 -->
-          <option value="2">Teilintegriert</option> <!-- Option 2 -->
-          <option value="3">Kastenwagen</option> <!-- Option 3 -->
-        </select>
-      </fieldset>
-      
-      <fieldset>
-        <legend>Batterientyp</legend> <!-- Überschrift für das Fieldset Batterientyp -->
-        <label>
-          <input type="checkbox" value="1"> Ich möchte Litiumbatterien
-        </label>
-        <label>
-          <input type="checkbox" value="2"> Ich möchte AGM-Batterien
-        </label>
-        <label>
-          <input type="checkbox" value="3"> Ich möchte Gelbatterien
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Heizung</legend> <!-- Überschrift für das Fieldset Heizung -->
-        <label>
-          <input type="checkbox" value="1"> Ich möchte mit Gas heizen
-        </label>
-        <label>
-          <input type="checkbox" value="2"> Ich möchte mit Strom heizen
-        </label>
-        <label>
-          <input type="checkbox" value="3"> Ich möchte mit Diesel heizen
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Kochen</legend> <!-- Überschrift für das Fieldset Kochen -->
-        <label>
-          <input type="checkbox" value="1"> Ich möchte mit Gas kochen
-        </label>
-        <label>
-          <input type="checkbox" value="2"> Ich möchte mit Strom kochen
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>Solar</legend> <!-- Überschrift für das Fieldset Solar -->
-        <label>
-          <input type="radio" value="1" name="solar-type"> mit Solar
-        </label>
-        <label>
-          <input type="radio" value="2" name="solar-type"> ohne Solar
-        </label>
-      </fieldset>
-
-      <label for="description">Deine Vorstellung des Grundrisses:</label> <!-- Beschreibung für das Textfeld -->
-      <textarea id="description" rows="7" cols="49" placeholder="Gib deinen Text ein"></textarea> <!-- Textarea für zusätzliche Informationen -->
-
-      <input id="submit" type="submit" value="Submit"> <!-- Submit-Button zum Absenden des Formulars -->
-    </form>
+      </form>
+    </section>
   </body>
 </html>
 

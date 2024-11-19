@@ -8,20 +8,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: blueviolet; /* Hintergrundfarbe */
   color: whitesmoke; /* Textfarbe */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
+section {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
 form {
-  background-color: white; /* Hintergrund des Formulars */
+  background-color: blueviolet; /* Hintergrund des Formulars */
   padding: 20px;
   border-radius: 8px; /* Abgerundete Ecken */
   width: 100%;
-  max-width: 600px; /* Maximale Breite */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Weiches Schatten */
 }
 
@@ -70,6 +73,11 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
+button {
+  border: 1px solid black;
+  background-color: blueviolet;
+}
+
 input[type="submit"] {
   background-color: blueviolet;
   color: white;
@@ -85,7 +93,8 @@ input[type="submit"]:hover {
   background-color: #7a4de9; /* Dunklerer Lila-Ton für Hover-Effekt */
 }
 
-@media (max-width: 768px) {
+/* Smartphone Optimierungen */
+@media (max-width: 600px) {
   form {
     padding: 15px;
   }
@@ -96,5 +105,180 @@ input[type="submit"]:hover {
   select,
   textarea {
     font-size: 1rem;
+  }
+
+  button {
+    padding: 12px 30vw;
+  }
+
+  input[type="submit"] {
+    padding: 15px 0; /* Größere Fläche für den Submit-Button */
+  }
+
+  .fieldset-first-page {
+    height: 82vh;
+  }
+  
+  .fieldset-others {
+    height: 100vh;
+  }
+  
+  #fieldset-two, #fieldset-three {
+    height: 24vh;
+  }
+  
+  #fieldset-four, #fieldset-five {
+    height: 20vh;
+  }
+  
+  #textarea {
+    height: 92vh;
+    text-align: center;
+  }
+}
+
+/* Tablet Optimierungen Hochformat */
+@media screen and (orientation: portrait) {
+  @media (min-width: 601px) and (max-width: 1024px)  {
+    form {
+      padding: 10px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      font-size: 1rem; /* Etwas größere Schrift auf Tablets */
+    }
+  
+    button {
+      padding: 12px 43vw;
+    }
+  
+    input[type="submit"] {
+      padding: 10px 0;
+    }
+  
+    #title {
+      margin: 5vh;
+      font-size: 2.2rem;
+    }
+  
+    .fieldset-first-page {
+      height: 85vh;
+    }
+    
+    .fieldset-others {
+      height: 100vh;
+    }
+    
+    #fieldset-two, #fieldset-three {
+      height: 24vh;
+    }
+    
+    #fieldset-four, #fieldset-five {
+      height: 20vh;
+    }
+    
+    #textarea {
+      height: 92vh;
+      text-align: center;
+    }
+  }  
+}
+
+
+
+/* Tablet Optimierungen Querformat */
+@media screen and (orientation: landscape) {
+  @media (min-width: 768px) and (max-width: 1024px) {
+    section {
+    width: 100vw;
+    }
+  
+    body {
+      padding: 0;
+    }
+    
+    form {
+      padding: 20px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      font-size: 1.1rem; /* Etwas größere Schrift auf Tablets */
+    }
+  
+    button {
+      padding: 12px 47vw;
+    }
+  
+    input[type="submit"] {
+      padding: 12px 20px;
+    }
+  
+    #title {
+      margin: 5vh;
+      font-size: 2.2rem;
+    }
+  
+    .fieldset-first-page {
+      height: 84vh;
+    }
+    
+    .fieldset-others {
+      height: 100vh;
+    }
+    
+    #fieldset-two, #fieldset-three {
+      height: 24vh;
+    }
+    
+    #fieldset-four, #fieldset-five {
+      height: 20vh;
+    }
+    
+    #textarea {
+      height: 92vh;
+      text-align: center;
+    }
+  }
+  
+}
+
+
+/* Laptop und größere Bildschirme */
+@media (min-width: 1025px) {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    padding-top: 50px; /* Abstand vom oberen Rand */
+  }
+
+  form {
+    padding: 30px;
+    max-width: 800px; /* Größeres Formular auf größeren Bildschirmen */
+  }
+
+  h1 {
+    font-size: 2rem; /* Größere Schrift auf großen Bildschirmen */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 1.2rem; /* Größere Schrift auf Laptops */
+  }
+
+  input[type="submit"] {
+    padding: 15px 30px; /* Etwas größere Fläche für den Submit-Button */
   }
 }

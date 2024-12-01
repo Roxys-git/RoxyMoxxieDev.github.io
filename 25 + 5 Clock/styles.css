@@ -66,6 +66,24 @@ button {
   }
 }
 
+/* Für iPad (Portrait) */
+@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
+  html {
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
+  }
+  button {
+    font-size: 5vw;
+    padding: 1vh 10vw;
+  }
+
+  button > #start, #reset {
+    justify-content: space-around;
+    padding: 1vh 7vw;
+  }
+}
+
 /* Für Handys im Landscape-Modus (Breite: 480px - 600px) */
 @media screen and (min-width: 480px) and (max-width: 600px) and (orientation: landscape) {
   html {

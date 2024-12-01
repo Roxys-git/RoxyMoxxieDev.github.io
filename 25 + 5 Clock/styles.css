@@ -48,14 +48,21 @@ button {
   }
 }
 
-/* Für Tablets im Portrait-Modus (Breite: 600px - 768px) */
+/* Für Tablets im Portrait-Modus (Breite: 600px - 767px) */
 @media screen and (min-width: 600px) and (max-width: 768px) and (orientation: portrait) {
   html {
-    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    font-size: 3vw;
   }
   button {
-    font-size: 2vw;
-    padding: 2vh 2.5vw;
+    font-size: 5vw;
+    padding: 1vh 10vw;
+  }
+
+  button > #start, #reset {
+    justify-content: space-around;
+    padding: 1vh 7vw;
   }
 }
 

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(#fecc4c, #855917);
+}
+
+h1 {
+  color: #060f4b;
+  text-align: center;
+  margin-bottom: 5vh;
+  font-size: 2.9vw;
+}
+
+#display {
+  height: 20vh;
+  width: 20vw;
+  background: #060f4b;
+  border-radius: 0.5vw;
+  border: 0.1vw solid #99FFFF;
+  color: #99FFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 16vh;
+  font-size: 1vw;
+}
+
+button {
+  border: none;
+  border-radius: 0.25vw;
+  padding: 2vh 1vw;
+  font-size: 1vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background: #060f4b;
+  color: #99FFFF;
+}
+
+.drum-pad.active {
+  background: linear-gradient(#fecc4c, #855917);
+  /* Beispiel: Farbe ändern */
+  transform: scale(0.95);
+  /* Kleiner Effekt beim Drücken */
+  box-shadow: 0 4px #e67e22;
+  /* Schatten simuliert "gedrückten" Zustand */
+}
+
+/* Für Geräte mit einer Breite von mindestens 1200px (Große Desktops) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+}
+/* Für Geräte mit einer Breite von maximal 768px (Tablets und kleinere Geräte) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+/* Für Geräte mit einer Breite von maximal 600px (Smartphones) */
+@media (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

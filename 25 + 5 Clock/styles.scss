@@ -1,0 +1,25 @@
+$background: linear-gradient(#DAA520, #000000);
+$button: #2F4F4F;
+$text: #FAEBD7;
+
+html {
+  background: $background;
+  height: 100vh;
+  color: $text;
+  font-size: 1vw;
+  margin: auto;
+}
+
+section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 5vh auto;
+  padding: 2vh 2vw;
+  font-size: 1vw;
+  background-color: $button;
+  color: $text;
+  border-radius: 0.5vw; 
+}

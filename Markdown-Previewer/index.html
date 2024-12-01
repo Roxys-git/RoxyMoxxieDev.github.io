@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Markdown-Previewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.0.1/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Markdown Previewer</h1>
+      </header>
+      <main>
+        <section>
+          <!-- Editor Section -->
+          <div>
+            <div id="editor-title">Editor</div>
+            <textarea id="editor"></textarea>
+          </div>
+          <!-- Previewer Section -->
+          <div>
+            <div id="previewer-title">Previewer</div>
+            <div id="preview"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>&#169; Roxana Zwicky 2024</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.0.1/marked.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

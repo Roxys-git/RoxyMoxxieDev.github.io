@@ -1,0 +1,74 @@
+$background: #990066;
+$text: #0B033A;
+$box: #E9A4F0;
+$code: #F3C2F8;
+$toolbar: #9F6DA4;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: $background;
+  color: $text;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 4vh;
+}
+
+#editor-title {
+  background: $toolbar;
+  width: 40vw;
+  margin: auto;
+  border: 0.25vw solid $text;
+  border-bottom: none;
+  border-radius: 1vw 1vw 0 0;
+  font-weight: 900;
+  text-align: left;
+  text-indent: 0.6em;
+}
+
+#previewer-title {
+  background: $toolbar;
+  width: 60vw;
+  margin: auto;
+  border: 0.25vw solid $text;
+  border-bottom: none;
+  border-radius: 1vw 1vw 0 0;
+  font-weight: 900;
+  text-align: left;
+  text-indent: 0.6em;
+}
+
+#editor, #preview {
+  background: $box;
+  border: 0.25vw solid $text;
+  border-top: none;
+  border-radius: 0 0 1vw 1vw;
+}
+
+#editor {
+  height: 20vh;
+  width: 40vw;
+  margin-bottom: 4vh;
+}
+
+#preview {
+  height: 120vh;
+  width: 60vw;
+}
+
+img {
+  margin: auto;
+}
+
+footer {
+  visibility: hidden;
+}

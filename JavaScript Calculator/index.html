@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-with, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://db.onlinewebfonts.com/c/d25b6ed650b522a5cdd12418b609574d?family=Cyberchild+CE" rel="stylesheet">
+    <title>javascript-calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript Calculator</h1>
+    </header>
+    <main>
+      <section id="calculator">
+        <div id="display"></div>
+        <div id="buttons">
+          <!-- Erste Zeile -->
+          <div class="row">
+            <button id="clear">C</button>
+          </div>
+          <!-- Zweite bis fünfte Zeile für Zahlen und Operatoren -->
+          <div id="numbers-grid">
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="zero">0</button>
+            <button id="decimal">.</button>
+            <button id="equals">=</button>
+          </div>
+          <div id="operators-column">
+            <button id="add">+</button>
+            <button id="subtract">−</button>
+            <button id="multiply">×</button>
+            <button id="divide">÷</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="visibility: hidden;">&#169 RoxyMoxxie Dev (Roxana Zwicky) 2024<br>Roxana Zwicky</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

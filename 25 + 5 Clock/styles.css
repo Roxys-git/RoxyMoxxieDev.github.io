@@ -74,10 +74,10 @@ button {
 /* Für Handys im Portrait-Modus (Breite < 480px) */
 @media screen and (max-width: 480px) and (orientation: portrait) {
   html {
-    font-size: 3vw;
+    font-size: 5vw;
   }
   button {
     font-size: 3vw;
-    padding: 2vh 2vw;
+    padding: 2vh 4vw;
   }
 }

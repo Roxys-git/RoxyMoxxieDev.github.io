@@ -2,114 +2,29 @@ html {
   background: linear-gradient(#DAA520, #000000);
   height: 100vh;
   color: #FAEBD7;
-  font-size: 1vw;
-  margin: auto;
+  font-size: 2vw;
+  margin: 0 auto;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 10vh;
-  margin-top: 5vh;
+  margin-bottom: 1vh;
+  margin-top: 1.5vh;
 }
 
 section {
   text-align: center;
-  margin-top: 20px;
 }
 
 button {
-  margin: 5vh auto;
-  padding: 2vh 2vw;
-  font-size: 1vw;
+  margin: 0 auto;
+  padding: 3.5vh 13.6vw;
+  font-size: 2vw;
   background-color: #2F4F4F;
   color: #FAEBD7;
   border-radius: 0.5vw;
 }
 
-/* Für 4K Bildschirme (Breite >= 2560px) */
-@media screen and (min-width: 2560px) {
-  html {
-    font-size: 1.2vw;
-  }
-  button {
-    font-size: 1.2vw;
-    padding: 3vh 3vw;
-  }
-}
-
-/* Für Tablets im Landscape-Modus (Breite: 768px - 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  html {
-    font-size: 1.5vw;
-  }
-  button {
-    font-size: 1.5vw;
-    padding: 2.5vh 2.5vw;
-  }
-}
-
-/* Für Tablets im Portrait-Modus (Breite: 600px - 767px) */
-@media screen and (min-width: 600px) and (max-width: 768px) and (orientation: portrait) {
-  html {
-    display: flex;
-    justify-content: center;
-    font-size: 3vw;
-  }
-  button {
-    font-size: 5vw;
-    padding: 1vh 10vw;
-  }
-
-  button > #start, #reset {
-    justify-content: space-around;
-    padding: 1vh 7vw;
-  }
-}
-
-/* Für iPad (Portrait) */
-@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: portrait) {
-  html {
-    display: flex;
-    justify-content: center;
-    font-size: 3vw;
-  }
-  button {
-    font-size: 5vw;
-    padding: 1vh 10vw;
-  }
-
-  button > #start, #reset {
-    justify-content: space-around;
-    padding: 1vh 7vw;
-  }
-}
-
-/* Für Handys im Landscape-Modus (Breite: 480px - 600px) */
-@media screen and (min-width: 480px) and (max-width: 600px) and (orientation: landscape) {
-  html {
-    font-size: 2.5vw;
-  }
-
-  button {
-    font-size: 2.5vw;
-    padding: 2vh 2vw;
-  }
-}
-
-/* Für Handys im Portrait-Modus (Breite < 480px) */
-@media screen and (max-width: 480px) and (orientation: portrait) {
-  html {
-    display: flex;
-    justify-content: center;
-    font-size: 5vw;
-  }
-  button {
-    font-size: 5vw;
-    padding: 3vh 15vw;
-  }
-
-  button > #start, #reset {
-    justify-content: space-around;
-    padding: 3vh 10vw;
-  }
+button > #start_stop, #reset {
+  padding: 3.5vh 7vw;
 }

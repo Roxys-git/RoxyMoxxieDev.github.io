@@ -4,6 +4,9 @@ html {
   color: #FAEBD7;
   font-size: 2vw;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {

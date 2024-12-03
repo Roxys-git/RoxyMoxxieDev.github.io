@@ -31,3 +31,26 @@ button {
 button > #start_stop, #reset {
   padding: 3.5vh 7vw;
 }
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  h1 {
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 1.5vh;
+    font-size: 4vh;
+  }
+  
+  section {
+    text-align: center;
+    font-size: 2vh;
+  }
+
+  button {
+    margin: 5vh auto;
+    padding: 3.5vh 20vw;
+    font-size: 4vw;
+    background-color: #2F4F4F;
+    color: #FAEBD7;
+    border-radius: 2vw;
+  }
+}

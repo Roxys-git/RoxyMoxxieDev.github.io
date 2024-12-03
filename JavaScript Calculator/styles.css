@@ -27,11 +27,11 @@ main {
 
 #calculator {
   background-color: #CFC6CF;
-  max-width: 30vw;
+  width: 31vw;
   display: flex;
   flex-direction: column;
   border-radius: 0.5vw;
-  height: 60vh;
+  height: 70vh;
 }
 
 #display {
@@ -88,7 +88,7 @@ main {
 button {
   border: 0.11vw solid #FFFFFF;
   border-radius: 0.25vw;
-  padding: 2vh 0.9vw;
+  padding: 3vh 0.9vw;
   font-size: 2vw;
   cursor: pointer;
   pointer-events: auto;
@@ -99,6 +99,7 @@ button {
 
 #clear {
   background-color: #BF0606;
+  width: 52.3vw;
 }
 
 #numbers-grid > button:not(#decimal):not(#equals) {
@@ -115,4 +116,138 @@ button {
 
 #operators-column > button {
   background-color: #E6ED13;
+}
+
+@media (max-width: 1370px) and (orientation: landscape) {
+  #calculator {
+    background-color: #CFC6CF;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    height: 70vh;
+  }
+
+  button {
+    border: 0.11vw solid #FFFFFF;
+    border-radius: 1vw;
+    padding: 4vh 0.9vw;
+    font-size: 2vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: #510052;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  h1 {
+    text-align: center;
+    margin: 5vh;
+    color: #CFC6CF;
+    font-size: 9vw;
+  }
+
+  #calculator {
+    background-color: #CFC6CF;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2vw;
+    height: 70vh;
+  }
+
+  #display {
+    background-color: #FFFFFF;
+    height: 10vh;
+    margin: 2%;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1vw;
+    font-size: 4vw;
+    color: #510052;
+    border-radius: 2vw;
+  }
+
+  button {
+    border: 0.11vw solid #FFFFFF;
+    border-radius: 2vw;
+    padding: 3.5vh 0.9vw;
+    font-size: 4vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: #510052;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  #calculator {
+    background-color: #CFC6CF;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    height: 70vh;
+  }
+
+  button {
+    border: 0.11vw solid #FFFFFF;
+    border-radius: 1vw;
+    padding: 3vh 0.9vw;
+    font-size: 2vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: #510052;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  h1 {
+    text-align: center;
+    margin: 5vh;
+    color: #CFC6CF;
+    font-size: 9vw;
+  }
+
+  #calculator {
+    background-color: #CFC6CF;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    height: 70vh;
+  }
+
+  #display {
+    background-color: #FFFFFF;
+    height: 10vh;
+    margin: 2%;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1vw;
+    font-size: 7vw;
+    color: #510052;
+    border-radius: 2vw;
+  }
+
+  button {
+    border: 0.11vw solid #FFFFFF;
+    border-radius: 2vw;
+    padding: 3.5vh 0.9vw;
+    font-size: 7vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: #510052;
+  }
 }

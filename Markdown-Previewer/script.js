@@ -1,28 +1,22 @@
 // Initiales Markdown für den Editor (User Story #6)
 const initialMarkdown = `
-# Überschrift H1
-## Unterüberschrift H2
-<a href="https://roxymoxxiedev.github.io">RoxyMoxxieDev</a>
+<div id="title-from-js">
+  <a href="https://roxymoxxiedev.github.io">RoxyMoxxie Dev</a>
+</div>
+  <h1>You can create your Website,<br> 
+    based on Hypertext Marking Language,<br> 
+    within your own files.<br>
+  </h1>
 
-\`const example = "Code";\`
+  <img src="Logo Entwurf 1.png" alt="RoxyMoxxieDev">
 
-Inline-Code: \`const example = "Code";\`
-
-\`\`\`javascript
-// Ein Codeblock
-function greet() {
-  console.log("Hello, World!");
-}
-\`\`\`
-
-- Ein Listenelement
-- Noch ein Listenelement
-
-> Dies ist ein Blockquote.
-
-<img src="Logo Entwurf 1 150 px.png" alt="RoxyMoxxieDev">
-
-**Fettgedruckter Text**
+  <p>Roxana Zwicky<br>
+     <a href="https://roxymoxxiedev.github.io">RoxMoxxie Dev</a><br>
+     <a href="https://github.com/RoxyMoxxieDev/RoxyMoxxieDev.github.io">GitHub</a><br>
+     <a href="www.linkedin.com/in/roxana-anastasia-zwicky-544a1b32b">LinkedIn</a><br>
+     <a href="mailto:roxanaanastasiazwicky@gmail.com">&#9993</a><br>
+     <a href="tel:+41-77-283-12-36">&#9990</a>
+  <p>
 `;
 
 // Elemente abrufen

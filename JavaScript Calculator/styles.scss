@@ -4,10 +4,12 @@ $equal-button: #4DFF00;
 $decimal-button: #004DFF;
 $number-button: #E700EA;
 $button-text: #510052;
-$text: #CFC6CF;
-$background: #510052;
-$calculator: #CFC6CF;
 $button-border: #FFFFFF;
+$text: #CFC6CF;
+$background: $button-text;
+$calculator: $text;
+$display: $button-border;
+
 
 *,
 *::after,
@@ -38,15 +40,15 @@ main {
 
 #calculator {
   background-color: $calculator;
-  max-width: 30vw;
+  width: 31vw;
   display: flex;
   flex-direction: column;
   border-radius: 0.5vw;
-  height: 60vh;
+  height: 70vh;
 }
 
 #display {
-  background-color: $button-border;
+  background-color: $display;
   height: 10vh;
   margin: 2%;
   margin-bottom: 5vh;
@@ -61,10 +63,8 @@ main {
 
 #buttons {
   display: grid;
-  grid-template-areas:
-    "clear clear clear operators"
-    "numbers numbers numbers operators";
-  grid-template-columns: repeat(3, 1fr) 1fr; // Drei Spalten für Zahlen, eine für Operatoren
+  grid-template-areas: "clear clear clear operators" "numbers numbers numbers operators";
+  grid-template-columns: repeat(3, 1fr) 1fr;
   grid-template-rows: auto 1fr;
   gap: 1vh;
 }
@@ -78,8 +78,8 @@ main {
 #numbers-grid {
   grid-area: numbers;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); // Drei Spalten für Zahlen
-  grid-template-rows: repeat(4, auto);  // Vier Zeilen für die Zahlen
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
   gap: 1vh;
 }
 
@@ -89,21 +89,19 @@ main {
   flex-direction: column;
   justify-content: space-between;
   margin-left: 1vw;
-
-  button {
-    flex: 1; // Gleiche Höhe für alle Buttons
-    margin-bottom: 1vh;
-
-    &:last-child {
-      margin-bottom: 0; // Kein Abstand für den letzten Button
-    }
-  }
+}
+#operators-column button {
+  flex: 1;
+  margin-bottom: 1vh;
+}
+#operators-column button:last-child {
+  margin-bottom: 0;
 }
 
 button {
   border: 0.11vw solid $button-border;
   border-radius: 0.25vw;
-  padding: 2vh 0.9vw;
+  padding: 3vh 0.9vw;
   font-size: 2vw;
   cursor: pointer;
   pointer-events: auto;
@@ -114,6 +112,7 @@ button {
 
 #clear {
   background-color: $clear-button;
+  width: 52.3vw;
 }
 
 #numbers-grid > button:not(#decimal):not(#equals) {
@@ -130,4 +129,138 @@ button {
 
 #operators-column > button {
   background-color: $operator-button;
+}
+
+@media (max-width: 1370px) and (orientation: landscape) {
+  #calculator {
+    background-color: $calculator;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    height: 70vh;
+  }
+
+  button {
+    border: 0.11vw solid $button-border;
+    border-radius: 1vw;
+    padding: 4vh 0.9vw;
+    font-size: 2vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: $button-text;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  h1 {
+    text-align: center;
+    margin: 5vh;
+    color: $text;
+    font-size: 9vw;
+  }
+
+  #calculator {
+    background-color: $calculator;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2vw;
+    height: 70vh;
+  }
+
+  #display {
+    background-color: $display;
+    height: 10vh;
+    margin: 2%;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1vw;
+    font-size: 4vw;
+    color: $button-text;
+    border-radius: 2vw;
+  }
+
+  button {
+    border: 0.11vw solid $button-border;
+    border-radius: 2vw;
+    padding: 3.5vh 0.9vw;
+    font-size: 4vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: $button-text;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  #calculator {
+    background-color: $calculator;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    height: 70vh;
+  }
+
+  button {
+    border: 0.11vw solid $button-border;
+    border-radius: 1vw;
+    padding: 3vh 0.9vw;
+    font-size: 2vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: $button-text;
+  }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  h1 {
+    text-align: center;
+    margin: 5vh;
+    color: $text;
+    font-size: 9vw;
+  }
+
+  #calculator {
+    background-color: $calculator;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    height: 70vh;
+  }
+
+  #display {
+    background-color: $display;
+    height: 10vh;
+    margin: 2%;
+    margin-bottom: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1vw;
+    font-size: 7vw;
+    color: $button-text;
+    border-radius: 2vw;
+  }
+
+  button {
+    border: 0.11vw solid $button-border;
+    border-radius: 2vw;
+    padding: 3.5vh 0.9vw;
+    font-size: 7vw;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+    font-family: "Cyberchild CE", sans-serif;
+    color: $button-text;
+  }
 }

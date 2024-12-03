@@ -24,8 +24,8 @@ h1 {
 }
 
 #display {
-  height: 20vh;
-  width: 20vw;
+  height: 30vh;
+  width: 60vw;
   background: #060f4b;
   border-radius: 0.5vw;
   border: 0.1vw solid #99FFFF;
@@ -35,18 +35,24 @@ h1 {
   align-items: center;
   margin: auto;
   margin-bottom: 16vh;
-  font-size: 1vw;
+  font-size: 3vw;
 }
 
 button {
-  border: none;
-  border-radius: 0.25vw;
-  padding: 2vh 1vw;
-  font-size: 1vw;
+  border: 0.1vw solid #99FFFF;
+  border-radius: 0.5vw;
+  padding: 2vh 2vw;
+  margin: 2vw;
+  font-size: 2vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
   background: #060f4b;
   color: #99FFFF;
+}
+
+#drum-pads {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .drum-pad.active {
@@ -56,31 +62,4 @@ button {
   /* Kleiner Effekt beim Drücken */
   box-shadow: 0 4px #e67e22;
   /* Schatten simuliert "gedrückten" Zustand */
-}
-
-/* Für Geräte mit einer Breite von mindestens 1200px (Große Desktops) */
-@media (min-width: 1200px) {
-  body {
-    font-size: 18px;
-  }
-
-  .container {
-    max-width: 1200px;
-  }
-}
-/* Für Geräte mit einer Breite von maximal 768px (Tablets und kleinere Geräte) */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}
-/* Für Geräte mit einer Breite von maximal 600px (Smartphones) */
-@media (max-width: 600px) {
-  body {
-    font-size: 12px;
-  }
-
-  .container {
-    padding: 10px;
-  }
 }

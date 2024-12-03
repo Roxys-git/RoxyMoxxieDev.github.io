@@ -7,7 +7,7 @@
 }
 
 body {
-  font-size: 16px; /* Legt die Schriftgröße für den gesamten Text fest */
+  font-size: 1.5rem; /* Legt die Schriftgröße für den gesamten Text fest */
   text-align: center; /* Zentriert den Text im Body */
   font-family: Arial, sans-serif; /* Setzt die Schriftart auf Arial, alternativ sans-serif */
 }
@@ -30,9 +30,9 @@ a {
 }
 
 nav a {
-  padding: 20px; /* Fügt Padding um die Links hinzu */
-  border: 0px solid transparent; /* Fügt einen transparenten Rand hinzu (z.B. für Hover-Effekte) */
-  border-radius: 20px; /* Macht die Ecken der Links rund */
+  padding: 0.5vw; /* Fügt Padding um die Links hinzu */
+  border: 0 solid transparent; /* Fügt einen transparenten Rand hinzu (z.B. für Hover-Effekte) */
+  border-radius: 0.5vw; /* Macht die Ecken der Links rund */
   background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
 }
 
@@ -42,18 +42,18 @@ nav a {
   flex-direction: column; /* Elemente vertikal ausrichten */
   justify-content: center; /* Zentriert den Inhalt horizontal */
   align-items: center; /* Zentriert den Inhalt vertikal */
-  padding: 20px; /* Fügt Abstand innerhalb des Abschnitts hinzu */
-  margin-top: 60px; /* Abstand für die fixe Navbar */
+  padding: 0.5vw; /* Fügt Abstand innerhalb des Abschnitts hinzu */
+  margin-top: 4vh; /* Abstand für die fixe Navbar */
   font-style: italic; /* Setzt den Schriftstil auf kursiv */
 }
 
 h1 {
-  font-size: 36px; /* Legt die Schriftgröße für die Hauptüberschrift fest */
+  font-size: 3rem; /* Legt die Schriftgröße für die Hauptüberschrift fest */
   margin: 0; /* Entfernt den Standardmargin */
 }
 
 p {
-  font-size: 24px; /* Legt die Schriftgröße für Absätze fest */
+  font-size: 2rem; /* Legt die Schriftgröße für Absätze fest */
   margin: 0; /* Entfernt den Standardmargin */
 }
 
@@ -66,11 +66,13 @@ h1, p {
   display: flex; /* Flexbox für die Anordnung */
   flex-direction: column; /* Elemente vertikal ausrichten */
   align-items: center; /* Inhalte horizontal zentrieren */
+  height: 100vh;
 }
 
-.project-tile {
-  margin-bottom: 20px; /* Abstand nach unten zur Projektliste */
-  font-size: 24px; /* Schriftgröße für den Titel */
+.project-title {
+  margin-top: 5vh;
+  margin-bottom: 2vh; /* Abstand nach unten zur Projektliste */
+  font-size: 2rem; /* Schriftgröße für den Titel */
   font-weight: bold; /* Fettgedruckt */
   text-decoration: underline; /* Unterstrichen */
 }
@@ -79,16 +81,34 @@ h1, p {
   display: flex; /* Projekte in einer Zeile */
   flex-wrap: wrap; /* Umbruch bei Platzmangel */
   justify-content: space-evenly; /* Gleichmäßige Verteilung */
-  gap: 20px; /* Abstand zwischen den Pins */
+  gap: 1vw; /* Abstand zwischen den Pins */
   width: 100%; /* Nimmt die volle Breite ein */
 }
 
+.pin {
+  border: 0px solid transparent; /* Fügt einen transparenten Rand hinzu */
+  padding: 2vh 1vw; /* Fügt Padding um die Pins hinzu */
+  margin: 1vw; /* Fügt Margin zwischen den Pins hinzu */
+  background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
+  border-radius: 2vw;
+}
+
+a > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 27.75vw;
+  max-height: 27.75vh;
+  border: 0.1vw solid #000000;
+  border-radius: 1vw;
+}
+
 #see-more-projects {
-  margin-top: 20px; /* Abstand oberhalb des Buttons */
-  padding: 10px 20px; /* Innenabstand für den Button */
+  margin-top: 2vh; /* Abstand oberhalb des Buttons */
+  padding: 1vh 11.25vw; /* Innenabstand für den Button */
   background: var(--gradient-color); /* Farbverlauf */
-  border-radius: 10px; /* Abgerundete Ecken */
-  font-size: 16px; /* Schriftgröße des Buttons */
+  border-radius: 0.5vw; /* Abgerundete Ecken */
+  font-size: 2rem; /* Schriftgröße des Buttons */
   cursor: pointer; /* Zeigt einen Klickhinweis an */
 }
 
@@ -119,15 +139,6 @@ h1, p {
   border-radius: 20px; /* Macht die Ecken des Icons rund */
   margin-bottom: 10px; /* Fügt Abstand zwischen Icon und Text hinzu */
 }
-
-.pin {
-  border: 0px solid transparent; /* Fügt einen transparenten Rand hinzu */
-  padding: 20vh; /* Fügt Padding um die Pins hinzu */
-  margin: 10px; /* Fügt Margin zwischen den Pins hinzu */
-  background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
-  border-radius: 20px;
-}
-
 
 #github {
   width: 40px; /* Setzt die Breite des GitHub-Icons */

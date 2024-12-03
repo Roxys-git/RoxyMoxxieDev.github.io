@@ -1,20 +1,22 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box; /* Setzt die Box-Modell-Option für alle Elemente, sodass Padding und Border zur Gesamtbreite und -höhe gehören */
 }
 
 body {
-  font-size: 16px; /* Setzt die Standard-Schriftgröße auf 16px */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75rem; /* Setzt die Standard-Schriftgröße auf 16px */
   font-weight: normal; /* Setzt das Schriftgewicht auf normal */
   background: linear-gradient(#000088, black); /* Setzt einen linearen Farbverlauf als Hintergrund von Blau zu Schwarz */
   color: whitesmoke; /* Setzt die Textfarbe auf ein helles Grau */
   text-align: center; /* Zentriert den Text im Körper */
+  margin: 0;
 }
 
-img {
-  width: 1200px; /* Setzt die Breite der Bilder auf 1200px */
-  height: 400px; /* Setzt die Höhe der Bilder auf 400px */
-  display: flex; /* Setzt die Anzeige des Bildes auf Flexbox */
-  margin: 0 auto; /* Zentriert das Bild horizontal */
+#header-img {
+  width: 100vw; /* Setzt die Breite der Bilder auf 1200px */
+  height: 20vh; /* Setzt die Höhe der Bilder auf 400px */
 }
 
 #nav-bar {
@@ -23,14 +25,15 @@ img {
   top: 0; /* Positioniert die Navigationsleiste am oberen Rand */
   position: fixed; /* Fixiert die Navigationsleiste, sodass sie beim Scrollen sichtbar bleibt */
   z-index: 100; /* Setzt den z-Index, um sicherzustellen, dass die Navigationsleiste über anderen Elementen liegt */
-  margin: 0; /* Entfernt den äußeren Abstand */
+  margin: 0;
+  gap: 5vh; /* Entfernt den äußeren Abstand */
 }
 
 button {
-  font-size: 20px; /* Setzt die Schriftgröße der Buttons auf 20px */
-  padding: 20px; /* Fügt Padding von 20px hinzu */
+  font-size: 2rem; /* Setzt die Schriftgröße der Buttons auf 20px */
+  padding: 1vh 1vw; /* Fügt Padding von 20px hinzu */
   background-color: whitesmoke; /* Setzt die Hintergrundfarbe der Buttons auf ein helles Grau */
-  border-radius: 40px; /* Macht die Ecken der Buttons abgerundet */
+  border-radius: 2vw; /* Macht die Ecken der Buttons abgerundet */
 }
 
 a {
@@ -38,39 +41,83 @@ a {
   color:  #000088; /* Setzt die Textfarbe der Links auf Dunkelblau */
 }
 
+#section-one {
+  height: 70vh;
+}
+
 h1 {
-  font-size: 32px; /* Setzt die Schriftgröße der Hauptüberschrift auf 32px */
+  font-size: 2.25em; /* Setzt die Schriftgröße der Hauptüberschrift auf 32px */
+  margin: 10vh;
 }
 
-#email {
-  width: 300px; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
-  height: 20px; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
-  font-size: 16px; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
+#inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#email, #number, #name {
+  width: 25vw; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
+  height: 2vh; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
+  font-size: 1.75rem; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
   color: #000088; /* Setzt die Textfarbe des E-Mail-Eingabefeldes auf Dunkelblau */
+  margin: 2vh auto;
 }
 
-.features {
-  max-width: 300px; /* Setzt die maximale Breite der Features auf 300px */
-  margin: auto; /* Zentriert das Feature-Element horizontal */
+#section-two {
+  height: 100vh;
 }
 
 h2 {
-  font-size: 24px; /* Setzt die Schriftgröße der Unterüberschrift auf 24px */
+  font-size: 4rem; /* Setzt die Schriftgröße der Unterüberschrift auf 24px */
   text-decoration: underline; /* Unterstreicht die Unterüberschrift */
+  margin-bottom: 21vh;
 }
 
-p {
-  font-size: 16px; /* Setzt die Schriftgröße für Absätze auf 16px */
-  font-weight: 900; /* Setzt das Schriftgewicht auf 900 (fett) */
+.features-container {
+  display: flex; /* Aktiviert Flexbox für den Container */
+  flex-wrap: wrap; /* Ermöglicht den Umbruch der Features, wenn der Platz nicht ausreicht */
+  gap: 7vh; /* Fügt einen Abstand zwischen den einzelnen Features hinzu */
+  justify-content: space-evenly; /* Verwendet den verfügbaren Raum gleichmäßig */
+  margin: 0 auto; /* Zentriert den Container */
+  max-width: 70vw;
 }
 
-li {
-  list-style-type: none; /* Entfernt die Standard-Aufzählungszeichen von Listen */
-  text-align: left; /* Setzt die Textausrichtung der Listenpunkte auf links */
+.features {
+  flex: 1 1 calc(33.33% - 1rem); /* Setzt jedes Feature auf ein Drittel der Container-Breite mit etwas Abstand */
+  max-width: 20vw; /* Verhindert, dass Features zu klein werden */
+  border: 0.2rem solid whitesmoke;
+  padding: 5rem; /* Fügt Padding innerhalb der Features hinzu */
+  border-radius: 2rem; /* Macht die Ecken der Features abgerundet */
 }
 
-br {
-  margin: 50px 0; /* Fügt einen vertikalen Abstand von 50px über und unter dem Zeilenumbruch hinzu */
+.features > p {
+  margin: 0;
+}
+
+#section-three {
+  height: 100vh;
+}
+
+#video {
+  width: 50vw;
+  height: 50vh;
+}
+
+#section-four {
+  height: 100vh;
+}
+
+#section-four > input {
+  padding: 2vh 2vw;
+  background-color: #010111;
+  color: whitesmoke;
+  font-size: 3rem;
+  margin-top: 10vh;
+  border-radius: 2rem;
+}
+
+#pricing {
+  margin: 10vh;
 }
 
 .prices {
@@ -78,17 +125,198 @@ br {
   justify-content: space-evenly; /* Verteilt die Preise gleichmäßig innerhalb des Containers */
   flex-direction: row; /* Setzt die Flex-Richtung auf Zeile */
   flex-wrap: wrap; /* Ermöglicht, dass die Elemente umgebrochen werden, wenn der Platz nicht ausreicht */
-  max-width: 900px; /* Setzt die maximale Breite auf 900px */
+  max-width: 80vw; /* Setzt die maximale Breite auf 900px */
   margin: 0 auto; /* Zentriert den Container horizontal */
 }
 
 .pricing {
-  border: 1px solid whitesmoke; /* Fügt eine Rahmenlinie um die Preisinformationen hinzu */
-  width: 240px; /* Setzt die Breite der Preisbox auf 240px */
-  padding: 30px; /* Fügt Padding von 30px innerhalb der Preisbox hinzu */
+  border: 0.2rem solid whitesmoke; /* Fügt eine Rahmenlinie um die Preisinformationen hinzu */
+  border-radius: 2rem;
+  width: 25vw; /* Setzt die Breite der Preisbox auf 240px */
+  height: 20vh;
+  padding: 4vw; /* Fügt Padding von 30px innerhalb der Preisbox hinzu */
   display: grid; /* Setzt die Anzeige der Preisbox auf Grid */
+  font-size: 3rem;
 }
 
-@media (max-width: 4000px) and (min-width: 200px) {
-  /* Media-Query für responsive Design, kann hier bei Bedarf angepasst werden */
+/* Full HD (1920px) */
+@media (max-width: 1920px) {
+  body {
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  #nav-bar {
+    gap: 6vh;
+  }
+
+  #inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #email, #number, #name {
+    width: 25vw; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
+    height: 3vh; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
+    font-size: 1.25rem; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
+    color: #000088; /* Setzt die Textfarbe des E-Mail-Eingabefeldes auf Dunkelblau */
+    margin: 2vh auto;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 15vh;
+  }
+
+  .features {
+    flex: 1 1 calc(33.33% - 1rem);
+    max-width: 22vw;
+    max-height: 15vh;
+    font-size: 1rem;
+    padding: 1vh
+  }
+
+  #video {
+    width: 45vw;
+    height: 45vh;
+  }
+
+  .pricing {
+    width: 25vw;
+    font-size: 2rem;
+  }
+}
+
+/* Tablet Portrait (768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  #header-img {
+    height: 15vh;
+    width: 100vw;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    margin: 5vh;
+  }
+
+  #nav-bar {
+    flex-direction: row;
+    gap: 3vh;
+  }
+
+  .features {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 40vw;
+  }
+
+  #video {
+    width: 60vw;
+    height: 30vh;
+  }
+
+  .pricing {
+    width: 40vw;
+  }
+}
+
+/* Tablet Landscape (1024px) */
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  #header-img {
+    height: 20vh;
+  }
+
+  #nav-bar {
+    flex-direction: row;
+    gap: 4vh;
+  }
+
+  .features {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 40vw;
+  }
+
+  #video {
+    width: 60vw;
+    height: 30vh;
+  }
+
+  .pricing {
+    width: 35vw;
+  }
+}
+
+/* Smartphone Portrait (375px) */
+@media (max-width: 375px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  #header-img {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin: 5vh;
+  }
+
+  #nav-bar {
+    flex-direction: row;
+    gap: 2vh;
+  }
+
+  .features {
+    flex: 1 1 calc(100% - 1rem);
+    max-width: 90vw;
+  }
+
+  #video {
+    width: 80vw;
+    height: 30vh;
+  }
+
+  .pricing {
+    width: 80vw;
+  }
+}
+
+/* Smartphone Landscape (667px) */
+@media (max-width: 667px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  #header-img {
+    height: 25vh;
+  }
+
+  #nav-bar {
+    flex-direction: row;
+    gap: 3vh;
+  }
+
+  .features {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 45vw;
+  }
+
+  #video {
+    width: 70vw;
+    height: 35vh;
+  }
+
+  .pricing {
+    width: 70vw;
+  }
 }

@@ -6,7 +6,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.75rem; /* Setzt die Standard-Schriftgröße auf 16px */
   font-weight: normal; /* Setzt das Schriftgewicht auf normal */
   background: linear-gradient(#000088, black); /* Setzt einen linearen Farbverlauf als Hintergrund von Blau zu Schwarz */
   color: whitesmoke; /* Setzt die Textfarbe auf ein helles Grau */
@@ -30,7 +29,7 @@ body {
 }
 
 button {
-  font-size: 2rem; /* Setzt die Schriftgröße der Buttons auf 20px */
+  font-size: 1.9vh; /* Setzt die Schriftgröße der Buttons auf 20px */
   padding: 1vh 1vw; /* Fügt Padding von 20px hinzu */
   background-color: whitesmoke; /* Setzt die Hintergrundfarbe der Buttons auf ein helles Grau */
   border-radius: 2vw; /* Macht die Ecken der Buttons abgerundet */
@@ -46,7 +45,7 @@ a {
 }
 
 h1 {
-  font-size: 2.25em; /* Setzt die Schriftgröße der Hauptüberschrift auf 32px */
+  font-size: 4vh; /* Setzt die Schriftgröße der Hauptüberschrift auf 32px */
   margin: 10vh;
 }
 
@@ -58,7 +57,7 @@ h1 {
 #email, #number, #name {
   width: 25vw; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
   height: 2vh; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
-  font-size: 1.75rem; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
+  font-size: 0.75vw; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
   color: #000088; /* Setzt die Textfarbe des E-Mail-Eingabefeldes auf Dunkelblau */
   margin: 2vh auto;
 }
@@ -68,8 +67,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem; /* Setzt die Schriftgröße der Unterüberschrift auf 24px */
-  text-decoration: underline; /* Unterstreicht die Unterüberschrift */
+  font-size: 4vh; /* Setzt die Schriftgröße der Unterüberschrift auf 24px */
   margin-bottom: 21vh;
 }
 
@@ -85,9 +83,10 @@ h2 {
 .features {
   flex: 1 1 calc(33.33% - 1rem); /* Setzt jedes Feature auf ein Drittel der Container-Breite mit etwas Abstand */
   max-width: 20vw; /* Verhindert, dass Features zu klein werden */
-  border: 0.2rem solid whitesmoke;
-  padding: 5rem; /* Fügt Padding innerhalb der Features hinzu */
-  border-radius: 2rem; /* Macht die Ecken der Features abgerundet */
+  border: 0.2vh solid whitesmoke;
+  padding: 2.5vw; /* Fügt Padding innerhalb der Features hinzu */
+  border-radius: 2vh; /* Macht die Ecken der Features abgerundet */
+  font-size: 1.9vh;
 }
 
 .features > p {
@@ -98,9 +97,12 @@ h2 {
   height: 100vh;
 }
 
-#video {
+#section-three > h2 {
+  margin: 2vh auto 20vh auto;
+}
+
+#video > img {
   width: 50vw;
-  height: 50vh;
 }
 
 #section-four {
@@ -111,9 +113,9 @@ h2 {
   padding: 2vh 2vw;
   background-color: #010111;
   color: whitesmoke;
-  font-size: 3rem;
+  font-size: 2.5vh;
   margin-top: 10vh;
-  border-radius: 2rem;
+  border-radius: 2vh;
 }
 
 #pricing {
@@ -130,193 +132,147 @@ h2 {
 }
 
 .pricing {
-  border: 0.2rem solid whitesmoke; /* Fügt eine Rahmenlinie um die Preisinformationen hinzu */
-  border-radius: 2rem;
+  border: 0.2vh solid whitesmoke; /* Fügt eine Rahmenlinie um die Preisinformationen hinzu */
+  border-radius: 2vh;
   width: 25vw; /* Setzt die Breite der Preisbox auf 240px */
   height: 20vh;
   padding: 4vw; /* Fügt Padding von 30px innerhalb der Preisbox hinzu */
   display: grid; /* Setzt die Anzeige der Preisbox auf Grid */
-  font-size: 3rem;
+  font-size: 2.5vh;
 }
 
-/* Full HD (1920px) */
-@media (max-width: 1920px) {
-  body {
-    font-size: 1.75rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  #nav-bar {
-    gap: 6vh;
-  }
-
-  #inputs {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #email, #number, #name {
-    width: 25vw; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
-    height: 3vh; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
-    font-size: 1.25rem; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
-    color: #000088; /* Setzt die Textfarbe des E-Mail-Eingabefeldes auf Dunkelblau */
-    margin: 2vh auto;
-  }
-
-  h2 {
-    font-size: 3rem;
-    margin-bottom: 15vh;
-  }
-
-  .features {
-    flex: 1 1 calc(33.33% - 1rem);
-    max-width: 22vw;
-    max-height: 15vh;
-    font-size: 1rem;
-    padding: 1vh
-  }
-
-  #video {
-    width: 45vw;
-    height: 45vh;
-  }
-
-  .pricing {
-    width: 25vw;
-    font-size: 2rem;
-  }
-}
-
-/* Tablet Portrait (768px) */
-@media (max-width: 768px) {
-  body {
-    font-size: 1.5rem;
-  }
-
+@media (max-width: 1400px) and (orientation: landscape) {
   #header-img {
-    height: 15vh;
     width: 100vw;
   }
 
-  h1 {
-    font-size: 2.25rem;
-    margin: 5vh;
-  }
-
   #nav-bar {
-    flex-direction: row;
-    gap: 3vh;
+    gap: 1vh;
   }
 
-  .features {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: 40vw;
+  button {
+    font-size: 1.5vh;
+    padding: 0.7vh;
+  }
+  
+  h1 {
+    font-size: 3.6vh;
   }
 
-  #video {
-    width: 60vw;
-    height: 30vh;
+  #inputs {
+    margin: 0 auto;
+  }
+
+  #email, #number, #name {
+    width: 80vw;
+    height: 5vh; 
+    font-size: 2vh;
+    border-radius: 1vh;
+  }
+
+  #section-two > h2 {
+    margin: 10vh;
+  }
+
+  .features-container {
+    margin: 0 auto;
+    gap: 5vh;
   }
 
   .pricing {
     width: 40vw;
+    margin: 0;
   }
 }
 
-/* Tablet Landscape (1024px) */
-@media (max-width: 1024px) {
-  body {
-    font-size: 1.5rem;
-  }
-
+@media (max-width: 1024px) and (orientation: portrait) {
   #header-img {
-    height: 20vh;
+    width: 100vw;
   }
 
   #nav-bar {
-    flex-direction: row;
-    gap: 4vh;
+    gap: 1vh;
   }
 
-  .features {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: 40vw;
+  button {
+    font-size: 1.5vh;
+    padding: 0.1vh;
   }
-
-  #video {
-    width: 60vw;
-    height: 30vh;
-  }
-
-  .pricing {
-    width: 35vw;
-  }
-}
-
-/* Smartphone Portrait (375px) */
-@media (max-width: 375px) {
-  body {
-    font-size: 1.25rem;
-  }
-
-  #header-img {
-    height: 30vh;
-  }
-
+  
   h1 {
-    font-size: 1.75rem;
-    margin: 5vh;
+    font-size: 3.6vh;
   }
 
-  #nav-bar {
-    flex-direction: row;
-    gap: 2vh;
+  #inputs {
+    margin: 0 auto;
+  }
+
+  #email, #number, #name {
+    width: 80vw;
+    height: 5vh; 
+    font-size: 2vh;
+    border-radius: 1vh;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .features-container {
+    margin: 0 auto;
+    gap: 1vh;
   }
 
   .features {
-    flex: 1 1 calc(100% - 1rem);
-    max-width: 90vw;
-  }
-
-  #video {
-    width: 80vw;
-    height: 30vh;
+    min-width: 80vw;
   }
 
   .pricing {
-    width: 80vw;
+    width: 40vw;
+    margin: 0;
   }
 }
 
-/* Smartphone Landscape (667px) */
-@media (max-width: 667px) {
-  body {
-    font-size: 1.25rem;
-  }
-
+@media (max-width: 950px) and (orientation: landscape) {
   #header-img {
-    height: 25vh;
+    width: 100vw;
   }
 
   #nav-bar {
-    flex-direction: row;
-    gap: 3vh;
+    gap: 1vh;
   }
 
-  .features {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: 45vw;
+  button {
+    font-size: 2.8vh;
+    padding: 0.1vh;
+  }
+  
+  h1 {
+    font-size: 3.6vh;
   }
 
-  #video {
-    width: 70vw;
-    height: 35vh;
+  #inputs {
+    margin: 0 auto;
+  }
+
+  #email, #number, #name {
+    width: 80vw;
+    height: 5vh; 
+    font-size: 2vh;
+    border-radius: 1vh;
+  }
+
+  #section-two > h2 {
+    margin: 10vh;
+  }
+
+  .features-container {
+    margin: 0 auto;
+    gap: 5vh;
   }
 
   .pricing {
-    width: 70vw;
+    width: 40vw;
+    margin: 0;
   }
 }

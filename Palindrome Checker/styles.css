@@ -4,6 +4,11 @@
     box-sizing: border-box;
   }
   
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /* Stil für das <body>-Element, das den gesamten Seitenhintergrund und Text beeinflusst */
   body {
     text-align: center; /* Zentriert den gesamten Text auf der Seite */
@@ -12,26 +17,40 @@
     width: 100vw; /* Setzt die Breite des <body> auf 100% der Breite des Viewports */
     font-family: Arial, sans-serif; /* Wählt die Schriftart Arial und eine generische serifenlose Schriftart */
     font-weight: 400; /* Normalgewicht der Schrift */
-    font-size: 16px; /* Grundgröße der Schrift */
+    font-size: 3vh; /* Grundgröße der Schrift */
+    margin: 0;
   }
   
   /* Stil für die Hauptüberschrift <h1> */
   h1 {
-    margin: 5vh; /* Setzt einen oberen und unteren Rand von 5% der Höhe des Viewports */
-    font-size: 32px; /* Festlegung der Schriftgröße für die Überschrift */
+    margin: 25vh auto 5vh auto; /* Setzt einen oberen und unteren Rand von 5% der Höhe des Viewports */
+    font-size: 7vh; /* Festlegung der Schriftgröße für die Überschrift */
   }
   
   /* Stil für das Texteingabefeld mit der ID "text-input" */
   #text-input {
-    width: 260px; /* Festlegung der Breite des Eingabefelds auf 260px */
-    margin: 0; /* Entfernt äußere Abstände */
+    width: 20vw;
+    height: 5vh;
+    font-size: 3vh;
+    margin: 2vh auto;
+    border: 0.2vw solid var(--text-color);
+    border-radius: 2vw;
   }
   
   /* Stil für den Button mit der ID "check-btn" */
   #check-btn {
-    padding: 2px 20px 2px 20px; /* Innenabstand: oben und unten 2px, links und rechts 20px */
-    display: flex; /* Stellt den Button als Flexbox-Element dar (erleichtert Zentrierung) */
-    margin: 20px auto; /* Setzt oben und unten 20px Abstand und zentriert den Button horizontal */
+    display: flex;
+    margin: auto;
+    padding: 2vw;
+    background: var(--background);
+    font-size: 3vh;
+    border: 0.2vw solid black;
+    cursor: pointer;
+    border-radius: 2vw;
+  }
+  
+  #check-btn:hover {
+    opacity: 0.7;
   }
 
 /*

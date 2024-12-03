@@ -5,6 +5,10 @@
   box-sizing: border-box; /* Definiert, dass die Größenberechnung Höhe und Breite des Inhalts sowie Padding und Border umfasst */
 }
 
+html {
+  margin: 0;
+}
+
 /* 2. Stilregeln für das Body-Element */
 body {
   /* Hintergrundbild und -layout für die gesamte Seite */
@@ -16,13 +20,14 @@ body {
   /* Text- und Schriftartstile */
   color: black;                 /* Standardtextfarbe */
   font-family: Arial, sans-serif; /* Schriftart, als Fallback Arial und eine generische serifenlose Schrift */
-  font-size: 20px;              /* Schriftgröße */
+  font-size: 3vh;              /* Schriftgröße */
   -webkit-text-stroke: 1px yellow; /* Gelber Rand um den Text, nur in Webkit-basierten Browsern sichtbar */
 
   /* Seitenlayout */
   width: 100vw;                 /* Vollständige Breite des Viewports */
   height: 100vh;                /* Vollständige Höhe des Viewports */
   text-align: center;           /* Zentriert den Text horizontal */
+  margin: 0;
 }
 
 /* 3. Gemeinsame Stile für .search-options und input */
@@ -32,13 +37,20 @@ body {
 
 /* 4. Stilregeln für das Eingabefeld */
 input {
-  background-color: black; /* Schwarzer Hintergrund für das Eingabefeld */
+  background-color: black;
+  width: 12vw;
+  height: 5vh;
+  font-size: 3.5vh;
+  margin: 2vw; /* Schwarzer Hintergrund für das Eingabefeld */
 }
 
 /* 5. Stilregeln für die Schaltfläche */
 button {
-  margin: 30px;             /* Abstand um die Schaltfläche herum */
-  background-color: black;  /* Schwarzer Hintergrund */
+  margin: 2vw;             /* Abstand um die Schaltfläche herum */
+  background-color: black;
+  width: 8vw;
+  height: 5vh;
+  font-size: 3.5vh;  /* Schwarzer Hintergrund */
 }
 
 /* 6. Stile für die .table-Klasse */
@@ -46,6 +58,22 @@ button {
   display: flex;            /* Verwendet Flexbox für flexibles Layout */
   justify-content: center;  /* Zentriert den Inhalt horizontal */
   text-align: left;         /* Richtet den Text innerhalb der Tabelle links aus */
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  p {
+    font-size: 2.8vh;
+  }
+  
+  input {
+    width: 60vw;
+    font-size: 3vh;
+  }
+  
+  button {
+    width: 30vw;
+    font-size: 3vh;
+  }
 }
 
 /*

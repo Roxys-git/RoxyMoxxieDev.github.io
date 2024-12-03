@@ -19,7 +19,7 @@ body {
   font-family: Times New Roman, serif;
   /* Setzt die Schriftart für die gesamte Seite auf "Times New Roman", eine Serifenschriftart */
 
-  font-size: 24px;
+  font-size: 2vh;
   /* Grundschriftgröße für den Text im body-Bereich */
 
   color: var(--text-color);
@@ -33,10 +33,7 @@ body {
 
   width: 100vw;
   /* Setzt die Breite des body-Elements auf die volle Breite des Viewports (100% der Bildschirmbreite) */
-}
 
-/* Hauptbereichs-Styles */
-main {
   display: flex;
   /* Setzt das Layout des main-Elements auf Flexbox, um die flexible Anordnung von Kind-Elementen zu ermöglichen */
 
@@ -47,12 +44,14 @@ main {
   /* Zentriert die Kind-Elemente horizontal im Container */
 
   justify-content: center;
+
+  margin: 0
   /* Zentriert die Kind-Elemente vertikal im Container */
 }
 
 /* Überschrift-Styles */
 h1 {
-  font-size: 36px;
+  font-size: 5vh;
   /* Setzt die Schriftgröße für h1-Überschriften */
 
   text-align: center;
@@ -68,27 +67,32 @@ input, button {
   color: var(--text-color);
   /* Setzt die Textfarbe auf die vordefinierte CSS-Variable --text-color */
 
-  font-size: 24px;
+  font-size: 3vh;
   /* Setzt die Schriftgröße auf 24px, passend zur body-Schriftgröße */
 }
 
+.input {
+  display: flex;
+  justify-content: center;
+}
 /* Input-spezifische Styles */
 input {
-  width: 70vw;
+  width: 32vw;
   /* Setzt die Breite des Eingabefelds auf 70% der Viewport-Breite */
 
-  max-width: 425px;
-  /* Begrenzung der Breite auf maximal 425px, um das Layout auf großen Bildschirmen stabil zu halten */
-
-  height: 36px;
-  /* Setzt die Höhe des Eingabefelds */
-
-  margin: 3px;
+  margin: 5vh;
+  border-radius: 0.5vw;
   /* Fügt einen kleinen Außenabstand hinzu, um das Eingabefeld von benachbarten Elementen leicht zu trennen */
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+}
 /* Button-spezifische Styles */
 button {
-  padding: 8px 20px;
+  padding: 2vh 2vw;
+  border: 0.2vh solid lightgray;
+  border-radius: 2vw;
   /* Fügt Innenabstände hinzu: 8px oben/unten und 20px links/rechts für besseren Klickbereich und visuellen Komfort */
 }

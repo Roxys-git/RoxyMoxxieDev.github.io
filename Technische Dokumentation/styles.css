@@ -1,91 +1,161 @@
-/* Setzt das Box-Modell für alle Elemente auf border-box, damit Padding und Border in die Gesamtbreite und -höhe einfließen */
+/* Allgemeine Stile */
 * {
   box-sizing: border-box;
 }
 
-/* Hintergrundfarbe des Body auf dunkles Violett setzen und Textfarbe auf ein leuchtendes Gelb einstellen */
 body {
   background-color: darkviolet;
   color: #dfff00;
+  margin: 0;
 }
 
-/* Hauptbereich der Webseite: Schriftart und -größe festlegen */
+/* Hauptbereich */
 main {
-  font-family: Arial, sans-serif; /* Verwendung von Arial oder einer ähnlichen Schriftart */
-  font-size: 16px; /* Standard-Schriftgröße für den Hauptinhalt */
+  font-family: Arial, sans-serif;
+  font-size: 1.5vh;
+  margin-top: 15vh;
 }
 
-/* Schriftgröße für die Hauptüberschrift festlegen */
 .main-title {
-  font-size: 32px; /* Größe der Hauptüberschrift */
+  font-size: 4vh;
+  letter-spacing: 2vw;
 }
 
-/* Schriftgröße für Header-Elemente festlegen */
 header {
-  font-size: 24px; /* Größe der Überschriften innerhalb der Abschnitte */
+  font-size: 3vh;
 }
 
-/* Navigation Links stilisieren */
-.nav-link {
-  display: flex; /* Flexbox verwenden, um die Links anzuordnen */
-  color: #dfff00; /* Textfarbe auf leuchtendes Gelb setzen */
-  text-decoration: none; /* Unterstreichung der Links entfernen */
-}
-
-/* Navigationsleiste zentrieren */
+/* Navigation */
 #navbar {
-  text-align: center; /* Text in der Navigationsleiste zentrieren */
+  text-align: center;
+  position: fixed;
+  background-color: darkviolet;
+  width: 100vw;
+  top: 0;
 }
 
-/* Flexbox-Eigenschaften für die Links in der Navigationsleiste */
 .links {
-  display: flex; /* Flexbox verwenden, um die Links nebeneinander anzuordnen */
-  justify-content: space-between; /* Gleiche Abstände zwischen den Links */
-  margin-top: 20px; /* Abstand nach oben */
-  margin-bottom: 50px; /* Abstand nach unten */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2vh;
 }
 
-/* Stil für Abschnitte innerhalb der Hauptinhaltsbereiche */
-.main-section {
-  margin-bottom: 20px; /* Abstand nach unten für die Abschnitte */
-  margin: 0 10px; /* Abstand links und rechts */
-  border-bottom: 1px solid #dfff00; /* Untere Rahmenlinie in leuchtendem Gelb */
-}
-
-/* Zusätzliche Stilregeln für den horizontalen Trenner */
-hr {
-  color: #dfff00; /* Farbe des Trenners auf leuchtendes Gelb setzen */
-  height: 8px; /* Höhe des Trenners festlegen */
-  background-color: #dfff00; /* Hintergrundfarbe des Trenners */
-  margin-bottom: 0; /* Abstand nach unten auf 0 setzen */
-}
-
-/* Stil für Navigation Links erweitern */
 .nav-link {
-  display: flex; /* Flexbox verwenden für die Links */
-  color: #dfff00; /* Textfarbe auf leuchtendes Gelb setzen */
-  text-decoration: none; /* Unterstreichung entfernen */
-  border: 2px solid #dfff00; /* Rahmen um die Links in leuchtendem Gelb */
-  padding: 34.575px 138.3px; /* Innenabstand für die Links */
-  font-size: 24px; /* Schriftgröße für die Links festlegen */
+  display: flex;
+  color: #dfff00;
+  text-decoration: none;
+  border: 0.2vh solid #dfff00;
+  padding: 2vh 5vw;
+  font-size: 3vh;
+  border-bottom-right-radius: 2vh;
+  border-bottom-left-radius: 2vh;
 }
 
-/* Flexbox-Eigenschaften für die Links in der Navigationsleiste */
-.links {
-  display: flex; /* Flexbox verwenden, um die Links nebeneinander anzuordnen */
-  justify-content: space-between; /* Gleiche Abstände zwischen den Links */
-  margin-top: 0; /* Abstand nach oben */
-  margin-bottom: 20px; /* Abstand nach unten */
+.nav-link:hover {
+  opacity: 0.7;
 }
 
-/* Stil für Abschnitte innerhalb der Hauptinhaltsbereiche */
+/* Hauptinhaltsabschnitte */
+section {
+  scroll-margin-top: 15vh; /* Höhe der Navigationsleiste oder etwas mehr */
+}
+
 .main-section {
-  margin-bottom: 20px; /* Abstand nach unten für die Abschnitte */
-  margin: 0 10px; /* Abstand links und rechts */
-  border-bottom: 1px solid #dfff00; /* Untere Rahmenlinie in leuchtendem Gelb */
+  margin-bottom: 2vh;
 }
 
-/* Media-Query für responsive Design */
-@media (max-width: 5000px) and (min-width: 200px) {
-  /* Hier können spezifische Stilregeln für verschiedene Bildschirmgrößen hinzugefügt werden */
+.main-section > header, 
+.main-section > div > p, 
+code {
+  text-align: center;
+  margin: 2vh auto;
 }
+
+.main-section > div > p, 
+code {
+  max-width: 40vw;
+  display: flex;
+  justify-content: center;
+}
+
+#Processor, #Memory, #Video, #Screen, #Keyboard {
+  height: 85vh;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+#Processor > ul > li {
+  margin-top: 2vh;
+}
+
+#Memory > ul, 
+#Video > ul, 
+#Screen > ul, 
+#Keyboard > ul {
+  max-width: 28vw;
+  margin: 0 auto;
+}
+
+/* Horizontale Trenner */
+hr, #section-splitter {
+  color: #dfff00;
+  background-color: #dfff00;
+  margin: 0;
+}
+
+hr {
+  height: 0.5vh;
+}
+
+#section-splitter {
+  height: 0.1vh;
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  main {
+    font-size: 1vh;
+  }
+
+  .main-title {
+    font-size: 3vh;
+    letter-spacing: 1vw;
+  }
+
+  .nav-link {
+    font-size: 2vh;
+    padding: 2vh 4vw;
+  }
+
+  section {
+    scroll-margin-top: 12vh; /* Höhe der Navigationsleiste oder etwas mehr */
+  }
+
+  #Processor, #Memory, #Video, #Screen, #Keyboard {
+    height: 88vh;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  main {
+    font-size: 0.8vh;
+  }
+
+  .main-title {
+    font-size: 2vh;
+    letter-spacing: 1vw;
+  }
+
+  .nav-link {
+    font-size: 1.2vh;
+    padding: 2vh 4vw;
+  }
+
+  section {
+    scroll-margin-top: 12vh; /* Höhe der Navigationsleiste oder etwas mehr */
+  }
+
+  #Processor, #Memory, #Video, #Screen, #Keyboard {
+    height: 88vh;
+  }
+}
+

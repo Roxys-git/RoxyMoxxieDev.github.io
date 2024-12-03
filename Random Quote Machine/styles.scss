@@ -1,13 +1,13 @@
+$background: linear-gradient(blue, black);
+$text: chartreuse;
+$quote-box-background: $text;
+$quote-box-text: black;
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
-
-$background: linear-gradient(blue, black);
-$text: chartreuse;
-$quote-box-background: chartreuse;
-$quote-box-text: black;
 
 body {
   background: $background;
@@ -31,34 +31,27 @@ main {
 
 #quote-box {
   Background: $quote-box-background;
-  width: 25vw;
-  height: 25vh;
+  width: 40vw;
+  border-radius: 1vw;
 }
 
 #text {
   color: $quote-box-text;
   height: 13vh;
-  font-size: 1.75vw;
-  max-width: 20vw;
+  font-size: 2vh;
   margin: auto;
   margin-top: 2vh;
 }
 
 #author {
   color: $quote-box-text;
-  font-size: 1.75vw;
+  font-size: 2vh;
 }
 
 .clicker {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-#tweet-quote {
-  display: flex;
-  width: 20vw;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -67,10 +60,56 @@ img {
 }
 
 #new-quote {
-  font-size: 24px;
+  font-size: 1.5vh;
   background: $background;
   color: $text;
   padding: 0.5vh 0.5vw;
-  border-radius: 24px;
+  border-radius: 1vw;
   margin: 1vw;
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  #text {
+    font-size: 4vh;
+  }
+
+  #author {
+    font-size: 4vh;
+  }
+
+  #new-quote {
+    width: 7vw;
+    height: 7vh;
+    font-size: 2vh;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  header {
+    margin: 10vh 0;
+  }
+  
+  h1 {
+    font-size: 5vh;
+  }
+  
+  #quote-box {
+    width: 80vw;
+    height: 45vh;
+  }
+
+  #text {
+    font-size: 3vh;
+  }
+
+  #author {
+    font-size: 3vh;
+  }
+
+  #new-quote {
+    margin-top: 15vh;
+    width: 30vw;
+    height: 10vh;
+    border-radius: 2vw;
+  }
 }

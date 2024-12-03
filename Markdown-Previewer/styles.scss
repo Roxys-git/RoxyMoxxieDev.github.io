@@ -117,3 +117,152 @@ p {
 footer {
   visibility: hidden;
 }
+
+@media (max-width: 1366px) and (orientation: landscape) {
+  #title > a {
+    letter-spacing: 1vw;
+  }
+
+  #title-from-js > a {
+    letter-spacing: 2vw;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+  #editor-title {
+    font-size: 1.5vh;
+  }
+
+  #title {
+    font-size: 2.5vh;
+  }
+
+  #title > a {
+    letter-spacing: 0.3vw;
+    font-size: 2.5vh;
+  }
+
+  #previewer-title {
+    font-size: 2vh;
+  }
+
+  #preview {
+    margin: 0 auto;
+  }
+
+  #title-from-js {
+    font-size: 3vh;
+  }
+
+  #title-from-js > a {
+    letter-spacing: 1.2vw;
+    font-size: 3vh;
+  }
+
+  h1 {
+    font-size: 2vh;
+    margin-bottom: 25vh;
+  }
+
+  p {
+    font-size: 2vh;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  #editor-title {
+    font-size: 3vh;
+    width: 60vw;
+  }
+
+  #editor {
+    width: 60vw;
+  }
+
+  #title {
+    min-width: 60vw;
+    font-size: 4.5vh;
+  }
+
+  #title > a {
+    font-size: 4.5vh;
+    letter-spacing: 2.5vw;
+  }
+
+  #previewer-title {
+    font-size: 3.5vh;
+    width: 80vw;
+  }
+
+  #preview {
+    margin: 0 auto;
+    width: 80vw;
+  }
+
+  #title-from-js > a {
+    font-size: 5vh;
+    letter-spacing: 3.75vw;
+  }
+
+  h1 {
+    font-size: 4vh;
+    margin: 7vh 0;
+  }
+
+  img {
+    width: 15vw;
+    margin-bottom: 3vh;
+  }
+
+  p {
+    font-size: 4vh;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  #editor-title {
+    font-size: 2vh;
+    width: 60vw;
+  }
+
+  #editor {
+    width: 60vw;
+  }
+
+  #title {
+    min-width: 60vw;
+    font-size: 2.5vh;
+  }
+
+  #title > a {
+    font-size: 2.5vh;
+  }
+
+  #previewer-title {
+    font-size: 2.5vh;
+    width: 80vw;
+  }
+
+  #preview {
+    margin: 0 auto;
+    width: 80vw;
+  }
+
+  #title-from-js > a {
+    font-size: 3vh;
+  }
+
+  h1 {
+    font-size: 3vh;
+    margin-bottom: 15vh;
+  }
+
+  img {
+    width: 40vw;
+    margin-bottom: 3vh;
+  }
+
+  p {
+    font-size: 3vh;
+  }
+}

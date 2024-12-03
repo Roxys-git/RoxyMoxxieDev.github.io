@@ -11,16 +11,42 @@
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 3vh;
   background: var(--background-color);
   height: 100vh;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 7vh;
+}
+
+input {
+  width: 20vw;
+  height: 5vh;
+  font-size: 3vh;
+  margin: 2vh auto;
+  border: 0.2vw solid var(--text-color);
+  border-radius: 2vw;
 }
 
 button {
-  padding: 20px;
+  padding: 2vw;
+  background: var(--background);
+  font-size: 3vh;
+  border: 0.2vw solid black;
+  cursor: pointer;
+  border-radius: 2vw;
+}
+
+button:hover {
+  opacity: 0.7;
 }
 
 #text-over-input {
-  margin: 0px;
+  margin: 0;
+  font-size: 3vh;
 }

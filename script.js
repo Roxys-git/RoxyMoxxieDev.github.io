@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pin.style.display = "none"; // Verstecke die restlichen Projekte
       }
     });
-    seeMoreButton.textContent = "See more projects"; // Ändere den Button-Text
+    seeMoreButton.textContent = "More projects"; // Ändere den Button-Text
   }
 
   // Funktion zum Anzeigen aller Projekte
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Funktion zum Umschalten zwischen den Ansichten
   function toggleProjects() {
-    if (seeMoreButton.textContent === "See more projects") {
+    if (seeMoreButton.textContent === "More projects") {
       showAllProjects(); // Zeige alle Projekte
     } else {
       showInitialProjects(); // Zeige nur die Top-3-Projekte

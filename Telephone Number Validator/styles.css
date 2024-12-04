@@ -1,20 +1,70 @@
+:root {
+  --darkred-color: linear-gradient(#8b0000, #000000);
+}
+
 body {
-  font-size: 16px; /* Setzt die Schriftgröße des gesamten Textes im Body auf 16px. Dies ist der Basiswert, von dem aus andere Schriftgrößen relativ angepasst werden können. */
+  font-size: 3vh; /* Setzt die Schriftgröße des gesamten Textes im Body auf 16px. Dies ist der Basiswert, von dem aus andere Schriftgrößen relativ angepasst werden können. */
   font-family: Arial, sans-serif; /* Legt die Schriftart für den gesamten Text im Body auf Arial fest. Falls Arial nicht verfügbar ist, wird eine generische sans-serif-Schriftart verwendet. */
-  background: linear-gradient(darkred, black); /* Erzeugt einen linearen Farbverlauf als Hintergrund, der von "darkred" (dunkelrot) zu "black" (schwarz) verläuft. */
+  background: var(--darkred-color); /* Erzeugt einen linearen Farbverlauf als Hintergrund, der von "darkred" (dunkelrot) zu "black" (schwarz) verläuft. */
   height: 100vh; /* Setzt die Höhe des Body auf 100% der Viewport-Höhe (der sichtbare Bereich des Browsers), sodass der gesamte Bildschirm genutzt wird. */
   max-width: 100vw; /* Setzt die maximale Breite des Body auf 100% der Viewport-Breite, sodass der Body nicht breiter als der Bildschirm wird. */
-  text-align: center; /* Zentriert den gesamten Text im Body horizontal. Alle Textelemente innerhalb des Body werden somit zentriert angezeigt. */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Zentriert den gesamten Text im Body horizontal. Alle Textelemente innerhalb des Body werden somit zentriert angezeigt. */
 }
 
 input {
-  margin: 20px; /* Fügt einen Abstand von 20px rund um das Eingabefeld hinzu, um es von anderen Elementen zu trennen. */
+  padding: 2vh 10vw;
+  margin: 5vh;
+  border-radius: 1vh;
+  font-size: 3vh;
+  text-align: center; /* Fügt einen Abstand von 20px rund um das Eingabefeld hinzu, um es von anderen Elementen zu trennen. */
 }
 
 button {
-  padding: 10px; /* Fügt Innenabstand (Padding) von 10px rund um den Text des Buttons hinzu, um den Button größer und benutzerfreundlicher zu machen. */
+  padding: 7vh;
+  font-size: 3vh;
+  background-color: #8b0000;
+  border: 0.2vh solid black;
+  border-radius: 1vh; /* Fügt Innenabstand (Padding) von 10px rund um den Text des Buttons hinzu, um den Button größer und benutzerfreundlicher zu machen. */
 }
 
+button:hover {
+  background: #8b0000;
+  cursor: pointer;
+}
+
+#results-div {
+  color: #8b0000;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  input {
+    padding: 2vh 5vw;
+    font-size: 2vh;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  body {
+    font-size: 5vh;
+  }
+  
+  input {
+    padding: 2vh 20vw;
+    margin-top: 0;
+    font-size: 4vh;
+  }
+
+  button {
+    padding: 7vh 11.5vw;
+    font-size: 7vh;
+    border-radius: 4vh;
+  }
+}
 /*
 Detaillierte Erklärung der Syntax:
 

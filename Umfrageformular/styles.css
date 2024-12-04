@@ -14,43 +14,45 @@ body {
 
 section {
   margin: 0 auto;
-  padding: 20px;
+  padding: 2vh 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 0.8vh;
 }
 
 form {
   background-color: blueviolet; /* Hintergrund des Formulars */
-  padding: 20px;
-  border-radius: 8px; /* Abgerundete Ecken */
+  padding: 2vh 2vw;
+  border-radius: 1vh; /* Abgerundete Ecken */
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Weiches Schatten */
+  box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1); /* Weiches Schatten */
   align-items: center;
 }
 
 h1 {
   text-align: center;
   color: white;
+  font-size: 5vh;
+  margin: 0;
 }
 
 fieldset {
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px; /* Abgerundete Ecken */
+  border: 0.1vh solid #ddd;
+  margin-bottom: 2vh;
+  padding: 2vh;
+  border-radius: 1vh; /* Abgerundete Ecken */
 }
 
 legend {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 3vh;
+  margin-bottom: 1vh;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
-  font-size: 1rem;
+  margin-bottom: 1vh;
+  font-size: 2vh;
 }
 
 input[type="text"],
@@ -59,29 +61,32 @@ input[type="number"],
 select,
 textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0 20px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 1vh;
+  margin: 0.8vh 0 2vh 0;
+  border: 0.1vh solid #ddd;
+  border-radius: 1vh;
+  font-size: 2vh;
 }
 
 textarea {
-  resize: vertical;
+  height: 45vh;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  margin-right: 10px;
+  margin-right: 1vw;
+  width: 2vw;
+  padding: 1vh;
 }
 
 .submit-container {
   background-color: blueviolet;
-  padding: 12px;
+  padding: 1.2vh 2vw;
   text-align: center; /* Zentriert den Text im Container */
   cursor: pointer; /* Zeigt, dass der Container klickbar ist */
-  border: 1px solid black;
-  border-radius: 8px;
+  border: 0.1vh solid black;
+  border-radius: 1vh;
+  font-size: 2vh;
 }
 
 .submit-container input[type="submit"] {
@@ -91,7 +96,8 @@ input[type="radio"] {
   position: absolute; /* Positionierung um sicherzustellen, dass es die ganze Fläche abdeckt */
   left: 0;
   top: 0;
-  cursor: pointer; /* Zeigt einen klickbaren Bereich an */
+  cursor: pointer;
+   /* Zeigt einen klickbaren Bereich an */
 }
 
 .submit-container:hover {
@@ -103,265 +109,87 @@ input[type="submit"]:hover {
   background-color: #7a4de9; /* Dunklerer Lila-Ton für Hover-Effekt */
 }
 
-/* Smartphone im Hochformat*/
-@media (orientation: portrait) and (max-width: 600px) {
-  form {
-    padding: 15px;
+@media (max-width: 1024px) and (orientation: portrait) {
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    margin: 0.4vh;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  h1 {
+    font-size: 4vh;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    margin-bottom: 0.7vh;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  h1 {
+    font-size: 9vh;
+  }
+
+  label {
+    font-size: 5vh;
   }
 
   input[type="text"],
   input[type="email"],
   input[type="number"],
-  select,
-  textarea {
-    font-size: 1rem;
-  }
-
-  button {
-    padding: 12px 30vw;
-  }
-
-  input[type="submit"] {
-    padding: 15px 0; /* Größere Fläche für den Submit-Button */
-  }
-
-  .fieldset-first-page {
-    height: 82vh;
-  }
-  
-  .fieldset-others {
-    height: 100vh;
-  }
-  
-  #fieldset-two, #fieldset-three {
-    height: 24vh;
-  }
-  
-  #fieldset-four, #fieldset-five {
-    height: 20vh;
-  }
-  
-  #textarea {
-    height: 92vh;
-    text-align: center;
-  }
-}
-
-/* Smartphone im Querformat (funktioniert noch nicht)*/
-@media (orientation: landscape) and (max-width: 600px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    height: 100vh; /* Nutzt die gesamte Bildschirmhöhe */
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Verhindert Scrollen */
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.2rem; /* Reduzierte Schriftgröße */
-    margin: 0;
-    padding: 10px 0; /* Abstand ohne Margin */
-    text-align: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Elemente gleichmäßig verteilen */
-    align-items: stretch;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box; /* Bezieht Padding in die Breite/Höhe ein */
+  select {
+    font-size: 5vh;
   }
 
   fieldset {
-    flex-grow: 1; /* Lässt Fieldsets den verfügbaren Platz nutzen */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Inhalte mittig ausrichten */
-    align-items: stretch;
-    margin: 5px 0; /* Abstand zwischen Fieldsets */
-    padding: 10px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    height: 100%;
-  }
-
-  textarea {
-    flex-grow: 1; /* Passt sich dynamisch an den Platz an */
-    width: 100%; /* Füllt die Breite */
-    resize: none; /* Verhindert manuelles Ändern der Größe */
-    margin: 5px 0;
-    padding: 10px;
-  }
-
-  .submit-container {
-    flex-shrink: 0; /* Behält feste Höhe */
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: blueviolet;
-    cursor: pointer;
-    border: 1px solid black;
-    border-radius: 8px;
-  }
-
-  .submit-container input[type="submit"] {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-  }
-}
-
-/* Tablet Optimierungen Hochformat */
-@media (orientation: portrait) and (min-width: 601px) and (max-width: 1024px) {
-  section {
-    min-width: 100vw;
-  }
-
-  form {
-    padding: 10px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 1rem; /* Etwas größere Schrift auf Tablets */
-  }
-
-  button {
-    padding: 12px 43vw;
-  }
-
-  input[type="submit"] {
-    padding: 10px 0;
-  }
-
-  #title {
-    margin: 5vh;
-    font-size: 2.2rem;
-  }
-
-  .fieldset-first-page {
     height: 90vh;
     margin-bottom: 5vh;
   }
-  
-  .fieldset-others {
-    height: 100vh;
-  }
-  
-  #fieldset-two, #fieldset-three {
-    height: 24vh;
-  }
-  
-  #fieldset-four, #fieldset-five {
-    height: 20vh;
-  }
-  
-  #textarea {
-    height: 92vh;
-    text-align: center;
-  }
-}
 
-/* Tablet Optimierungen Querformat */
-@media (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
-  section {
-    width: 100vw; /* Füllt die gesamte Breite */
-    height: 100vh; /* Füllt die gesamte Höhe */
-    margin: 0; /* Entfernt äußeren Rand */
-    border-radius: 0; /* Entfernt abgerundete Ecken */
+  #fieldset-one {
+    height: 80vh;
   }
 
-  body {
-    padding: 0;
-    margin: 0;
+  legend {
+    font-size: 7vh;
   }
 
-  form {
-    padding: 20px;
-    height: 100%; /* Formular nimmt den gesamten Platz ein */
+  #checkbox, #radio { 
+    width: 5vw;
+    height: 10vh;
+    appearance: none; /* Entfernt Standardstil */
+    -webkit-appearance: none; /* Für WebKit-Browser */
+    -moz-appearance: none; /* Für Mozilla-Browser */
+    border: 0.2vh solid #ccc; /* Rahmenfarbe */
+    border-radius: 1vh; /* Optional: Rundung */
+    background-color: #fff; /* Hintergrund */
+    vertical-align: middle;
+  }
+
+  .fieldset-others > fieldset {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 1.1rem; /* Etwas größere Schrift auf Tablets */
-  }
-
-  button {
-    padding: 12px 49vw;
-  }
-
-  input[type="submit"] {
-    padding: 12px 20px;
-  }
-
-  #title {
-    margin: 5vh;
-    font-size: 2.2rem;
-  }
-
-  .fieldset-first-page,
-  .fieldset-others {
-    height: 100%;
-  }
-}
-
-/* Laptop und größere Bildschirme */
-@media (min-width: 1025px) {
-  section {
-    display: flex;
-    justify-content: center;
     align-items: flex-start;
-    height: auto;
-    padding-top: 50px; /* Abstand vom oberen Rand */
+    justify-content: center;
   }
 
-  form {
-    padding: 30px;
-    max-width: 100vw; /* Größeres Formular auf größeren Bildschirmen */
+  .fieldset-others > fieldset > label {
+    font-size: 9vh;
+    display: flex;
+    align-items: center;
+    margin: 5vh;
   }
 
-  h1 {
-    font-size: 2rem; /* Größere Schrift auf großen Bildschirmen */
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select,
   textarea {
-    font-size: 1.2rem; /* Größere Schrift auf Laptops */
+    height: 60vh;
+    font-size: 5vh;
   }
 
-  input[type="submit"] {
-    padding: 15px 30px; /* Etwas größere Fläche für den Submit-Button */
+  .submit-container {
+    font-size: 5vh;
   }
 }

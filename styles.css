@@ -7,9 +7,10 @@
 }
 
 body {
-  font-size: 1.5rem; /* Legt die Schriftgröße für den gesamten Text fest */
+  font-size: 3vh; /* Legt die Schriftgröße für den gesamten Text fest */
   text-align: center; /* Zentriert den Text im Body */
   font-family: Arial, sans-serif; /* Setzt die Schriftart auf Arial, alternativ sans-serif */
+  margin: 0;
 }
 
 #navbar {
@@ -32,8 +33,16 @@ a {
 nav a {
   padding: 0.5vw; /* Fügt Padding um die Links hinzu */
   border: 0 solid transparent; /* Fügt einen transparenten Rand hinzu (z.B. für Hover-Effekte) */
-  border-radius: 0.5vw; /* Macht die Ecken der Links rund */
+  border-radius: 1vw; /* Macht die Ecken der Links rund */
   background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
+}
+
+nav a:hover {
+  opacity: 0.7; /* Setzt die Transparenz auf 70% beim Hover-Effekt */
+}
+
+section {
+  scroll-margin-top: 4vh;
 }
 
 #welcome-section {
@@ -48,12 +57,12 @@ nav a {
 }
 
 h1 {
-  font-size: 3rem; /* Legt die Schriftgröße für die Hauptüberschrift fest */
+  font-size: 6vh; /* Legt die Schriftgröße für die Hauptüberschrift fest */
   margin: 0; /* Entfernt den Standardmargin */
 }
 
 p {
-  font-size: 2rem; /* Legt die Schriftgröße für Absätze fest */
+  font-size: 4vh; /* Legt die Schriftgröße für Absätze fest */
   margin: 0; /* Entfernt den Standardmargin */
 }
 
@@ -66,13 +75,13 @@ h1, p {
   display: flex; /* Flexbox für die Anordnung */
   flex-direction: column; /* Elemente vertikal ausrichten */
   align-items: center; /* Inhalte horizontal zentrieren */
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .project-title {
   margin-top: 5vh;
   margin-bottom: 2vh; /* Abstand nach unten zur Projektliste */
-  font-size: 2rem; /* Schriftgröße für den Titel */
+  font-size: 3vh; /* Schriftgröße für den Titel */
   font-weight: bold; /* Fettgedruckt */
   text-decoration: underline; /* Unterstrichen */
 }
@@ -86,8 +95,8 @@ h1, p {
 }
 
 .pin {
-  border: 0px solid transparent; /* Fügt einen transparenten Rand hinzu */
-  padding: 2vh 1vw; /* Fügt Padding um die Pins hinzu */
+  border: 0 solid transparent; /* Fügt einen transparenten Rand hinzu */
+  padding: 1vw; /* Fügt Padding um die Pins hinzu */
   margin: 1vw; /* Fügt Margin zwischen den Pins hinzu */
   background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
   border-radius: 2vw;
@@ -97,139 +106,143 @@ a > img {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 27.75vw;
-  max-height: 27.75vh;
+  width: 27.75vw;
   border: 0.1vw solid #000000;
   border-radius: 1vw;
 }
 
 #see-more-projects {
   margin-top: 2vh; /* Abstand oberhalb des Buttons */
-  padding: 1vh 11.25vw; /* Innenabstand für den Button */
+  padding: 2vh 44.4vw; /* Innenabstand für den Button */
   background: var(--gradient-color); /* Farbverlauf */
-  border-radius: 0.5vw; /* Abgerundete Ecken */
-  font-size: 2rem; /* Schriftgröße des Buttons */
+  border-radius: 1vw; /* Abgerundete Ecken */
+  font-size: 3vh; /* Schriftgröße des Buttons */
   cursor: pointer; /* Zeigt einen Klickhinweis an */
 }
 
+#see-more-projects:hover {
+  opacity: 0.7; /* Setzt die Transparenz auf 70% beim Hover-Effekt */
+}
+
 #contact {
-  min-height: 100vh; /* Setzt die Mindesthöhe jedes Abschnitts auf 100% der Viewport-Höhe */
+  height: 100vh; /* Setzt die Mindesthöhe jedes Abschnitts auf 100% der Viewport-Höhe */
   display: flex; /* Verwendet Flexbox für die Inhalte */
   flex-direction: row; /* Elemente vertikal ausrichten */
   justify-content: space-evenly; /* Zentriert den Inhalt horizontal */
   align-items: center; /* Zentriert den Inhalt vertikal */
-  padding: 20px; /* Fügt Abstand innerhalb des Abschnitts hinzu */
-  margin-top: 60px; /* Abstand für die fixe Navbar */
 }
 
 
 #profile-link-btn {
-  padding: 20px;
+  padding: 1vh 1vw;
   background: var(--gradient-color);
-  border-radius: 20px;
+  border-radius: 5vh;
   text-align: center; /* Zentriert den Text innerhalb des Buttons */
   display: flex; /* Flexbox für vertikale Ausrichtung von Icon und Text */
   flex-direction: column; /* Icon und Text übereinander */
   align-items: center; /* Zentriert den Inhalt horizontal */
   justify-content: center; /* Zentriert den Inhalt vertikal */
+  border: 0 solid transparent;
+}
+
+#profile-link-btn:hover {
+  opacity: 0.7;
 }
 
 #profile-link-btn img {
-  width: 40px; /* Setzt die Breite des Icons */
-  border-radius: 20px; /* Macht die Ecken des Icons rund */
-  margin-bottom: 10px; /* Fügt Abstand zwischen Icon und Text hinzu */
+  width: 10vh; /* Setzt die Breite des Icons */
+  border-radius: 5vh; /* Macht die Ecken des Icons rund */
 }
 
-#github {
-  width: 40px; /* Setzt die Breite des GitHub-Icons */
-  border-radius: 20px; /* Macht die Ecken des Icons rund */
-}
-
-#linkedin {
-  width: 40px; /* Setzt die Breite des LinkedIn-Icons */
-  border-radius: 20px; /* Macht die Ecken des Icons rund */
-}
-
-#mail {
-  width: 40px; /* Setzt die Breite des Mail-Icons */
-  border-radius: 20px; /* Macht die Ecken des Icons rund */
-}
-
-#phone {
-  width: 40px; /* Setzt die Breite des Telefon-Icons */
-  border-radius: 20px; /* Macht die Ecken des Icons rund */
-}
-
-/* Für Smartphone */
-@media (max-width: 600px) {
-  #navbar {
-    flex-direction: row;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  #projects .pin {
-    width: 100%;
-    padding: 8vh;
-    margin: 5px 0;
-  }
-
-  #projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    padding: 10px;
-    min-height: calc(100vh - 120px);
+@media (max-width: 1024px) and (orientation: portrait) {
+  a > img {
+    width: 45vw;
   }
 
   #see-more-projects {
-    margin-top: 5px;
-    padding: 8px 16px;
-    font-size: 14px;
-    background: var(--gradient-color);
-    border-radius: 8px;
+    padding: 2vh 35.5vw;
+    font-size: 3vh;
+    border-radius: 2vh;
   }
 }
-/* Für Tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
-  #navbar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 
-  h1 {
-    font-size: 28px;
+@media (max-width: 1400px) and (orientation: landscape) {
+  .project {
+    gap: 0vw;
   }
-
-  #projects .pin {
-    width: 40%; /* Verkleinert die Pins */
-    padding: 10vh; /* Reduziert das Padding */
-    margin: 10px; /* Weniger Abstand zwischen den Pins */
-  }
-
-  #projects {
-    display: flex;
-    flex-wrap: wrap; /* Pins umbrechen */
-    justify-content: space-evenly; /* Gleichmäßige Verteilung */
-    gap: 10px; /* Abstand zwischen den Pins reduzieren */
-    min-height: calc(100vh - 120px); /* Gesamthöhe anpassen */
+  
+  a > img {
+    width: 29vw;
   }
 
   #see-more-projects {
-    margin-top: 10px; /* Abstand zum letzten Pin */
-    padding: 10px 20px;
-    font-size: 16px;
-    background: var(--gradient-color);
-    border-radius: 10px;
+    padding: 2vh 41.4vw;
+    font-size: 3vh;
+    border-radius: 2vh;
   }
 }
-/* Für Desktop */
-@media (min-width: 1025px) {
-  #projects .pin {
-    width: 30%;
+
+@media (max-width: 600px) and (orientation: portrait) {
+  nav > a {
+    font-size: 4vh;
+    padding: 4vw;
+  }
+  
+  .pin {
+    padding: 1vh;
+    margin: 1vh;
+    border-radius: 2vh;
+  }
+  
+  a > img {
+    width: 80vw;
+    border-radius: 1.5vh;
+  }  
+
+  #see-more-projects {
+    padding: 2vh 20vw;
+    font-size: 3vh;
+    border-radius: 2vh;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+  nav > a {
+    font-size: 9vh;
+    padding: 2vw;
+  }
+
+  h1, p {
+    font-size: 9vh;
+  }
+
+  .project-title {
+    font-size: 9vh;
+  }
+  
+  .pin {
+    padding: 3vh;
+    margin: 4vh 2vh;
+    border-radius: 4vh;
+  }
+  
+  a > img {
+    width: 45vw;
+    border-radius: 3vh;
+  }  
+
+  #see-more-projects {
+    padding: 2vh 10vw;
+    font-size: 9vh;
+    border-radius: 4vh;
+  }
+
+  section {
+    scroll-margin-top: 13vh;
+  }
+
+  #contact {
+    height: 100vh;
+    align-items: flex-end;
   }
 }

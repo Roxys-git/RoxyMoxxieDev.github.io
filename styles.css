@@ -1,248 +1,252 @@
 :root {
-  --gradient-color: linear-gradient(yellow, blue); /* Definiert eine CSS-Variable für den Farbverlauf von Gelb nach Blau */
+  --gradient-color: linear-gradient(yellow, blue); /* Defines a CSS variable for the gradient from yellow to blue */
 }
 
 * {
-  box-sizing: border-box; /* Setzt das Box-Modell so, dass Padding und Border in der Gesamtbreite und -höhe enthalten sind */
+  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
 }
 
 body {
-  font-size: 3vh; /* Legt die Schriftgröße für den gesamten Text fest */
-  text-align: center; /* Zentriert den Text im Body */
-  font-family: Arial, sans-serif; /* Setzt die Schriftart auf Arial, alternativ sans-serif */
-  margin: 0;
+  font-size: 3vh; /* Sets the font size for all text */
+  text-align: center; /* Centers the text in the body */
+  font-family: Arial, sans-serif; /* Sets the font to Arial, or sans-serif as a fallback */
+  margin: 0; /* Removes default margin */
 }
 
 #navbar {
-  display: flex; /* Verwendet Flexbox für die Navigation */
-  justify-content: space-evenly; /* Verteilt die Navigationselemente gleichmäßig */
-  text-align: center; /* Zentriert den Text innerhalb der Navigation */
-  position: fixed; /* Macht die Navigation fixiert, sodass sie beim Scrollen sichtbar bleibt */
-  min-width: 100vw; /* Setzt die Mindestbreite auf die volle Breite des Viewports */
-  background-color: darkblue; /* Setzt die Hintergrundfarbe auf dunkelblau */
-  z-index: 101; /* Legt den Z-Index fest, damit die Navigation über anderen Inhalten liegt */
-  top: 0; /* Positioniert die Navigation an der oberen Kante */
-  left: 0; /* Positioniert die Navigation an der linken Kante */
+  display: flex; /* Uses Flexbox for the navigation */
+  justify-content: space-evenly; /* Distributes navigation items evenly */
+  text-align: center; /* Centers text within the navigation */
+  position: fixed; /* Fixes the navigation to stay visible while scrolling */
+  min-width: 100vw; /* Sets the minimum width to the full viewport width */
+  background-color: darkblue; /* Sets the background color to dark blue */
+  z-index: 101; /* Ensures the navigation appears above other content */
+  top: 0; /* Positions the navigation at the top of the page */
+  left: 0; /* Positions the navigation at the left edge */
 }
 
 a {
-  text-decoration: none; /* Entfernt die Unterstreichung von Links */
-  color: black; /* Setzt die Linkfarbe auf schwarz */
+  text-decoration: none; /* Removes underline from links */
+  color: black; /* Sets the link color to black */
 }
 
 nav a {
-  padding: 0.5vw; /* Fügt Padding um die Links hinzu */
-  border: 0 solid transparent; /* Fügt einen transparenten Rand hinzu (z.B. für Hover-Effekte) */
-  border-radius: 1vw; /* Macht die Ecken der Links rund */
-  background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
+  padding: 0.5vw; /* Adds padding around the links */
+  border: 0 solid transparent; /* Adds a transparent border (e.g., for hover effects) */
+  border-radius: 1vw; /* Rounds the corners of the links */
+  background: var(--gradient-color); /* Sets the background to the defined gradient */
 }
 
 nav a:hover {
-  opacity: 0.7; /* Setzt die Transparenz auf 70% beim Hover-Effekt */
+  opacity: 0.7; /* Sets the opacity to 70% on hover */
 }
 
 section {
-  scroll-margin-top: 4vh;
+  scroll-margin-top: 4vh; /* Adds a margin to the top of each section when scrolling */
 }
 
 #welcome-section {
-  min-height: 100vh; /* Setzt die Mindesthöhe jedes Abschnitts auf 100% der Viewport-Höhe */
-  display: flex; /* Verwendet Flexbox für die Inhalte */
-  flex-direction: column; /* Elemente vertikal ausrichten */
-  justify-content: center; /* Zentriert den Inhalt horizontal */
-  align-items: center; /* Zentriert den Inhalt vertikal */
-  padding: 0.5vw; /* Fügt Abstand innerhalb des Abschnitts hinzu */
-  margin-top: 4vh; /* Abstand für die fixe Navbar */
-  font-style: italic; /* Setzt den Schriftstil auf kursiv */
+  min-height: 100vh; /* Sets the minimum height of the section to 100% of the viewport height */
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  padding: 0.5vw; /* Adds padding inside the section */
+  margin-top: 4vh; /* Adds space for the fixed navbar */
+  font-style: italic; /* Sets the font style to italic */
 }
 
 h1 {
-  font-size: 6vh; /* Legt die Schriftgröße für die Hauptüberschrift fest */
-  margin: 0; /* Entfernt den Standardmargin */
+  font-size: 6vh; /* Sets the font size for the main heading */
+  margin: 0; /* Removes default margin */
 }
 
 p {
-  font-size: 4vh; /* Legt die Schriftgröße für Absätze fest */
-  margin: 0; /* Entfernt den Standardmargin */
+  font-size: 4vh; /* Sets the font size for paragraphs */
+  margin: 0; /* Removes default margin */
 }
 
 h1, p {
-  display: block; /* Sicherstellen, dass beide Elemente als Block dargestellt werden */
-  margin: 0 auto; /* Zentriert die Elemente bei Bedarf */ 
+  display: block; /* Ensures both elements are displayed as blocks */
+  margin: 0 auto; /* Centers the elements if necessary */
 } 
 
 #projects {
-  display: flex; /* Flexbox für die Anordnung */
-  flex-direction: column; /* Elemente vertikal ausrichten */
-  align-items: center; /* Inhalte horizontal zentrieren */
-  min-height: 100vh;
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Centers content horizontally */
+  min-height: 100vh; /* Sets the minimum height to 100% of the viewport */
 }
 
 .project-title {
-  margin-top: 5vh;
-  margin-bottom: 2vh; /* Abstand nach unten zur Projektliste */
-  font-size: 3vh; /* Schriftgröße für den Titel */
-  font-weight: bold; /* Fettgedruckt */
-  text-decoration: underline; /* Unterstrichen */
+  margin-top: 5vh; /* Adds space above the project title */
+  margin-bottom: 2vh; /* Adds space below the project title */
+  font-size: 3vh; /* Sets the font size for the title */
+  font-weight: bold; /* Makes the title bold */
+  text-decoration: underline; /* Underlines the title */
 }
 
-.project {
-  display: flex; /* Projekte in einer Zeile */
-  flex-wrap: wrap; /* Umbruch bei Platzmangel */
-  justify-content: space-evenly; /* Gleichmäßige Verteilung */
-  gap: 1vw; /* Abstand zwischen den Pins */
-  width: 100%; /* Nimmt die volle Breite ein */
+.project, 
+.project-in-depth-work {
+  display: flex; /* Uses Flexbox for the project layout */
+  flex-wrap: wrap; /* Allows items to wrap when space is limited */
+  justify-content: space-evenly; /* Distributes items evenly */
+  gap: 1vw; /* Adds space between the project pins */
+  width: 100%; /* Takes up the full width */
 }
 
-.pin {
-  border: 0 solid transparent; /* Fügt einen transparenten Rand hinzu */
-  padding: 1vw; /* Fügt Padding um die Pins hinzu */
-  margin: 1vw; /* Fügt Margin zwischen den Pins hinzu */
-  background: var(--gradient-color); /* Setzt den Hintergrund auf den definierten Farbverlauf */
-  border-radius: 2vw;
+.pin,
+.pin-in-depth-work {
+  border: 0 solid transparent; /* Adds a transparent border */
+  padding: 1vw; /* Adds padding around the pins */
+  margin: 1vw; /* Adds margin between the pins */
+  background: var(--gradient-color); /* Sets the background to the gradient color */
+  border-radius: 2vw; /* Rounds the corners of the pins */
 }
 
 a > img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 27.75vw;
-  border: 0.1vw solid #000000;
-  border-radius: 1vw;
+  display: flex; /* Uses Flexbox for the image layout */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  width: 27.75vw; /* Sets the image width */
+  border: 0.1vw solid #000000; /* Adds a black border around the image */
+  border-radius: 1vw; /* Rounds the corners of the image */
 }
 
 #see-more-projects {
-  margin-top: 2vh; /* Abstand oberhalb des Buttons */
-  padding: 2vh 44.4vw; /* Innenabstand für den Button */
-  background: var(--gradient-color); /* Farbverlauf */
-  border-radius: 1vw; /* Abgerundete Ecken */
-  font-size: 3vh; /* Schriftgröße des Buttons */
-  cursor: pointer; /* Zeigt einen Klickhinweis an */
+  margin-top: 2vh; /* Adds space above the "See More Projects" button */
+  padding: 2vh 44.4vw; /* Adds padding to the button */
+  background: var(--gradient-color); /* Sets the background to the gradient color */
+  border-radius: 1vw; /* Rounds the corners of the button */
+  font-size: 3vh; /* Sets the font size of the button */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 #see-more-projects:hover {
-  opacity: 0.7; /* Setzt die Transparenz auf 70% beim Hover-Effekt */
+  opacity: 0.7; /* Sets the opacity to 70% on hover */
 }
 
 #contact {
-  height: 100vh; /* Setzt die Mindesthöhe jedes Abschnitts auf 100% der Viewport-Höhe */
-  display: flex; /* Verwendet Flexbox für die Inhalte */
-  flex-direction: row; /* Elemente vertikal ausrichten */
-  justify-content: space-evenly; /* Zentriert den Inhalt horizontal */
-  align-items: center; /* Zentriert den Inhalt vertikal */
+  height: 100vh; /* Sets the minimum height to 100% of the viewport height */
+  display: flex; /* Uses Flexbox for layout */
+  flex-direction: row; /* Aligns items horizontally */
+  justify-content: space-evenly; /* Distributes items evenly */
+  align-items: center; /* Centers items vertically */
 }
 
-
 #profile-link-btn {
-  padding: 1vh 1vw;
-  background: var(--gradient-color);
-  border-radius: 5vh;
-  text-align: center; /* Zentriert den Text innerhalb des Buttons */
-  display: flex; /* Flexbox für vertikale Ausrichtung von Icon und Text */
-  flex-direction: column; /* Icon und Text übereinander */
-  align-items: center; /* Zentriert den Inhalt horizontal */
-  justify-content: center; /* Zentriert den Inhalt vertikal */
-  border: 0 solid transparent;
+  padding: 1vh 1vw; /* Adds padding around the button */
+  background: var(--gradient-color); /* Sets the background to the gradient color */
+  border-radius: 5vh; /* Rounds the corners of the button */
+  text-align: center; /* Centers the text within the button */
+  display: flex; /* Uses Flexbox for vertical alignment of icon and text */
+  flex-direction: column; /* Aligns icon and text vertically */
+  align-items: center; /* Centers the content horizontally */
+  justify-content: center; /* Centers the content vertically */
+  border: 0 solid transparent; /* Adds a transparent border */
 }
 
 #profile-link-btn:hover {
-  opacity: 0.7;
+  opacity: 0.7; /* Sets the opacity to 70% on hover */
 }
 
 #profile-link-btn img {
-  width: 10vh; /* Setzt die Breite des Icons */
-  border-radius: 5vh; /* Macht die Ecken des Icons rund */
+  width: 10vh; /* Sets the width of the icon */
+  border-radius: 5vh; /* Rounds the corners of the icon */
 }
 
 @media (max-width: 1024px) and (orientation: portrait) {
   a > img {
-    width: 45vw;
+    width: 45vw; /* Sets the image width to 45% of the viewport width */
   }
 
   #see-more-projects {
-    padding: 2vh 35.5vw;
-    font-size: 3vh;
-    border-radius: 2vh;
+    padding: 2vh 35.5vw; /* Adjusts the button padding */
+    font-size: 3vh; /* Adjusts the font size */
+    border-radius: 2vh; /* Adjusts the border radius */
   }
 }
 
 @media (max-width: 1400px) and (orientation: landscape) {
-  .project {
-    gap: 0vw;
+  .project, 
+  .project-in-depth-work {
+    gap: 0vw; /* Reduces the gap between project pins */
   }
   
   a > img {
-    width: 29vw;
+    width: 29vw; /* Adjusts the image width */
   }
 
   #see-more-projects {
-    padding: 2vh 41.4vw;
-    font-size: 3vh;
-    border-radius: 2vh;
+    padding: 2vh 41.4vw; /* Adjusts the button padding */
+    font-size: 3vh; /* Adjusts the font size */
+    border-radius: 2vh; /* Adjusts the border radius */
   }
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
   nav > a {
-    font-size: 4vh;
-    padding: 4vw;
+    font-size: 4vh; /* Reduces the font size of the navigation links */
+    padding: 4vw; /* Adjusts the padding of the navigation links */
   }
   
-  .pin {
-    padding: 1vh;
-    margin: 1vh;
-    border-radius: 2vh;
+  .pin, 
+  .pin-in-depth-work {
+    padding: 1vh; /* Reduces the padding around the pins */
+    margin: 1vh; /* Reduces the margin between the pins */
+    border-radius: 2vh; /* Adjusts the border radius */
   }
   
   a > img {
-    width: 80vw;
-    border-radius: 1.5vh;
+    width: 80vw; /* Sets the image width to 80% of the viewport width */
+    border-radius: 1.5vh; /* Adjusts the border radius of the image */
   }  
 
   #see-more-projects {
-    padding: 2vh 20vw;
-    font-size: 3vh;
-    border-radius: 2vh;
+    padding: 2vh 20vw; /* Adjusts the button padding */
+    font-size: 3vh; /* Adjusts the font size */
+    border-radius: 2vh; /* Adjusts the border radius */
   }
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
   nav > a {
-    font-size: 9vh;
-    padding: 2vw;
+    font-size: 9vh; /* Increases the font size of the navigation links */
+    padding: 2vw; /* Adjusts the padding of the navigation links */
   }
 
   h1, p {
-    font-size: 9vh;
+    font-size: 9vh; /* Increases the font size of headings and paragraphs */
   }
 
   .project-title {
-    font-size: 9vh;
+    font-size: 9vh; /* Increases the font size of the project title */
   }
   
-  .pin {
-    padding: 3vh;
-    margin: 4vh 2vh;
-    border-radius: 4vh;
+  .pin, 
+  .pin-in-depth-work {
+    padding: 3vh; /* Increases the padding around the pins */
+    margin: 4vh 2vh; /* Increases the margin between the pins */
+    border-radius: 4vh; /* Increases the border radius of the pins */
   }
   
   a > img {
-    width: 45vw;
-    border-radius: 3vh;
+    width: 45vw; /* Adjusts the image width */
+    border-radius: 3vh; /* Adjusts the border radius of the image */
   }  
 
   #see-more-projects {
-    padding: 2vh 10vw;
-    font-size: 9vh;
-    border-radius: 4vh;
+    padding: 2vh 10vw; /* Adjusts the button padding */
+    font-size: 9vh; /* Increases the font size */
+    border-radius: 4vh; /* Increases the border radius */
   }
 
   section {
-    scroll-margin-top: 13vh;
+    scroll-margin-top: 13vh; /* Adjusts the scroll margin for sections */
   }
 
   #contact {
     height: 100vh;
-    align-items: flex-end;
+    align-items: flex-end; /* Aligns items at the bottom of the contact section */
   }
 }

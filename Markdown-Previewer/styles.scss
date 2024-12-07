@@ -1,268 +1,289 @@
-$background: #990066;
-$text: #0B033A;
-$box: #E9A4F0;
-$code: #F3C2F8;
-$toolbar: #9F6DA4;
+// Variables for colors and design elements
+$background: #990066;  // Background color of the page
+$text: #0B033A;        // Text color
+$box: #E9A4F0;         // Box background color
+$code: #F3C2F8;        // Code block color (though not used directly here)
+$toolbar: #9F6DA4;     // Toolbar background color
 
+// Global reset: apply border-box model to all elements
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box;  // Ensures padding and borders are included in the total width/height
 }
 
+// Styling for the HTML element
 html {
-  background-color: $background;
-  color: $text;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  background-color: $background;  // Background color from the variable
+  color: $text;                   // Text color from the variable
+  font-family: Arial, sans-serif;  // Font family
+  display: flex;                  // Use Flexbox layout
+  justify-content: center;        // Center content horizontally
+  text-align: center;             // Center text
 }
 
+// Header styling for the h1 inside header
 header > h1 {
-  margin: 4vh;
-  font-size: 5vw;
-  font-weight: 700;
-  text-shadow: 0 0 1.5vh $box;
+  margin: 4vh;                    // Margin of 4% of the viewport height
+  font-size: 5vw;                 // Font size based on 5% of the viewport width
+  font-weight: 700;               // Bold font weight
+  text-shadow: 0 0 1.5vh $box;    // Soft text shadow with the color from the $box variable
 }
 
+// Styling for all h1 elements
 h1 {
-  font-size: 3vh;
-  display: flex;
-  justify-content: center;
-  margin: 16vh auto;
+  font-size: 3vh;                 // Font size based on 3% of the viewport height
+  display: flex;                  // Use Flexbox
+  justify-content: center;        // Center horizontally
+  margin: 16vh auto;              // Auto horizontal margin, 16% of the viewport height for vertical margin
 }
 
+// Styling for the editor title
 #editor-title {
-  background-color: $toolbar;
-  width: 40vw;
-  margin: auto;
-  border: 0.2vw solid $text;
-  border-bottom: none;
-  border-radius: 1vw 1vw 0 0;
-  font-weight: 900;
-  text-align: left;
-  text-indent: 0.7vw;
-  font-size: 2vh;
+  background-color: $toolbar;   // Toolbar color for the background
+  width: 40vw;                  // Width of 40% of the viewport width
+  margin: auto;                 // Center horizontally
+  border: 0.2vw solid $text;    // Border with color from the $text variable
+  border-bottom: none;          // Remove bottom border
+  border-radius: 1vw 1vw 0 0;   // Rounded top corners
+  font-weight: 900;             // Very bold text
+  text-align: left;             // Align text to the left
+  text-indent: 0.7vw;           // Indentation for the text
+  font-size: 2vh;               // Font size based on 2% of the viewport height
 }
 
+// Styling for the title
 #title {
-  max-width: 40vw;
-  background-color: $toolbar;
-  font-size: 3vh;
-  border-top: 0.1vh solid $text;
-  margin: auto;
-  border-left: 0.2vw solid $text;
-  border-right: 0.2vw solid $text;
+  max-width: 40vw;               // Maximum width of 40% of the viewport width
+  background-color: $toolbar;    // Toolbar color for the background
+  font-size: 3vh;                // Font size based on 3% of the viewport height
+  border-top: 0.1vh solid $text; // Thin top border
+  margin: auto;                  // Center horizontally
+  border-left: 0.2vw solid $text; // Left border
+  border-right: 0.2vw solid $text; // Right border
 }
 
+// Styling for links inside #title
 #title > a {
-  letter-spacing: 1.75vw;
+  letter-spacing: 1.75vw;        // Add space between letters
 }
 
-
+// Styling for the previewer title
 #previewer-title {
-  background-color: $toolbar;
-  width: 60vw;
-  margin: auto;
-  border: 0.25vw solid $text;
-  border-bottom: none;
-  border-radius: 1vw 1vw 0 0;
-  font-weight: 900;
-  text-align: left;
-  text-indent: 0.7vw;
-  font-size: 2.5vh;
+  background-color: $toolbar;   // Toolbar color for the background
+  width: 60vw;                  // Width of 60% of the viewport width
+  margin: auto;                 // Center horizontally
+  border: 0.25vw solid $text;   // Border color and thickness
+  border-bottom: none;          // Remove bottom border
+  border-radius: 1vw 1vw 0 0;   // Rounded top corners
+  font-weight: 900;             // Very bold text
+  text-align: left;             // Align text to the left
+  text-indent: 0.7vw;           // Indentation for the text
+  font-size: 2.5vh;             // Font size based on 2.5% of the viewport height
 }
 
+// Styling for #editor and #preview sections
 #editor, #preview {
-  background-color: $toolbar;
-  border: 0.25vw solid $text;
-  border-top: none;
-  border-radius: 0 0 1vw 1vw;
+  background-color: $toolbar;    // Toolbar color for the background
+  border: 0.25vw solid $text;    // Border color and thickness
+  border-top: none;              // Remove top border
+  border-radius: 0 0 1vw 1vw;    // Rounded bottom corners
 }
 
+// Specific styling for the editor
 #editor {
-  height: 20vh;
-  width: 40vw;
-  margin-bottom: 4vh;
-  border: 0.2vw solid $text;
-  border-top: none;
+  height: 20vh;                // Height of 20% of the viewport height
+  width: 40vw;                 // Width of 40% of the viewport width
+  margin-bottom: 4vh;          // Margin below the editor
+  border-top: none;            // Remove top border
 }
 
+// Specific styling for the preview
 #preview {
-  height: 120vh;
-  width: 60vw;
+  height: 120vh;               // Height of 120% of the viewport height
+  width: 60vw;                 // Width of 60% of the viewport width
 }
 
+// Styling for the title from JavaScript section
 #title-from-js {
-  background-color: $toolbar;
-  font-size: 3.5vh;
-  border-top: 0.1vh solid $text;
+  background-color: $toolbar;  // Toolbar color for the background
+  font-size: 3.5vh;            // Font size based on 3.5% of the viewport height
+  border-top: 0.1vh solid $text; // Thin top border
 }
 
+// Styling for links inside #title-from-js
 #title-from-js > a {
-  letter-spacing: 3vw;
+  letter-spacing: 3vw;          // Add space between letters
 }
 
+// Styling for images
 img {
-  margin: auto;
-  width: 15vw;
-  margin-bottom: 3vh;
+  margin: auto;                 // Center the image horizontally
+  width: 15vw;                  // Width of 15% of the viewport width
+  margin-bottom: 3vh;           // Margin below the image
 }
 
+// Styling for paragraph text
 p {
-  font-size: 3vh;
+  font-size: 3vh;               // Font size based on 3% of the viewport height
 }
 
+// Hide the footer
 footer {
-  visibility: hidden;
+  visibility: hidden;           // Makes footer invisible
 }
 
+// Media queries for responsive design based on screen size and orientation
+
+// Adjustments for landscape orientation on screens with max width 1366px
 @media (max-width: 1366px) and (orientation: landscape) {
   #title > a {
-    letter-spacing: 1vw;
+    letter-spacing: 1vw;         // Reduce letter spacing
   }
 
   #title-from-js > a {
-    letter-spacing: 2vw;
+    letter-spacing: 2vw;         // Reduce letter spacing
   }
 }
 
+// Adjustments for portrait orientation on screens between 601px and 1024px
 @media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
   #editor-title {
-    font-size: 1.5vh;
+    font-size: 1.5vh;            // Smaller font size for the editor title
   }
 
   #title {
-    font-size: 2.5vh;
+    font-size: 2.5vh;            // Smaller font size for the title
   }
 
   #title > a {
-    letter-spacing: 0.3vw;
-    font-size: 2.5vh;
+    letter-spacing: 0.3vw;       // Smaller letter spacing for the title links
+    font-size: 2.5vh;            // Smaller font size for the title links
   }
 
   #previewer-title {
-    font-size: 2vh;
+    font-size: 2vh;              // Smaller font size for the previewer title
   }
 
   #preview {
-    margin: 0 auto;
+    margin: 0 auto;              // Center the preview
   }
 
   #title-from-js {
-    font-size: 3vh;
+    font-size: 3vh;              // Adjust font size
   }
 
   #title-from-js > a {
-    letter-spacing: 1.2vw;
-    font-size: 3vh;
+    letter-spacing: 1.2vw;       // Adjust letter spacing for the links
+    font-size: 3vh;              // Adjust font size for the links
   }
 
   h1 {
-    font-size: 2vh;
-    margin-bottom: 25vh;
+    font-size: 2vh;              // Smaller font size for h1
+    margin-bottom: 25vh;         // More space below the h1
   }
 
   p {
-    font-size: 2vh;
+    font-size: 2vh;              // Smaller font size for paragraphs
   }
 }
 
+// Adjustments for landscape orientation on screens with max width 950px
 @media (max-width: 950px) and (orientation: landscape) {
   #editor-title {
-    font-size: 3vh;
-    width: 60vw;
+    font-size: 3vh;              // Adjust font size for the editor title
+    width: 60vw;                 // Adjust width
   }
 
   #editor {
-    width: 60vw;
+    width: 60vw;                 // Adjust width
   }
 
   #title {
-    min-width: 60vw;
-    font-size: 4.5vh;
+    min-width: 60vw;             // Minimum width for the title
+    font-size: 4.5vh;            // Larger font size
   }
 
   #title > a {
-    font-size: 4.5vh;
-    letter-spacing: 2.5vw;
+    font-size: 4.5vh;            // Larger font size for the title links
+    letter-spacing: 2.5vw;       // Increased letter spacing
   }
 
   #previewer-title {
-    font-size: 3.5vh;
-    width: 80vw;
+    font-size: 3.5vh;            // Adjust font size
+    width: 80vw;                 // Adjust width
   }
 
   #preview {
-    margin: 0 auto;
-    width: 80vw;
+    margin: 0 auto;              // Center the preview
+    width: 80vw;                 // Adjust width
   }
 
   #title-from-js > a {
-    font-size: 5vh;
-    letter-spacing: 3.75vw;
+    font-size: 5vh;              // Larger font size for the links
+    letter-spacing: 3.75vw;      // Increased letter spacing
   }
 
   h1 {
-    font-size: 4vh;
-    margin: 7vh 0;
+    font-size: 4vh;              // Larger font size for h1
+    margin: 7vh 0;               // Adjust margin for h1
   }
 
   img {
-    width: 15vw;
-    margin-bottom: 3vh;
+    width: 15vw;                 // Adjust image width
+    margin-bottom: 3vh;          // Margin below the image
   }
 
   p {
-    font-size: 4vh;
+    font-size: 4vh;              // Larger font size for paragraphs
   }
 }
 
+// Adjustments for portrait orientation on screens with max width 600px
 @media (max-width: 600px) and (orientation: portrait) {
   #editor-title {
-    font-size: 2vh;
-    width: 60vw;
+    font-size: 2vh;              // Smaller font size for the editor title
+    width: 60vw;                 // Adjust width
   }
 
   #editor {
-    width: 60vw;
+    width: 60vw;                 // Adjust width
   }
 
   #title {
-    min-width: 60vw;
-    font-size: 2.5vh;
+    min-width: 60vw;             // Minimum width for the title
+    font-size: 2.5vh;            // Adjust font size
   }
 
   #title > a {
-    font-size: 2.5vh;
+    font-size: 2.5vh;            // Adjust font size for the title links
   }
 
   #previewer-title {
-    font-size: 2.5vh;
-    width: 80vw;
+    font-size: 2.5vh;            // Adjust font size
+    width: 80vw;                 // Adjust width
   }
 
   #preview {
-    margin: 0 auto;
-    width: 80vw;
+    margin: 0 auto;              // Center the preview
+    width: 80vw;                 // Adjust width
   }
 
   #title-from-js > a {
-    font-size: 3vh;
+    font-size: 3vh;              // Adjust font size for the links
   }
 
   h1 {
-    font-size: 3vh;
-    margin-bottom: 15vh;
+    font-size: 3vh;              // Adjust font size for h1
+    margin-bottom: 15vh;         // More space below h1
   }
 
   img {
-    width: 40vw;
-    margin-bottom: 3vh;
+    width: 40vw;                 // Adjust image width
+    margin-bottom: 3vh;          // Margin below the image
   }
 
   p {
-    font-size: 3vh;
+    font-size: 3vh;              // Adjust font size for paragraphs
   }
 }

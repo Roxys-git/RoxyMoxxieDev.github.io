@@ -1,110 +1,122 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* 1. Apply border-box box-sizing globally */
+*,                /* All elements */
+*::before,        /* Pseudo-element ::before */
+*::after {        /* Pseudo-element ::after */
+  box-sizing: border-box; /* Ensures padding and border are included in element's width and height */
 }
 
+/* 2. Body Styles */
 body {
-  background: linear-gradient(blue, black);
-  color: chartreuse;
-  height: 100vh;
-  width: 100vw;
-  font-family: Arial, sans-serif;
-  text-align: center;
+  background: linear-gradient(blue, black); /* Background is a gradient from blue to black */
+  color: chartreuse;                       /* Text color is chartreuse */
+  height: 100vh;                           /* Full viewport height */
+  width: 100vw;                            /* Full viewport width */
+  font-family: Arial, sans-serif;          /* Font style: Arial, or fallback to any sans-serif font */
+  text-align: center;                      /* Centers text horizontally */
 }
 
+/* 3. Header Styles */
 header {
-  margin: 16vh;
-  font-size: 2vw;
+  margin: 16vh;                    /* Adds vertical margin of 16% of the viewport height */
+  font-size: 2vw;                  /* Font size based on viewport width (2% of the width) */
 }
 
+/* 4. Main Container Styles */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;                    /* Uses flexbox to align children elements */
+  justify-content: center;          /* Centers content horizontally */
+  align-items: center;              /* Centers content vertically */
 }
 
+/* 5. Quote Box Styling */
 #quote-box {
-  Background: chartreuse;
-  width: 40vw;
-  border-radius: 1vw;
+  background: chartreuse;           /* Background color is chartreuse */
+  width: 40vw;                      /* Width is 40% of the viewport width */
+  border-radius: 1vw;               /* Rounded corners with 1% of the viewport width */
 }
 
+/* 6. Text Styling */
 #text {
-  color: black;
-  height: 13vh;
-  font-size: 2vh;
-  margin: auto;
-  margin-top: 2vh;
+  color: black;                     /* Text color is black */
+  height: 13vh;                      /* Height is 13% of the viewport height */
+  font-size: 2vh;                    /* Font size is 2% of the viewport height */
+  margin: auto;                      /* Centers the text block */
+  margin-top: 2vh;                   /* Top margin of 2% of the viewport height */
 }
 
+/* 7. Author Styling */
 #author {
-  color: black;
-  font-size: 2vh;
+  color: black;                     /* Author text color is black */
+  font-size: 2vh;                    /* Font size for author is 2% of the viewport height */
 }
 
+/* 8. Clicker Container Styling (for button) */
 .clicker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;                    /* Uses flexbox for alignment */
+  justify-content: center;          /* Centers content horizontally */
+  align-items: center;              /* Centers content vertically */
 }
 
+/* 9. Image Styling */
 img {
-  max-width: 3vw;
-  margin: 1vw;
+  max-width: 3vw;                   /* Image's max width is 3% of the viewport width */
+  margin: 1vw;                      /* Margin around the image is 1% of the viewport width */
 }
 
+/* 10. New Quote Button Styling */
 #new-quote {
-  font-size: 1.5vh;
-  background: linear-gradient(blue, black);
-  color: chartreuse;
-  padding: 0.5vh 0.5vw;
-  border-radius: 1vw;
-  margin: 1vw;
+  font-size: 1.5vh;                  /* Font size of the button text is 1.5% of the viewport height */
+  background: linear-gradient(blue, black); /* Background gradient from blue to black */
+  color: chartreuse;                 /* Button text color is chartreuse */
+  padding: 0.5vh 0.5vw;              /* Padding inside the button (vertical and horizontal) */
+  border-radius: 1vw;                /* Rounded corners with 1% of the viewport width */
+  margin: 1vw;                       /* Margin around the button is 1% of the viewport width */
 }
 
+/* 11. Media Query for Landscape Orientation (max-width: 950px) */
 @media (max-width: 950px) and (orientation: landscape) {
   #text {
-    font-size: 4vh;
+    font-size: 4vh;                  /* Increase text font size to 4% of viewport height */
   }
 
   #author {
-    font-size: 4vh;
+    font-size: 4vh;                  /* Increase author font size to 4% of viewport height */
   }
 
   #new-quote {
-    width: 7vw;
-    height: 7vh;
-    font-size: 2vh;
+    width: 7vw;                      /* Increase width of the button to 7% of viewport width */
+    height: 7vh;                     /* Increase height of the button to 7% of viewport height */
+    font-size: 2vh;                   /* Increase font size to 2% of viewport height */
   }
 }
 
+/* 12. Media Query for Portrait Orientation (max-width: 600px) */
 @media (max-width: 600px) and (orientation: portrait) {
   header {
-    margin: 10vh 0;
+    margin: 10vh 0;                   /* Adjust margin of header to 10% of the viewport height */
   }
-  
+
   h1 {
-    font-size: 5vh;
+    font-size: 5vh;                   /* Increase header font size to 5% of viewport height */
   }
-  
+
   #quote-box {
-    width: 80vw;
-    height: 45vh;
+    width: 80vw;                      /* Set width of the quote box to 80% of viewport width */
+    height: 45vh;                     /* Set height of the quote box to 45% of viewport height */
   }
 
   #text {
-    font-size: 3vh;
+    font-size: 3vh;                   /* Increase font size of quote text to 3% of viewport height */
   }
 
   #author {
-    font-size: 3vh;
+    font-size: 3vh;                   /* Increase font size of author text to 3% of viewport height */
   }
 
   #new-quote {
-    margin-top: 15vh;
-    width: 30vw;
-    height: 10vh;
-    border-radius: 2vw;
+    margin-top: 15vh;                 /* Increase top margin for the button */
+    width: 30vw;                      /* Set button width to 30% of viewport width */
+    height: 10vh;                     /* Set button height to 10% of viewport height */
+    border-radius: 2vw;               /* Increase border radius to 2% of viewport width */
   }
 }

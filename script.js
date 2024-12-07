@@ -1,63 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Holen der Projekte und des Buttons
+  // Get all project pins and the "See More Projects" button
   const projectPins = document.querySelectorAll(".project .pin");
   const seeMoreButton = document.getElementById("see-more-projects");
 
-  // Funktion zum Anzeigen der ersten drei Projekte
+  // Function to display the first three projects
   function showInitialProjects() {
     projectPins.forEach((pin, index) => {
       if (index < 3) {
-        pin.style.display = "block"; // Zeige die ersten drei Projekte
+        pin.style.display = "block"; // Show the first three projects
       } else {
-        pin.style.display = "none"; // Verstecke die restlichen Projekte
+        pin.style.display = "none"; // Hide the remaining projects
       }
     });
-    seeMoreButton.textContent = "More projects"; // Ändere den Button-Text
+    seeMoreButton.textContent = "More projects"; // Change the button text to "More projects"
   }
 
-  // Funktion zum Anzeigen aller Projekte
+  // Function to display all projects
   function showAllProjects() {
     projectPins.forEach((pin) => {
-      pin.style.display = "block"; // Zeige alle Projekte
+      pin.style.display = "block"; // Show all projects
     });
-    seeMoreButton.textContent = "Top projects"; // Ändere den Button-Text
+    seeMoreButton.textContent = "Top projects"; // Change the button text to "Top projects"
   }
 
-  // Funktion zum Umschalten zwischen den Ansichten
+  // Function to toggle between the initial view (3 projects) and the full view (all projects)
   function toggleProjects() {
     if (seeMoreButton.textContent === "More projects") {
-      showAllProjects(); // Zeige alle Projekte
+      showAllProjects(); // Show all projects if the button text is "More projects"
     } else {
-      showInitialProjects(); // Zeige nur die Top-3-Projekte
+      showInitialProjects(); // Show only the top 3 projects if the button text is "Top projects"
     }
   }
 
-  // Initialisiere die Seite mit den ersten drei Projekten
+  // Initialize the page with the first three projects visible
   showInitialProjects();
 
-  // Event Listener für den "See More Projects"-Button
+  // Add an event listener for the "See More Projects" button
   seeMoreButton.addEventListener("click", toggleProjects);
 });
-
-/*
-Erklärung
-
-    showInitialProjects:
-        Zeigt nur die ersten drei Projekte (index < 3) und verbirgt die restlichen.
-        Ändert den Button-Text zu "See more projects".
-
-    showAllProjects:
-        Zeigt alle Projekte an, indem style.display = "block" gesetzt wird.
-        Ändert den Button-Text zu "Top projects".
-
-    toggleProjects:
-        Überprüft den aktuellen Button-Text mit textContent.
-        Wechselt dynamisch zwischen showInitialProjects und showAllProjects.
-
-    Event Listener:
-        Der Button schaltet beim Klick zwischen den beiden Ansichten hin und her.
-
-Integration
-
-Speichere den aktualisierten Code in die script.js-Datei, die mit deinem HTML-Dokument verknüpft ist. Der Button passt sein Verhalten dynamisch an den angezeigten Text an. 😊
-*/

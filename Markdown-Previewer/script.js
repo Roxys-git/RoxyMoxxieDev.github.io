@@ -1,4 +1,4 @@
-// Initiales Markdown für den Editor (User Story #6)
+// Initial Markdown content for the editor (User Story #6)
 const initialMarkdown = `
 <div id="title-from-js">
   <a href="https://roxymoxxiedev.github.io">RoxyMoxxie Dev</a>
@@ -19,27 +19,28 @@ const initialMarkdown = `
   <p>
 `;
 
-// Elemente abrufen
-const editor = document.getElementById("editor");
-const preview = document.getElementById("preview");
+// Retrieve elements from the DOM
+const editor = document.getElementById("editor"); // Textarea where the user writes Markdown
+const preview = document.getElementById("preview"); // Area where the HTML preview will be displayed
 
-// Standard-Markdown in den Editor laden (User Story #6)
-editor.value = initialMarkdown;
+// Load the initial Markdown into the editor (User Story #6)
+editor.value = initialMarkdown; // Pre-fills the editor with the initialMarkdown string
 
-// Funktion zur Aktualisierung der Vorschau (User Story #3 und #4)
+// Function to update the preview area with parsed HTML (User Story #3 and #4)
 const updatePreview = () => {
-  const markdownText = editor.value; // Markdown-Text aus dem Editor
-  const htmlContent = marked.parse(markdownText, { breaks: true }); // Markdown in HTML umwandeln (User Story #7)
-  preview.innerHTML = htmlContent; // HTML in den Vorschau-Bereich einfügen
+  const markdownText = editor.value; // Get the Markdown text from the editor
+  const htmlContent = marked.parse(markdownText, { breaks: true }); // Parse the Markdown to HTML (User Story #7)
+  preview.innerHTML = htmlContent; // Insert the parsed HTML into the preview section
 };
 
-// Event-Listener hinzufügen, um Echtzeit-Updates zu ermöglichen (User Story #3)
-editor.addEventListener("input", updatePreview);
+// Add event listener for real-time updates when the user types (User Story #3)
+editor.addEventListener("input", updatePreview); // Calls updatePreview every time the editor content changes
 
-// Vorschau beim ersten Laden aktualisieren (User Story #6)
-updatePreview();
+// Update preview when the page is first loaded (User Story #6)
+updatePreview(); // Initially render the preview with the content loaded into the editor
 
+// Configure Marked.js options
 marked.setOptions({
-  breaks: true, // GitHub-Flavored Markdown Zeilenumbrüche
-  gfm: true, // GitHub Flavored Markdown aktivieren
+  breaks: true, // Enables GitHub-Flavored Markdown (GFM) line breaks
+  gfm: true, // Activates GitHub Flavored Markdown (GFM) syntax
 });

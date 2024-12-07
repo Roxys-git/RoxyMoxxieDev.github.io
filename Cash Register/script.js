@@ -1,8 +1,7 @@
-// Setze die variable 'price' auf 19.5, was den Preis eines Artikels angibt
+// Set the 'price' variable to 19.5, representing the price of the item
 const price = 19.5;
 
-// 'cid' ist eine Liste von Arrays, die den Kassenbestand für jede Währungseinheit anzeigt
-// Jedes innere Array enthält den Namen der Währungseinheit und den verfügbaren Betrag
+// 'cid' is an array of arrays representing the cash-in-drawer, with each inner array containing the currency unit and available amount
 let cid = [
     ["PENNY", 1.01],
     ["NICKEL", 2.05],
@@ -15,9 +14,9 @@ let cid = [
     ["ONE HUNDRED", 100]
 ];
 
-// Funktion zur Berechnung des Wechselgeldes basierend auf 'price', 'cash' und 'cid' (Kassenbestand)
+// Function to calculate the change based on 'price', 'cash', and 'cid' (cash-in-drawer)
 function checkCashRegister(price, cash, cid) {
-    // Definiert die Werte jeder Währungseinheit in einem Objekt zur schnellen Zuordnung
+    // Defines the value of each currency unit in an object for quick lookup
     const currencyUnit = {
         "PENNY": 0.01,
         "NICKEL": 0.05,
@@ -30,69 +29,69 @@ function checkCashRegister(price, cash, cid) {
         "ONE HUNDRED": 100
     };
 
-    // Berechnet das ausstehende Wechselgeld und rundet es auf zwei Dezimalstellen
+    // Calculates the change due and rounds it to two decimal places
     let changeDue = Math.round((cash - price) * 100) / 100;
-    // Summiert alle Beträge in der Kasse auf, um den Gesamtbestand zu berechnen
+    // Sums all amounts in the cash-in-drawer to calculate the total available cash
     let totalCid = Number(cid.reduce((sum, [, amount]) => sum + amount, 0).toFixed(2));
 
-    // Überprüft, ob der Kunde genügend Geld hat
+    // Checks if the customer has enough money
     if (cash < price) {
         alert("Customer does not have enough money to purchase the item");
         return;
     }
 
-    // Falls kein Wechselgeld erforderlich ist, wird dies zurückgegeben
+    // If no change is needed, return a message indicating exact payment
     if (changeDue === 0) {
         return "No change due - customer paid with exact cash";
     }
 
-    // Überprüft, ob genug Geld in der Kasse für das Wechselgeld vorhanden ist
+    // Checks if there is enough money in the cash-in-drawer for the required change
     if (totalCid < changeDue) {
         return "Status: INSUFFICIENT_FUNDS";
     }
 
-    // Array zum Speichern der zurückzugebenden Währungseinheiten und Beträge
+    // Array to store the change to be returned
     let change = [];
-    // Umkehrung der 'cid'-Liste, um mit der größten Einheit zu beginnen
+    // Reverse the 'cid' array to start with the largest currency unit
     let reversedCid = [...cid].reverse();
 
-    // Iteriert durch jede Währungseinheit in 'reversedCid'
+    // Iterates through each currency unit in the reversed 'cid' array
     for (let [currency, amount] of reversedCid) {
-        let unit = currencyUnit[currency]; // Wert der Einheit in Dezimalform
-        let available = Math.round(amount * 100) / 100; // Runden der verfügbaren Menge
-        let needed = 0; // Zum Speichern des erforderlichen Betrags
+        let unit = currencyUnit[currency]; // Value of the currency unit in decimal form
+        let available = Math.round(amount * 100) / 100; // Round the available amount
+        let needed = 0; // To store the required amount
 
-        // Überprüft, ob die aktuelle Währungseinheit für das Wechselgeld verwendet werden kann
+        // Checks if the current currency unit can be used for the change
         while (changeDue >= unit && available > 0) {
-            needed += unit; // Fügt den Wert der Einheit zum benötigten Betrag hinzu
-            available -= unit; // Reduziert die verfügbare Menge um den Wert der Einheit
-            changeDue = Math.round((changeDue - unit) * 100) / 100; // Reduziert das ausstehende Wechselgeld
+            needed += unit; // Add the unit value to the needed amount
+            available -= unit; // Reduce the available amount by the unit value
+            changeDue = Math.round((changeDue - unit) * 100) / 100; // Reduce the remaining change
         }
 
-        // Falls die Währungseinheit verwendet wurde, füge sie zu 'change' hinzu
+        // If the currency unit was used, add it to the 'change' array
         if (needed > 0) {
             change.push([currency, needed]);
         }
     }
 
-    // Falls nicht das genaue Wechselgeld gegeben werden kann, wird 'INSUFFICIENT_FUNDS' zurückgegeben
+    // If exact change cannot be given, return 'INSUFFICIENT_FUNDS'
     if (changeDue > 0) {
         return "Status: INSUFFICIENT_FUNDS";
     }
 
-    // Falls der gesamte Kassenbestand dem Wechselgeld entspricht, ist der Status "geschlossen"
+    // If the cash-in-drawer exactly matches the required change, return 'CLOSED' status
     if (Math.abs(totalCid - (cash - price)) < 0.01) {
         return formatClosedStatus(change);
     }
 
-    // Normalfall: gibt das Wechselgeld im "offenen" Status zurück
+    // Otherwise, return the 'OPEN' status with the change
     return "Status: OPEN " + change.map(([name, amount]) => 
         `${name}: $${amount}`).join(" ");
 }
 
-// Funktion zur Formatierung des Status, wenn die Kasse geschlossen werden soll
+// Function to format the status when the cash register should be closed
 function formatClosedStatus(change) {
-    // Sortiert 'change' von der höchsten zur niedrigsten Einheit
+    // Sorts the 'change' array from highest to lowest currency unit
     const sortedChange = change.sort((a, b) => {
         const denomValues = {
             "ONE HUNDRED": 100,
@@ -108,38 +107,22 @@ function formatClosedStatus(change) {
         return denomValues[b[0]] - denomValues[a[0]];
     });
 
-    // Gibt den Status "CLOSED" mit dem sortierten Wechselgeld zurück
+    // Returns the 'CLOSED' status with the sorted change
     return "Status: CLOSED " + sortedChange.map(([name, amount]) => 
         `${name}: $${amount}`).join(" ");
 }
 
-// Eventlistener für den Kauf-Button: Berechnet das Wechselgeld und zeigt das Ergebnis an
+// Event listener for the purchase button: calculates the change and displays the result
 document.getElementById('purchase-btn').addEventListener('click', function() {
-    const cashInput = document.getElementById('cash'); // Eingabe des Bargeldbetrags
-    const cash = Number(cashInput.value); // Konvertiert den Eingabewert in eine Zahl
-    const changeDueElement = document.getElementById('change-due'); // Element zur Anzeige des Ergebnisses
+    const cashInput = document.getElementById('cash'); // Get the cash input value
+    const cash = Number(cashInput.value); // Convert the input value to a number
+    const changeDueElement = document.getElementById('change-due'); // Element to display the result
 
-    // Berechnung des Ergebnisses der Funktion checkCashRegister
+    // Calculate the result of the checkCashRegister function
     const result = checkCashRegister(price, cash, cid);
     
-    // Wenn ein Ergebnis vorhanden ist, wird es im 'change-due' Element angezeigt
+    // If a result is available, display it in the 'change-due' element
     if (result) {
         changeDueElement.textContent = result;
     }
 });
-
-/*
-Erklärung:
-
-    const price = 19.5; – Definiert den Preis des Artikels.
-    cid (cash-in-drawer) – Ein Array von Arrays, das jede Währungseinheit und ihren Betrag in der Kasse speichert.
-    checkCashRegister Funktion – Berechnet das Wechselgeld und gibt den Status zurück.
-    currencyUnit – Ein Objekt zur schnellen Zuordnung der Werte der einzelnen Währungseinheiten.
-    totalCid – Gesamtbetrag in der Kasse.
-    changeDue – Berechnetes Wechselgeld.
-    change Array – Speichert das benötigte Wechselgeld.
-    formatClosedStatus Funktion – Formatiert das Ergebnis, wenn die Kasse genau geleert werden muss.
-    Event-Listener – Führt die Berechnung und Anzeige bei Button-Klick aus.
-
-Diese Lösung berücksichtigt alle Anforderungen an die Berechnung und gibt den passenden Status der Kasse aus.
-*/

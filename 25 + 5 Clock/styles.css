@@ -1,56 +1,67 @@
-html {
-  background: linear-gradient(#DAA520, #000000);
-  height: 100vh;
-  color: #FAEBD7;
-  font-size: 2vw;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 1vh;
-  margin-top: 1.5vh;
-}
-
-section {
-  text-align: center;
-}
-
-button {
-  margin: 0 auto;
-  padding: 3.5vh 13.6vw;
-  font-size: 2vw;
-  background-color: #2F4F4F;
-  color: #FAEBD7;
-  border-radius: 0.5vw;
-}
-
-button > #start_stop, #reset {
-  padding: 3.5vh 7vw;
-}
-
-@media (max-width: 1024px) and (orientation: portrait) {
-  h1 {
-    text-align: center;
-    margin-bottom: 2vh;
-    margin-top: 1.5vh;
-    font-size: 4vh;
+/* Set the background with a linear gradient, adjust height to 100% of the viewport, 
+   text color, font size, and center the content */
+   html {
+    background: linear-gradient(#DAA520, #000000); /* Golden to black gradient */
+    height: 100vh; /* Full viewport height */
+    color: #FAEBD7; /* Antique white text color */
+    font-size: 2vw; /* Font size based on viewport width */
+    margin: 0 auto; /* Remove default margin and center horizontally */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
   
+  /* Style the main heading (h1) */
+  h1 {
+    text-align: center; /* Center text */
+    margin-bottom: 1vh; /* Bottom margin relative to viewport height */
+    margin-top: 1.5vh; /* Top margin relative to viewport height */
+  }
+  
+  /* Style the section containing elements */
   section {
-    text-align: center;
-    font-size: 2vh;
+    text-align: center; /* Center text */
   }
-
+  
+  /* Style the buttons */
   button {
-    margin: 5vh auto;
-    padding: 3.5vh 20vw;
-    font-size: 4vw;
-    background-color: #2F4F4F;
-    color: #FAEBD7;
-    border-radius: 2vw;
+    margin: 0 auto; /* Center button horizontally */
+    padding: 3.5vh 13.6vw; /* Vertical and horizontal padding based on viewport size */
+    font-size: 2vw; /* Font size based on viewport width */
+    background-color: #2F4F4F; /* Dark slate gray background */
+    color: #FAEBD7; /* Antique white text color */
+    border-radius: 0.5vw; /* Rounded corners based on viewport width */
   }
-}
+  
+  /* Additional styling for the start/stop and reset buttons */
+  button > #start_stop, #reset {
+    padding: 3.5vh 7vw; /* Adjust padding for start/stop and reset buttons */
+  }
+  
+  /* Media query for portrait orientation and screen size below 1024px */
+  @media (max-width: 1024px) and (orientation: portrait) {
+    /* Adjust heading size and margins for smaller screens */
+    h1 {
+      text-align: center; /* Center text */
+      margin-bottom: 2vh; /* Bottom margin for smaller screens */
+      margin-top: 1.5vh; /* Top margin for smaller screens */
+      font-size: 4vh; /* Font size relative to viewport height */
+    }
+    
+    /* Adjust section font size for smaller screens */
+    section {
+      text-align: center; /* Center text */
+      font-size: 2vh; /* Font size relative to viewport height */
+    }
+  
+    /* Adjust button size, padding, and layout for smaller screens */
+    button {
+      margin: 5vh auto; /* Vertical margin for smaller screens */
+      padding: 3.5vh 20vw; /* Larger padding based on viewport width */
+      font-size: 4vw; /* Font size based on viewport width */
+      background-color: #2F4F4F; /* Dark slate gray background */
+      color: #FAEBD7; /* Antique white text color */
+      border-radius: 2vw; /* Larger rounded corners for smaller screens */
+    }
+  }
+  

@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-with, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta charset="utf-8" />
+    <!-- Ensures that all characters are encoded in UTF-8 -->
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page responsive, scaling it for different screen sizes -->
+
+    <meta name="description" content="25 + 5 Clock" />
+    <!-- Description of the page, shown in search results -->
+
+    <meta name="author" content="RoxyMoxxieDev" />
+    <!-- Author of the page, displayed in search results -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with the latest versions of web browsers -->
     <link rel="stylesheet" href="styles.css">
     <title>25-+-5-clock</title>
   </head>
@@ -15,24 +26,36 @@
       <section>
         <section>
           <div id="break-label">Break Length</div>
+          <!-- Label for the break length -->
           <div id="break-length">5</div>
+          <!-- Displays the current break length -->
           <button id="break-decrement">-</button>
+          <!-- Button to decrease break length -->
           <button id="break-increment">+</button>
+          <!-- Button to increase break length -->
 
           <div id="session-label">Session Length</div>
+          <!-- Label for the session length -->
           <div id="session-length">25</div>
+          <!-- Displays the current session length -->
           <button id="session-decrement">-</button>
+          <!-- Button to decrease session length -->
           <button id="session-increment">+</button>
+          <!-- Button to increase session length -->
 
-          <div id="timer-label">Sitzung</div>
+          <div id="timer-label">Session</div>
+          <!-- Label for the timer -->
           <div id="time-left">25:00</div>
+          <!-- Displays the time left on the clock -->
           <button id="start_stop">Start/Stop</button>
+          <!-- Button to start or stop the timer -->
           <button id="reset">Reset</button>
+          <!-- Button to reset the timer -->
 
           <audio id="beep" preload="auto" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav"></audio>
+          <!-- Audio element for the beep sound when the timer ends -->
       </section>
     </main>
-    <footer style="visibility: hidden;">&#169 RoxyMoxxie Dev (Roxana Zwicky) 2024<br>Roxana Zwicky</footer>
     <script src="script.js"></script>
   </body>
 </html>

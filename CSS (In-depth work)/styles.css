@@ -1,0 +1,281 @@
+/* Variations for position property 
+
+(.box class - different types of positioning:)
+.box {
+  position: static; (Static positioning (default behavior))
+  top: 100px;
+  left: 100px;
+
+  position: relative; (Relative positioning (relative to its normal position))
+  top: 100px;
+  left: 100px;
+
+  position: fixed; (Fixed positioning (relative to the viewport))
+  top: 100px;
+  left: 100px;
+
+  position: absolute; (Absolute positioning (relative to the nearest positioned ancestor))
+  top: 100px;
+  left: 100px;
+
+  position: sticky; (Sticky positioning (sticks to the viewport when scrolling))
+  top: 100px;
+  left: 100px;
+}
+
+Variations of the cat's right ear
+
+The right ear using solid colors and borders
+.cat-right-ear {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-left: 35px solid blue; Solid blue left border
+  border-right: 35px solid blue; Solid blue right border
+  border-top: 35px solid red; /* Solid red top border
+  border-bottom: 35px solid red; Solid red bottom border
+}
+
+The right ear with transparent borders
+.cat-right-ear {
+  height: 0;
+  width: 0;
+  border-left: 35px solid transparent; Transparent left border
+  border-right: 35px solid transparent; Transparent right border
+  border-top: 35px solid transparent; Transparent top border
+  border-bottom: 35px solid red; Solid red bottom border
+}
+
+Difference between solid and transparent borders
+*/
+
+/* Ensures the box model calculates the box correctly with padding and border */
+* {
+  box-sizing: border-box;
+}
+
+/* Background color of the entire document */
+body {
+  background-color: #c9d2fc; /* Light blue background */
+}
+
+/* Defines the cat's head with positioning, size, gradient, and rounded corners */
+.cat-head {
+  position: absolute; /* Positioned absolutely within its parent */
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; /* Centers the head */
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%); /* Gradient background */
+  width: 10.677vw; /* Relative width in viewport units */
+  height: 16.667vh; /* Relative height in viewport units */
+  border: 0.093vh solid #000; /* Black border */
+  border-radius: 46%; /* Rounded corners */
+}
+
+/* Positioning and styling for the left cat ear */
+.cat-left-ear {
+  position: absolute;
+  top: -2.407vh; /* Position relative to the cat's head */
+  left: -1.615vw;
+  z-index: 1; /* Positioned above other elements */
+  /* A negative z-index could bring the cat head into focus */
+  border-top-left-radius: 4.688vw; /* Rounded top-left corner */
+  border-top-right-radius: 0.521vw; /* Rounded top-right corner */
+  transform: rotate(-45deg); /* Rotates the ear */
+  border-left: 1.823vw solid transparent; /* Transparent left border */
+  border-right: 1.823vw solid transparent; /* Transparent right border */
+  border-bottom: 6.481vh solid #5e5e5e; /* Solid bottom border to form the ear */
+}
+
+/* Positioning and styling for the right cat ear */
+.cat-right-ear {
+  position: absolute;
+  top: -2.407vh;
+  left: 8.49vw;
+  z-index: 1;
+  transform: rotate(45deg); /* Rotates the ear */
+  border-top-left-radius: 4.688vw; /* Rounded top-left corner */
+  border-top-right-radius: 0.521vw; /* Rounded top-right corner */
+  border-left: 1.823vw solid transparent; /* Transparent left border */
+  border-right: 1.823vw solid transparent; /* Transparent right border */
+  border-bottom: 6.481vh solid #5e5e5e; /* Solid bottom border */
+}
+
+/* Inner part of the left cat ear */
+.cat-left-inner-ear {
+  position: absolute;
+  top: 2.037vh;
+  left: -1.042vw;
+  border-top-left-radius: 4.688vw; /* Rounded top-left corner */
+  border-top-right-radius: 0.521vw; /* Rounded top-right corner */
+  border-bottom-right-radius: 40%; /* Rounded bottom-right corner */
+  border-bottom-left-radius: 40%; /* Rounded bottom-left corner */
+  border-left: 1.042vw solid transparent; /* Transparent left border */
+  border-right: 1.042vw solid transparent; /* Transparent right border */
+  border-bottom: 3.704vh solid #3b3b4f; /* Darker bottom color for the inner ear */
+}
+
+/* Inner part of the right cat ear */
+.cat-right-inner-ear {
+  position: absolute;
+  top: 2.037vh;
+  left: -1.042vw;
+  border-top-left-radius: 4.688vw; /* Rounded top-left corner */
+  border-top-right-radius: 0.521vw; /* Rounded top-right corner */
+  border-bottom-right-radius: 40%; /* Rounded bottom-right corner */
+  border-bottom-left-radius: 40%; /* Rounded bottom-left corner */
+  border-left: 1.042vw solid transparent; /* Transparent left border */
+  border-right: 1.042vw solid transparent; /* Transparent right border */
+  border-bottom: 3.704vh solid #3b3b4f; /* Darker bottom color for the inner ear */
+}
+
+/* Left cat eye */
+.cat-left-eye {
+  position: absolute;
+  top: 5vh;
+  left: 2.031vw;
+  border-radius: 60%; /* Circular shape */
+  transform: rotate(25deg); /* Rotation to adjust eye position */
+  width: 1.563vw; /* Relative width */
+  height: 3.704vh; /* Relative height */
+  background-color: #000; /* Black color for the eye */
+}
+
+/* Right cat eye */
+.cat-right-eye {
+  position: absolute;
+  top: 5vh;
+  left: 6.979vw;
+  border-radius: 60%; /* Circular shape */
+  transform: rotate(-25deg); /* Rotation to adjust eye position */
+  width: 1.563vw; /* Relative width */
+  height: 3.704vh; /* Relative height */
+  background-color: #000; /* Black color for the eye */
+}
+
+/* Inner part of the left cat eye */
+.cat-left-inner-eye {
+  position: absolute;
+  top: 0.741vh;
+  left: 0.104vw;
+  width: 0.521vw; /* Relative width */
+  height: 1.852vh; /* Relative height */
+  transform: rotate(10deg); /* Slight rotation */
+  background-color: #fff; /* White color for the inner part */
+  border-radius: 60%; /* Circular shape */
+}
+
+/* Inner part of the right cat eye */
+.cat-right-inner-eye {
+  position: absolute;
+  top: 0.741vh;
+  left: 0.938vw;
+  transform: rotate(-5deg); /* Slight rotation */
+  width: 0.521vw; /* Relative width */
+  height: 1.852vh; /* Relative height */
+  background-color: #fff; /* White color for the inner part */
+  border-radius: 60%; /* Circular shape */
+}
+
+/* Cat nose styling */
+.cat-nose {
+  position: absolute;
+  top: 10vh;
+  left: 4.427vw;
+  border-top-left-radius: 50%; /* Rounded corners */
+  border-bottom-right-radius: 50%; /* Rounded corners */
+  border-bottom-left-radius: 50%; /* Rounded corners */
+  transform: rotate(180deg); /* Flip nose upside down */
+  border-left: 0.781vw solid transparent; /* Transparent left border */
+  border-right: 0.781vw solid transparent; /* Transparent right border */
+  border-bottom: 1.852vh solid #442c2c; /* Brownish color for the nose */
+}
+
+/* Cat mouth styling */
+.cat-mouth div {
+  width: 1.563vw;
+  height: 4.63vh;
+  border: 0.185vh solid #000; /* Black border for mouth */
+  border-radius: 190%/9.896vw 7.813vw 0 0; /* Rounded corners for the mouth */
+  border-color: black transparent transparent transparent; /* Black border on top */
+}
+
+/* Left line of the cat's mouth */
+.cat-mouth-line-left {
+  position: absolute;
+  top: 8.148vh;
+  left: 3.854vw;
+  transform: rotate(170deg); /* Rotation to shape the mouth line */
+}
+
+/* Right line of the cat's mouth */
+.cat-mouth-line-right {
+  position: absolute;
+  top: 8.148vh;
+  left: 4.74vw;
+  transform: rotate(165deg); /* Rotation to shape the mouth line */
+}
+
+/* Left whiskers styling */
+.cat-whiskers-left div {
+  width: 2.083vw;
+  height: 0.093vh;
+  background-color: #000; /* Black whiskers */
+}
+
+/* Right whiskers styling */
+.cat-whiskers-right div {
+  width: 2.083vw;
+  height: 0.093vh;
+  background-color: #000; /* Black whiskers */
+}
+
+/* Upper left whisker */
+.cat-whisker-left-top {
+  position: absolute;
+  top: 11.111vh;
+  left: 2.708vw;
+  transform: rotate(10deg); /* Adjust angle of whisker */
+}
+
+/* Middle left whisker */
+.cat-whisker-left-middle {
+  position: absolute;
+  top: 11.759vh;
+  left: 2.708vw;
+  transform: rotate(3deg); /* Adjust angle of whisker */
+}
+
+/* Lower left whisker */
+.cat-whisker-left-bottom {
+  position: absolute;
+  top: 12.407vh;
+  left: 2.708vw;
+  transform: rotate(-3deg); /* Adjust angle of whisker */
+}
+
+/* Upper right whisker */
+.cat-whisker-right-top {
+  position: absolute;
+  top: 11.111vh;
+  left: 5.677vw;
+  transform: rotate(-10deg); /* Adjust angle of whisker */
+}
+
+/* Middle right whisker */
+.cat-whisker-right-middle {
+  position: absolute;
+  top: 11.759vh;
+  left: 5.677vw;
+  transform: rotate(-3deg); /* Adjust angle of whisker */
+}
+
+/* Lower right whisker */
+.cat-whisker-right-bottom {
+  position: absolute;
+  top: 12.407vh;
+  left: 5.677vw;
+  transform: rotate(3deg); /* Adjust angle of whisker */
+}

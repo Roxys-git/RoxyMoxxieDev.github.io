@@ -1,50 +1,68 @@
-<!DOCTYPE html> <!-- Deklariert das Dokument als HTML5 -->
-<html lang="en"> <!-- Start des HTML-Dokuments, Attribut "lang" definiert die Sprache des Inhalts als Englisch -->
+<!DOCTYPE html> 
+<!-- Declares the document as HTML5 -->
+
+<html lang="en">
+  <!-- Root of the HTML document, with "lang" attribute set to English -->
+
   <head>
-    <!-- Der Kopfbereich der Seite, der Metainformationen und Links zu externen Dateien enthält -->
-    <meta charset="utf-8" /> <!-- Gibt die Zeichenkodierung des Dokuments an; "utf-8" unterstützt die meisten Zeichen weltweit -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Macht die Seite responsiv, passt die Breite an die des Geräts an -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Kompatibilitätsmodus für den Internet Explorer, damit die neueste Version verwendet wird -->
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinkt das CSS-Stylesheet "styles.css" zur Gestaltung der Seite -->
-    <title>Telephone Number Validator</title> <!-- Titel des Dokuments, wird im Browser-Tab angezeigt -->
+    <!-- Head section for meta information and linking external files -->
+
+    <meta charset="utf-8" />
+    <!-- Ensures all characters are encoded in UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enables responsive design and proper scaling on different devices -->
+
+    <meta name="description" content="Telephone Number Validator" />
+    <!-- Page description displayed in search engine results -->
+
+    <meta name="author" content="RoxyMoxxieDev" />
+    <!-- Specifies the author of the page -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with the latest versions of Internet Explorer and other modern browsers -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Links the external CSS file for styling -->
+
+    <title>Telephone Number Validator</title>
+    <!-- The title of the document, displayed in the browser tab -->
   </head>
 
   <body>
-    <!-- Hauptbereich des Dokuments, in dem alle sichtbaren Inhalte platziert werden -->
+    <!-- Body section containing all visible content -->
+
     <main>
-      <!-- Der Hauptinhalt der Seite -->
+      <!-- Main content of the page -->
+
       <header>
-        <!-- Kopfbereich des Hauptinhalts -->
-        <h1>Telephone Number Validator</h1> <!-- Überschrift der Seite, die den Titel des Tools anzeigt -->
+        <!-- Header for the main content -->
+        <h1>Telephone Number Validator</h1>
+        <!-- Main heading displaying the tool's title -->
       </header>
 
       <section>
-        <!-- Sektion für den Eingabebereich und die Schaltflächen -->
+        <!-- Section for input and buttons -->
+
         <div>
-          <input id="user-input"> <!-- Eingabefeld für den Benutzer zur Eingabe der Telefonnummer -->
+          <input id="user-input" placeholder="Enter phone number" />
+          <!-- Input field where the user can type a phone number -->
         </div>
+
         <div>
-          <button id="check-btn">Check</button> <!-- "Check"-Schaltfläche, um die Telefonnummer zu validieren -->
-          <button id="clear-btn">Clear</button> <!-- "Clear"-Schaltfläche, um den Inhalt des Ergebnisbereichs zu löschen -->
+          <button id="check-btn">Check</button>
+          <!-- Button to trigger the validation of the phone number -->
+
+          <button id="clear-btn">Clear</button>
+          <!-- Button to clear the results or reset the input -->
         </div>
-        <div id="results-div"></div> <!-- Bereich, um die Validierungsergebnisse anzuzeigen -->
+
+        <div id="results-div"></div>
+        <!-- Division to display the validation results -->
       </section>
     </main>
 
-    <script src="script.js"></script> <!-- Verlinkt das JavaScript-Skript "script.js", das die Logik der Telefonnummernvalidierung enthält -->
+    <script src="script.js"></script>
+    <!-- Links the JavaScript file that contains the validation logic -->
   </body>
 </html>
-
-<!--Detaillierte Erklärung der Syntax:
-
-    <!DOCTYPE html>: Der Doctype legt fest, dass es sich um ein HTML5-Dokument handelt, was Browsern hilft, die Seite korrekt zu rendern.
-    <html lang="en">: Die lang-Eigenschaft im html-Tag informiert Suchmaschinen und Screenreader über die Sprache, hier Englisch.
-    <meta charset="utf-8">: Stellt sicher, dass der Text auf der Seite in UTF-8 kodiert wird, einer universellen Zeichencodierung.
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">: Dieser meta-Tag sorgt für eine gute Anzeige auf mobilen Geräten.
-    <link rel="stylesheet" href="styles.css">: Ein link-Tag zum Verknüpfen von CSS-Dateien, um das Erscheinungsbild der HTML-Elemente zu stylen.
-    <title>: Bestimmt den Titel der Seite, der im Browser-Tab erscheint.
-    <main>, <header>, <section>, <div>: Strukturierende Tags für den Inhalt, die dabei helfen, verschiedene Bereiche der Seite zu ordnen.
-    <input id="user-input">: Ein Eingabefeld mit einer id, um es im JavaScript- und CSS-Code anzusprechen.
-    <button>: Die Schaltflächen, um die Aktionen "Check" und "Clear" auszuführen.
-    <script src="script.js">: Verknüpft das JavaScript, das die Funktionsweise der Seite steuert, wie die Überprüfung der Telefonnummer und das Anzeigen der Ergebnisse.
--->

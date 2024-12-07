@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta-Tag für die responsive Gestaltung der Webseite, um sicherzustellen, dass sie auf verschiedenen Bildschirmgrößen gut aussieht -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Zeichencodierung der Webseite auf UTF-8 setzen -->
-    <meta charset="utf-8">
-    <!-- Verlinkt das externe Stylesheet für das Styling der Webseite -->
+    <meta charset="utf-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Technical datasheet" />
+
+    <meta name="author" content="RoxyMoxxieDev" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <link rel="stylesheet" href="styles.css">
-    <!-- Titel der Webseite (aktuell leer) -->
-    <title></title>
+ 
+    <title>Technical datasheet</title>
   </head>
   <body>
-    <!-- Hauptinhalt der Webseite -->
+
     <main id="main-doc">
-      <!-- Navigationsleiste -->
+
       <nav id="navbar">
-        <!-- Hauptüberschrift der Webseite -->
+
         <header class="main-title">Technical data of my Dreamlaptop</header>
         <hr>
-        <!-- Links zur Navigation innerhalb der Seite -->
+
         <div class="links">
           <a class="nav-link" href="#Processor">Processor</a>
           <a class="nav-link" href="#Memory">Memory</a>
@@ -27,9 +32,9 @@
           <a class="nav-link" href="#Keyboard">Keyboard</a>
         </div>    
       </nav>
-      <!-- Abschnitt für die Prozessorinformationen -->
+
       <section class="main-section" id="Processor">
-        <!-- Überschrift des Abschnitts -->
+
         <header>Processor</header>
         <div>
           <p>The Ryzen 9 7940HS is a powerful Phoenix family APU that saw the light of day in H1 2023. Its 8 cores are powered by the Zen 4 architecture and are SMT-enabled for a total of 16 processing threads. 4.0 GHz is the base clock speed and the highest Boost clock speed achievable is 5.2 GHz. The 7940HS introduces Ryzen AI which is AMD's answer to Intel's DL Boost and GNA technologies. The Radeon 780M serves as the integrated graphics adapter.</p>
@@ -37,7 +42,7 @@
           <code>AMD is for work processes better then Intel</code>
         </div><!-- Beschreibung des Prozessors -->
         
-        <!-- Liste von Eigenschaften und Leistungsdaten des Prozessors -->
+
         <ul>
           <li>
             <strong>Architecture & Features</strong>
@@ -67,9 +72,9 @@
         </ul>
       </section>
       <hr id="section-splitter">
-      <!-- Abschnitt für den Arbeitsspeicher -->
+
       <section class="main-section" id="Memory">
-        <!-- Überschrift des Abschnitts -->
+
         <header>Memory</header>
         <div>
           <p>64 GB (RAM-Module: 2 Stück),<br>
@@ -78,8 +83,8 @@
             Anschluss: 262-pin,<br>
             Spannung: 1,1 Volt
           </p>
-        </div><!-- Beschreibung des Arbeitsspeichers -->
-        <!-- Liste von RAM-Spezifikationen -->
+        </div>
+
         <ul>
           <li>RAM configuration 2 x 32GB</li>
           <li>RAM typ DDR5-RAM</li>
@@ -92,7 +97,7 @@
         </ul>
         <div>
           <p>The ThinkPad 1TB Performance PCIe Gen4 NVMe OPAL2 M.2 2280 SSD is a good choice to upgrade your ThinkPad notebook.<br>It is qualified on select ThinkPad notebooks and is backed by a one year warranty.</p>
-        </div><!-- Beschreibung einer SSD für das ThinkPad -->
+        </div>
         
         <ul>
           <li>1TB storage capacity</li>
@@ -102,7 +107,7 @@
         </ul>
       </section>
       <hr id="section-splitter">
-      <!-- Abschnitt für die Video-/Grafikinformationen -->
+
       <section class="main-section" id="Video">
         <header>Video</header>
         
@@ -136,7 +141,7 @@
         </ul>
       </section>
       <hr id="section-splitter">
-      <!-- Abschnitt für die Bildschirm-/Displayinformationen -->
+
       <section class="main-section" id="Screen">
         <header>Screen</header>
 
@@ -168,7 +173,7 @@
         </ul>
       </section>
       <hr id="section-splitter">
-      <!-- Abschnitt für die Tastaturinformationen -->
+
       <section class="main-section" id="Keyboard">
         <header>Keyboard</header>
         <div>
@@ -221,31 +226,3 @@
     </main>
   </body>
 </html>
-
-<!--    DOCTYPE und HTML-Tag:
-        Der <!DOCTYPE html>-Tag zeigt an, dass es sich um ein HTML5-Dokument handelt.
-        Der <html lang="en">-Tag legt die Sprache der Webseite auf Englisch fest.
-
-    Head-Bereich:
-        Der <head>-Bereich enthält Metadaten über die Webseite, einschließlich des Zeichensatzes, der viewport-Einstellungen für Responsive Design und dem Link zu einem externen Stylesheet.
-
-    Body-Bereich:
-        Der <body>-Tag enthält den Hauptinhalt der Webseite, einschließlich eines <main>-Containers, der den gesamten Inhalt umschließt.
-
-    Navigationsleiste:
-        Das <nav>-Element enthält Links zu verschiedenen Abschnitten der Seite, um die Benutzerführung zu erleichtern. Die <header>-Tags definieren die Hauptüberschrift, während die <a>-Tags als Links zu den jeweiligen Abschnitten dienen.
-
-    Abschnitte:
-        Jeder Abschnitt ist mit einem <section>-Tag strukturiert, der mit einer eindeutigen id versehen ist. Dies ermöglicht es den Links in der Navigationsleiste, direkt zu den entsprechenden Abschnitten zu springen.
-        Jeder Abschnitt hat eine Überschrift (<header>), einen einleitenden Absatz (<p>) und eine Liste (<ul>), die zusätzliche Informationen oder Merkmale auflistet.
-
-    Code-Tag:
-        Das <code>-Tag wird verwendet, um technische Anmerkungen oder Hinweise hervorzuheben.
-
-    Listen:
-        Die Verwendung von <ul> und <li> ermöglicht eine klare und strukturierte Auflistung von Informationen und Eigenschaften.
-
-Diese Struktur sorgt für eine klare Trennung und Organisation der Informationen, wodurch die Lesbarkeit und Benutzerfreundlichkeit der Websei
-
-te erhöht werden.
--->

@@ -1,146 +1,146 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Setzt die Box-Modell-Option für alle Elemente, sodass Padding und Border zur Gesamtbreite und -höhe gehören */
+/* Universal box-sizing rule for all elements */
+*, *::before, *::after {
+  box-sizing: border-box; /* Ensures that padding and borders are included in the element's total width and height */
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal; /* Setzt das Schriftgewicht auf normal */
-  background: linear-gradient(#000088, black); /* Setzt einen linearen Farbverlauf als Hintergrund von Blau zu Schwarz */
-  color: whitesmoke; /* Setzt die Textfarbe auf ein helles Grau */
-  text-align: center; /* Zentriert den Text im Körper */
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; /* Sets the font family to Arial, Helvetica, or sans-serif */
+  font-weight: normal; /* Sets the font weight to normal */
+  background: linear-gradient(#000088, black); /* Sets a linear gradient background from blue to black */
+  color: whitesmoke; /* Sets the text color to a light gray */
+  text-align: center; /* Centers the text horizontally in the body */
+  margin: 0; /* Removes the default margin of the body */
 }
 
 #header-img {
-  width: 100vw; /* Setzt die Breite der Bilder auf 1200px */
-  height: 20vh; /* Setzt die Höhe der Bilder auf 400px */
+  width: 100vw; /* Sets the width of the image to 100% of the viewport width */
+  height: 20vh; /* Sets the height of the image to 20% of the viewport height */
 }
 
 #nav-bar {
-  display: flex; /* Setzt die Anzeige der Navigationsleiste auf Flexbox */
-  flex-direction: column; /* Stellt die Flex-Richtung auf Spalte ein */
-  top: 0; /* Positioniert die Navigationsleiste am oberen Rand */
-  position: fixed; /* Fixiert die Navigationsleiste, sodass sie beim Scrollen sichtbar bleibt */
-  z-index: 100; /* Setzt den z-Index, um sicherzustellen, dass die Navigationsleiste über anderen Elementen liegt */
-  margin: 0;
-  gap: 5vh; /* Entfernt den äußeren Abstand */
+  display: flex; /* Enables Flexbox layout for the navigation bar */
+  flex-direction: column; /* Aligns the navigation links in a column */
+  top: 0; /* Positions the navigation bar at the top of the page */
+  position: fixed; /* Fixes the navigation bar so it stays visible when scrolling */
+  z-index: 100; /* Ensures the navigation bar is above other elements */
+  margin: 0; /* Removes any default margin */
+  gap: 5vh; /* Adds vertical spacing between the navigation items */
 }
 
 button {
-  font-size: 1.9vh; /* Setzt die Schriftgröße der Buttons auf 20px */
-  padding: 1vh 1vw; /* Fügt Padding von 20px hinzu */
-  background-color: whitesmoke; /* Setzt die Hintergrundfarbe der Buttons auf ein helles Grau */
-  border-radius: 2vw; /* Macht die Ecken der Buttons abgerundet */
+  font-size: 1.9vh; /* Sets the font size of buttons based on viewport height */
+  padding: 1vh 1vw; /* Adds padding inside the buttons */
+  background-color: whitesmoke; /* Sets the background color of buttons to light gray */
+  border-radius: 2vw; /* Rounds the corners of the buttons */
 }
 
 a {
-  text-decoration: none; /* Entfernt die Unterstreichung von Links */
-  color:  #000088; /* Setzt die Textfarbe der Links auf Dunkelblau */
+  text-decoration: none; /* Removes the underline from links */
+  color: #000088; /* Sets the link color to dark blue */
 }
 
 #section-one {
-  height: 70vh;
+  height: 70vh; /* Sets the height of the first section to 70% of the viewport height */
 }
 
 h1 {
-  font-size: 4vh; /* Setzt die Schriftgröße der Hauptüberschrift auf 32px */
-  margin: 10vh;
+  font-size: 4vh; /* Sets the font size of the main heading based on viewport height */
+  margin: 10vh; /* Adds margin around the heading */
 }
 
 #inputs {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Enables Flexbox layout for the input fields */
+  flex-direction: column; /* Aligns input fields in a column */
 }
 
 #email, #number, #name {
-  width: 25vw; /* Setzt die Breite des E-Mail-Eingabefeldes auf 300px */
-  height: 2vh; /* Setzt die Höhe des E-Mail-Eingabefeldes auf 20px */
-  font-size: 0.75vw; /* Setzt die Schriftgröße des E-Mail-Eingabefeldes auf 16px */
-  color: #000088; /* Setzt die Textfarbe des E-Mail-Eingabefeldes auf Dunkelblau */
-  margin: 2vh auto;
+  width: 25vw; /* Sets the width of the input fields to 25% of the viewport width */
+  height: 2vh; /* Sets the height of the input fields */
+  font-size: 0.75vw; /* Sets the font size of the input fields */
+  color: #000088; /* Sets the text color of the input fields to dark blue */
+  margin: 2vh auto; /* Adds margin around the input fields */
 }
 
 #section-two {
-  height: 100vh;
+  height: 100vh; /* Sets the height of the second section to 100% of the viewport height */
 }
 
 h2 {
-  font-size: 4vh; /* Setzt die Schriftgröße der Unterüberschrift auf 24px */
-  margin-bottom: 21vh;
+  font-size: 4vh; /* Sets the font size of the subsection heading */
+  margin-bottom: 21vh; /* Adds space below the heading */
 }
 
 .features-container {
-  display: flex; /* Aktiviert Flexbox für den Container */
-  flex-wrap: wrap; /* Ermöglicht den Umbruch der Features, wenn der Platz nicht ausreicht */
-  gap: 7vh; /* Fügt einen Abstand zwischen den einzelnen Features hinzu */
-  justify-content: space-evenly; /* Verwendet den verfügbaren Raum gleichmäßig */
-  margin: 0 auto; /* Zentriert den Container */
-  max-width: 70vw;
+  display: flex; /* Enables Flexbox layout for the features container */
+  flex-wrap: wrap; /* Allows items to wrap to the next line when necessary */
+  gap: 7vh; /* Adds vertical spacing between features */
+  justify-content: space-evenly; /* Distributes features evenly across the container */
+  margin: 0 auto; /* Centers the container */
+  max-width: 70vw; /* Limits the container width to 70% of the viewport width */
 }
 
 .features {
-  flex: 1 1 calc(33.33% - 1rem); /* Setzt jedes Feature auf ein Drittel der Container-Breite mit etwas Abstand */
-  max-width: 20vw; /* Verhindert, dass Features zu klein werden */
-  border: 0.2vh solid whitesmoke;
-  padding: 2.5vw; /* Fügt Padding innerhalb der Features hinzu */
-  border-radius: 2vh; /* Macht die Ecken der Features abgerundet */
-  font-size: 1.9vh;
+  flex: 1 1 calc(33.33% - 1rem); /* Makes each feature take up one-third of the container width */
+  max-width: 20vw; /* Prevents features from becoming too small */
+  border: 0.2vh solid whitesmoke; /* Adds a light border around each feature */
+  padding: 2.5vw; /* Adds padding inside each feature box */
+  border-radius: 2vh; /* Rounds the corners of each feature box */
+  font-size: 1.9vh; /* Sets the font size inside each feature box */
 }
 
 .features > p {
-  margin: 0;
+  margin: 0; /* Removes margin inside each paragraph element */
 }
 
 #section-three {
-  height: 100vh;
+  height: 100vh; /* Sets the height of the third section to 100% of the viewport height */
 }
 
 #section-three > h2 {
-  margin: 2vh auto 20vh auto;
+  margin: 2vh auto 20vh auto; /* Adds vertical margin to the heading */
 }
 
 #video > img {
-  width: 50vw;
+  width: 50vw; /* Sets the width of the video thumbnail to 50% of the viewport width */
 }
 
 #section-four {
-  height: 100vh;
+  height: 100vh; /* Sets the height of the fourth section to 100% of the viewport height */
 }
 
 #section-four > input {
-  padding: 2vh 2vw;
-  background-color: #010111;
-  color: whitesmoke;
-  font-size: 2.5vh;
-  margin-top: 10vh;
-  border-radius: 2vh;
+  padding: 2vh 2vw; /* Adds padding inside the input field */
+  background-color: #010111; /* Sets the background color of the input field */
+  color: whitesmoke; /* Sets the text color inside the input field */
+  font-size: 2.5vh; /* Sets the font size of the input field */
+  margin-top: 10vh; /* Adds margin above the input field */
+  border-radius: 2vh; /* Rounds the corners of the input field */
 }
 
 #pricing {
-  margin: 10vh;
+  margin: 10vh; /* Adds margin around the pricing section */
 }
 
 .prices {
-  display: flex; /* Setzt die Anzeige für die Preisinformationen auf Flexbox */
-  justify-content: space-evenly; /* Verteilt die Preise gleichmäßig innerhalb des Containers */
-  flex-direction: row; /* Setzt die Flex-Richtung auf Zeile */
-  flex-wrap: wrap; /* Ermöglicht, dass die Elemente umgebrochen werden, wenn der Platz nicht ausreicht */
-  max-width: 80vw; /* Setzt die maximale Breite auf 900px */
-  margin: 0 auto; /* Zentriert den Container horizontal */
+  display: flex; /* Enables Flexbox layout for the pricing container */
+  justify-content: space-evenly; /* Distributes the pricing items evenly */
+  flex-direction: row; /* Aligns items in a row */
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  max-width: 80vw; /* Limits the container width to 80% of the viewport width */
+  margin: 0 auto; /* Centers the container */
 }
 
 .pricing {
-  border: 0.2vh solid whitesmoke; /* Fügt eine Rahmenlinie um die Preisinformationen hinzu */
-  border-radius: 2vh;
-  width: 25vw; /* Setzt die Breite der Preisbox auf 240px */
-  height: 20vh;
-  padding: 4vw; /* Fügt Padding von 30px innerhalb der Preisbox hinzu */
-  display: grid; /* Setzt die Anzeige der Preisbox auf Grid */
-  font-size: 2.5vh;
+  border: 0.2vh solid whitesmoke; /* Adds a border around each pricing box */
+  border-radius: 2vh; /* Rounds the corners of each pricing box */
+  width: 25vw; /* Sets the width of each pricing box */
+  height: 20vh; /* Sets the height of each pricing box */
+  padding: 4vw; /* Adds padding inside each pricing box */
+  display: grid; /* Displays content of pricing box in grid format */
+  font-size: 2.5vh; /* Sets the font size inside the pricing box */
 }
 
+/* Responsive styles for larger screens (landscape orientation, max-width 1400px) */
 @media (max-width: 1400px) and (orientation: landscape) {
   #header-img {
     width: 100vw;
@@ -185,6 +185,7 @@ h2 {
   }
 }
 
+/* Responsive styles for portrait screens (max-width 1024px) */
 @media (max-width: 1024px) and (orientation: portrait) {
   #header-img {
     width: 100vw;
@@ -233,6 +234,7 @@ h2 {
   }
 }
 
+/* Responsive styles for smaller landscape screens (max-width 950px) */
 @media (max-width: 950px) and (orientation: landscape) {
   #header-img {
     width: 100vw;

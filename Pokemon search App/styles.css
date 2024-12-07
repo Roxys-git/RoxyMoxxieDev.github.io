@@ -1,108 +1,78 @@
-/* 1. Basis-CSS für Box-Sizing (Standardmäßig für alle Elemente und deren Pseudoelemente) */
-*,                 /* Alle Elemente der Seite */
-*::before,         /* Pseudo-Elemente '::before' */
-*::after {         /* Pseudo-Elemente '::after' */
-  box-sizing: border-box; /* Definiert, dass die Größenberechnung Höhe und Breite des Inhalts sowie Padding und Border umfasst */
+/* 1. Base CSS for Box-Sizing (Defaults for all elements and their pseudo-elements) */
+*,                 /* All elements on the page */
+*::before,         /* Pseudo-elements '::before' */
+*::after {         /* Pseudo-elements '::after' */
+  box-sizing: border-box; /* Defines that the sizing includes the content's height and width, as well as padding and border */
 }
 
 html {
-  margin: 0;
+  margin: 0; /* Removes default margin from the HTML element */
 }
 
-/* 2. Stilregeln für das Body-Element */
+/* 2. Style rules for the body element */
 body {
-  /* Hintergrundbild und -layout für die gesamte Seite */
-  background-image: url(https://images.hdqwalls.com/download/the-pikachu-zj-3840x2160.jpg); /* Hintergrundbild-URL */
-  background-size: cover;       /* Deckt die gesamte Breite und Höhe des Viewports ab */
-  background-repeat: no-repeat; /* Verhindert Wiederholung des Bildes */
-  background-position: center;  /* Zentriert das Bild innerhalb des Viewports */
+  /* Background image and layout for the entire page */
+  background-image: url(https://images.hdqwalls.com/download/the-pikachu-zj-3840x2160.jpg); /* URL of the background image */
+  background-size: cover;       /* Covers the entire width and height of the viewport */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center;  /* Centers the image within the viewport */
 
-  /* Text- und Schriftartstile */
-  color: black;                 /* Standardtextfarbe */
-  font-family: Arial, sans-serif; /* Schriftart, als Fallback Arial und eine generische serifenlose Schrift */
-  font-size: 3vh;              /* Schriftgröße */
-  -webkit-text-stroke: 1px yellow; /* Gelber Rand um den Text, nur in Webkit-basierten Browsern sichtbar */
+  /* Text and font styles */
+  color: black;                 /* Standard text color */
+  font-family: Arial, sans-serif; /* Font family, with Arial and a generic sans-serif as fallback */
+  font-size: 3vh;              /* Font size */
+  -webkit-text-stroke: 1px yellow; /* Yellow text stroke, visible only in Webkit-based browsers */
 
-  /* Seitenlayout */
-  width: 100vw;                 /* Vollständige Breite des Viewports */
-  height: 100vh;                /* Vollständige Höhe des Viewports */
-  text-align: center;           /* Zentriert den Text horizontal */
-  margin: 0;
+  /* Page layout */
+  width: 100vw;                 /* Full width of the viewport */
+  height: 100vh;                /* Full height of the viewport */
+  text-align: center;           /* Centers text horizontally */
+  margin: 0;                    /* Removes default margin */
 }
 
-/* 3. Gemeinsame Stile für .search-options und input */
+/* 3. Common styles for .search-options and input */
 .search-options, input {
-  margin: 0; /* Entfernt den Standardabstand um die Elemente */
+  margin: 0; /* Removes default margin around the elements */
 }
 
-/* 4. Stilregeln für das Eingabefeld */
+/* 4. Style rules for the input field */
 input {
-  background-color: black;
-  width: 12vw;
-  height: 5vh;
-  font-size: 3.5vh;
-  margin: 2vw; /* Schwarzer Hintergrund für das Eingabefeld */
+  background-color: black;      /* Black background for the input field */
+  width: 12vw;                  /* Width of the input field relative to the viewport */
+  height: 5vh;                  /* Height of the input field relative to the viewport */
+  font-size: 3.5vh;             /* Font size */
+  margin: 2vw;                  /* Margin around the input field */
 }
 
-/* 5. Stilregeln für die Schaltfläche */
+/* 5. Style rules for the button */
 button {
-  margin: 2vw;             /* Abstand um die Schaltfläche herum */
-  background-color: black;
-  width: 8vw;
-  height: 5vh;
-  font-size: 3.5vh;  /* Schwarzer Hintergrund */
+  margin: 2vw;                 /* Margin around the button */
+  background-color: black;     /* Black background for the button */
+  width: 8vw;                  /* Width of the button relative to the viewport */
+  height: 5vh;                 /* Height of the button relative to the viewport */
+  font-size: 3.5vh;            /* Font size for the button */
 }
 
-/* 6. Stile für die .table-Klasse */
+/* 6. Styles for the .table class */
 .table {
-  display: flex;            /* Verwendet Flexbox für flexibles Layout */
-  justify-content: center;  /* Zentriert den Inhalt horizontal */
-  text-align: left;         /* Richtet den Text innerhalb der Tabelle links aus */
+  display: flex;                /* Uses Flexbox for flexible layout */
+  justify-content: center;      /* Centers the content horizontally */
+  text-align: left;             /* Aligns text within the table to the left */
 }
 
+/* Media query for screens with a max-width of 600px and portrait orientation */
 @media (max-width: 600px) and (orientation: portrait) {
   p {
-    font-size: 2.8vh;
+    font-size: 2.8vh; /* Decreases font size for paragraphs on small screens */
   }
   
   input {
-    width: 60vw;
-    font-size: 3vh;
+    width: 60vw;       /* Increases the width of the input field */
+    font-size: 3vh;    /* Decreases font size for input */
   }
   
   button {
-    width: 30vw;
-    font-size: 3vh;
+    width: 30vw;       /* Increases the width of the button */
+    font-size: 3vh;    /* Decreases font size for the button */
   }
 }
-
-/*
-Erklärung der Syntax und Hauptkomponenten:
-
-    Universelle Box-Sizing-Regel (*, *::before, *::after):
-        Der *-Selektor betrifft alle Elemente, während *::before und *::after auf Pseudo-Elemente abzielt.
-        box-sizing: border-box; sorgt dafür, dass die Breite und Höhe der Elemente das Padding und den Rahmen einbeziehen. Dies vereinfacht das Layout, da die tatsächliche Breite/Höhe des Elements nicht durch Padding oder Border beeinflusst wird.
-
-    Stilregeln für das <body>-Element:
-        background-image: Gibt die URL des Hintergrundbildes an.
-        background-size: cover: Skaliert das Hintergrundbild so, dass es den gesamten Viewport ohne Verzerrung abdeckt.
-        background-repeat: no-repeat: Verhindert eine Wiederholung des Bildes, falls es kleiner als der Viewport ist.
-        background-position: center: Zentriert das Bild im Hintergrund.
-        font-family: Definiert die Schriftart als Arial oder eine generische serifenlose Alternative.
-        -webkit-text-stroke: Erzeugt einen gelben Rand um den Text. Dies ist eine Webkit-spezifische Eigenschaft und funktioniert nur in Chrome und Safari.
-
-    Stil für .search-options und input:
-        margin: 0; entfernt Standardabstände, sodass diese Elemente bündig im Layout sitzen.
-
-    input-Stilregel:
-        background-color: black; sorgt für einen schwarzen Hintergrund im Eingabefeld, was es optisch von der Seite abhebt.
-
-    button-Stilregel:
-        margin: 30px; fügt Abstand um die Schaltfläche herum hinzu.
-        background-color: black; sorgt für einen schwarzen Hintergrund, um zur Seitenästhetik zu passen.
-
-    Stil für .table:
-        display: flex; wendet Flexbox an, was eine flexible Anordnung der Inhalte ermöglicht.
-        justify-content: center; zentriert die Tabelle horizontal auf der Seite.
-        text-align: left; richtet den Text innerhalb der Tabelle linksbündig aus.
-*/

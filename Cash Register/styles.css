@@ -1,52 +1,58 @@
-*,
-*::before,
-*::after {
+/* Apply border-box model to all elements, including pseudo-elements */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
+/* Set root variables for text color and background gradient */
 :root {
   --text-color: black;
   --background-color: linear-gradient(chartreuse, black);
 }
 
+/* Body styles */
 body {
-  font-family: Arial, sans-serif;
-  font-size: 3vh;
-  background: var(--background-color);
-  height: 100vh;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  font-family: Arial, sans-serif;  /* Set font family */
+  font-size: 3vh;  /* Set base font size */
+  background: var(--background-color);  /* Set background gradient using CSS variable */
+  height: 100vh;  /* Full viewport height */
+  display: flex;  /* Flexbox layout */
+  text-align: center;  /* Center align text */
+  justify-content: center;  /* Center horizontally */
+  align-items: center;  /* Center vertically */
 }
 
+/* Heading styles */
 h1 {
-  font-size: 7vh;
+  font-size: 7vh;  /* Set large font size for the heading */
 }
 
+/* Input field styles */
 input {
-  width: 20vw;
-  height: 5vh;
-  font-size: 3vh;
-  margin: 2vh auto;
-  border: 0.2vw solid var(--text-color);
-  border-radius: 2vw;
+  width: 20vw;  /* Set width to 20% of viewport width */
+  height: 5vh;  /* Set height to 5% of viewport height */
+  font-size: 3vh;  /* Set font size */
+  margin: 2vh auto;  /* Vertical margin of 2vh, horizontal auto for centering */
+  border: 0.2vw solid var(--text-color);  /* Border with width relative to viewport width */
+  border-radius: 2vw;  /* Rounded corners */
 }
 
+/* Button styles */
 button {
-  padding: 2vw;
-  background: var(--background);
-  font-size: 3vh;
-  border: 0.2vw solid black;
-  cursor: pointer;
-  border-radius: 2vw;
+  padding: 2vw;  /* Padding relative to viewport width */
+  background: var(--background-color);  /* Set background to gradient defined in root */
+  font-size: 3vh;  /* Set font size */
+  border: 0.2vw solid black;  /* Black border with relative width */
+  cursor: pointer;  /* Pointer cursor on hover */
+  border-radius: 2vw;  /* Rounded corners */
 }
 
+/* Button hover effect */
 button:hover {
-  opacity: 0.7;
+  opacity: 0.7;  /* Reduce opacity on hover for visual effect */
 }
 
+/* Text above the input field */
 #text-over-input {
-  margin: 0;
-  font-size: 3vh;
+  margin: 0;  /* Remove default margin */
+  font-size: 3vh;  /* Set font size */
 }

@@ -1,98 +1,108 @@
-/* Universelle Selektoren und Pseudoelemente */
+/* Universal selectors and pseudo-elements */
 *, *::before, *::after {
   box-sizing: border-box;
-  /* box-sizing: border-box; sorgt dafür, dass Padding und Border in die Breite und Höhe der Elemente eingerechnet werden, 
-     anstatt die Gesamtgröße des Elements zu vergrößern. Dies erleichtert das Layout und sorgt für ein konsistentes Verhalten der Größen. */
+  /* box-sizing: border-box; ensures that padding and border are included in the width and height of the elements,
+     rather than increasing the total size of the element. This simplifies layout management and provides consistent sizing behavior. */
 }
 
-/* :root-Selektor für CSS-Variablen */
+/* :root selector for CSS variables */
 :root {
   --background-color: linear-gradient(darkviolet, black);
-  /* Definiert eine CSS-Variable für den Hintergrund als Farbverlauf von Darkviolet nach Schwarz */
+  /* Defines a CSS variable for the background as a gradient from Darkviolet to black */
   
   --text-color: chartreuse;
-  /* Definiert eine CSS-Variable für die Textfarbe als Chartreuse (grünlich-gelb) */
+  /* Defines a CSS variable for the text color as Chartreuse (greenish-yellow) */
 }
 
-/* Styling für das body-Element */
+/* Styling for the body element */
 body {
   font-family: Times New Roman, serif;
-  /* Setzt die Schriftart für die gesamte Seite auf "Times New Roman", eine Serifenschriftart */
+  /* Sets the font for the entire page to "Times New Roman", a serif font */
 
   font-size: 2vh;
-  /* Grundschriftgröße für den Text im body-Bereich */
+  /* Sets the base font size for the body content based on 2% of the viewport height */
 
   color: var(--text-color);
-  /* Verwendet die CSS-Variable --text-color, die in :root definiert ist, für die Textfarbe */
+  /* Uses the CSS variable --text-color, defined in :root, for the text color */
 
   background: var(--background-color);
-  /* Verwendet die CSS-Variable --background-color als Hintergrund, um den definierten Farbverlauf anzuzeigen */
+  /* Uses the CSS variable --background-color as the background, displaying the defined gradient */
 
   height: 100vh;
-  /* Setzt die Höhe des body-Elements auf die volle Höhe des Viewports (100% der Bildschirmhöhe) */
+  /* Sets the height of the body element to 100% of the viewport height */
 
   width: 100vw;
-  /* Setzt die Breite des body-Elements auf die volle Breite des Viewports (100% der Bildschirmbreite) */
+  /* Sets the width of the body element to 100% of the viewport width */
 
   display: flex;
-  /* Setzt das Layout des main-Elements auf Flexbox, um die flexible Anordnung von Kind-Elementen zu ermöglichen */
+  /* Applies Flexbox layout to the body element to enable flexible arrangement of child elements */
 
   flex-direction: column;
-  /* Ordnet die Kind-Elemente in einer Spalte (vertikal) an */
+  /* Arranges child elements vertically (in a column) */
 
   align-items: center;
-  /* Zentriert die Kind-Elemente horizontal im Container */
+  /* Centers child elements horizontally within the container */
 
   justify-content: center;
-
-  margin: 0
-  /* Zentriert die Kind-Elemente vertikal im Container */
+  /* Centers child elements vertically within the container */
+  
+  margin: 0;
+  /* Removes the default margin from the body element */
 }
 
-/* Überschrift-Styles */
+/* Styling for the header */
 h1 {
   font-size: 5vh;
-  /* Setzt die Schriftgröße für h1-Überschriften */
+  /* Sets the font size for h1 headings to 5% of the viewport height */
 
   text-align: center;
-  /* Zentriert den Text innerhalb des h1-Elements */
+  /* Centers the text inside the h1 element */
 }
 
-/* Gemeinsame Styles für input- und button-Elemente */
+/* Common styles for input and button elements */
 input, button {
-  background: var(--background);
-  /* Setzt den Hintergrund für die input- und button-Elemente. Vermutlich soll hier `var(--background-color)` stehen, 
-     um den gleichen Farbverlauf wie der Hintergrund des body zu verwenden. */
+  background: var(--background-color);
+  /* Sets the background for the input and button elements to the gradient from --background-color */
 
   color: var(--text-color);
-  /* Setzt die Textfarbe auf die vordefinierte CSS-Variable --text-color */
+  /* Sets the text color to the defined --text-color variable */
 
   font-size: 3vh;
-  /* Setzt die Schriftgröße auf 24px, passend zur body-Schriftgröße */
+  /* Sets the font size for both the input and button elements to 3% of the viewport height */
 }
 
 .input {
   display: flex;
   justify-content: center;
+  /* Centers the input field horizontally within its container */
 }
-/* Input-spezifische Styles */
+
+/* Input-specific styles */
 input {
   width: 32vw;
-  /* Setzt die Breite des Eingabefelds auf 70% der Viewport-Breite */
+  /* Sets the width of the input field to 32% of the viewport width */
 
   margin: 5vh;
+  /* Adds a margin of 5% of the viewport height to create space around the input field */
+
   border-radius: 0.5vw;
-  /* Fügt einen kleinen Außenabstand hinzu, um das Eingabefeld von benachbarten Elementen leicht zu trennen */
+  /* Adds rounded corners to the input field with a radius of 0.5% of the viewport width */
 }
 
+/* Button-specific styles */
 .button {
   display: flex;
   justify-content: center;
+  /* Centers the button horizontally within its container */
 }
-/* Button-spezifische Styles */
+
 button {
   padding: 2vh 2vw;
+  /* Adds padding of 2% of the viewport height vertically and 2% of the viewport width horizontally to the button */
+  
   border: 0.2vh solid lightgray;
+  /* Adds a thin, light gray border around the button with a thickness of 0.2% of the viewport height */
+  
   border-radius: 2vw;
-  /* Fügt Innenabstände hinzu: 8px oben/unten und 20px links/rechts für besseren Klickbereich und visuellen Komfort */
+  /* Adds rounded corners to the button with a radius of 2% of the viewport width */
 }

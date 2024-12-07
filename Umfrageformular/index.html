@@ -1,143 +1,103 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de"> <!-- Declares the language of the page as German -->
   <head>
-    <meta charset="utf-8"> <!-- Setzt die Zeichencodierung auf UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Für responsives Design -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Umfrageformular</title> <!-- Titel der Webseite -->
-    <link rel="stylesheet" href="styles.css"> <!-- Verknüpft die externe CSS-Datei für das Styling -->
+    <meta charset="utf-8" />
+    <!-- Ensures that all characters are encoded in UTF-8 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Enables a responsive design that adjusts to various screen sizes -->
+
+    <meta name="description" content="Survey Form" />
+    <!-- Description of the form for search engines -->
+
+    <meta name="author" content="RoxyMoxxieDev" />
+    <!-- Provides author information for the page -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with modern browsers -->
+    
+    <title>Survey Form</title> <!-- Title of the webpage, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links the external CSS file for styling -->
   </head>
+  
   <body>
-    <h1 id="title">Umfrageformular für einen Camperausbau</h1> <!-- Hauptüberschrift des Formulars -->
+    <h1 id="title">Survey Form for Camper Conversion</h1> <!-- Main heading of the form -->
+
     <section>
-      <form method="post" action="https://survey-form.camperausbau.org" id="survey-form"> <!-- Beginnt das Formular, POST-Methode, Ziel-URL -->
-        <fieldset class="fieldset-first-page" id="fieldset-one"> <!-- Erstes Fieldset für persönliche Informationen -->
+      <!-- Section where the form is placed -->
+      <form method="post" action="https://survey-form.camperausbau.org" id="survey-form">
+        <!-- Starts the form with POST method and target URL -->
+        
+        <fieldset class="fieldset-first-page" id="fieldset-one">
+          <!-- Fieldset for personal information -->
           <label for="name">Name:</label>
-          <input id="name" name="name" type="text" placeholder="Gib dein Name ein" required> <!-- Eingabefeld für den Namen, Pflichtfeld -->
+          <input id="name" name="name" type="text" placeholder="Enter your name" required> 
+          <!-- Input field for the user's name, required field -->
           
           <label for="email">Email:</label>
-          <input id="email" name="email" type="email" placeholder="Gib deine Email ein" required> <!-- Eingabefeld für die E-Mail-Adresse, Pflichtfeld -->
+          <input id="email" name="email" type="email" placeholder="Enter your email" required> 
+          <!-- Input field for the user's email, required field -->
           
-          <label for="number">Alter:</label>
-          <input id="number" name="age" type="number" min="18" max="99" placeholder="Wähle"> <!-- Eingabefeld für das Alter, mit Mindest- und Höchstgrenze -->
+          <label for="number">Age:</label>
+          <input id="number" name="age" type="number" min="18" max="99" placeholder="Select"> 
+          <!-- Input field for the user's age, with a minimum and maximum value -->
           
-          <label for="dropdown">Konfiguration:</label>
-          <select id="dropdown" name="configuration"> <!-- Dropdown-Menü für die Konfiguration des Campers -->
-            <option value="">(Wählen Sie)</option> <!-- Standardoption -->
-            <option value="1">Vollintegriert</option> <!-- Option 1 -->
-            <option value="2">Teilintegriert</option> <!-- Option 2 -->
-            <option value="3">Kastenwagen</option> <!-- Option 3 -->
+          <label for="dropdown">Configuration:</label>
+          <select id="dropdown" name="configuration">
+            <!-- Dropdown menu for camper configuration -->
+            <option value="">(Choose)</option> <!-- Default option -->
+            <option value="1">Fully integrated</option>
+            <option value="2">Partially integrated</option>
+            <option value="3">Panel van</option>
           </select>
         </fieldset>
+
         <div class="fieldset-others">
+          <!-- Section with additional options -->
           <fieldset id="fieldset-two">
-            <legend>Batterientyp</legend> <!-- Überschrift für das Fieldset Batterientyp -->
-            <label>
-              <input id="checkbox" type="checkbox" value="1"> Ich möchte Litiumbatterien
-            </label>
-            <label>
-              <input id="checkbox" type="checkbox" value="2"> Ich möchte AGM-Batterien
-            </label>
-            <label>
-              <input id="checkbox" type="checkbox" value="3"> Ich möchte Gelbatterien
-            </label>
+            <!-- Options for battery types -->
+            <legend>Battery Type</legend>
+            <label><input id="checkbox" type="checkbox" value="1"> Lithium batteries</label>
+            <label><input id="checkbox" type="checkbox" value="2"> AGM batteries</label>
+            <label><input id="checkbox" type="checkbox" value="3"> Gel batteries</label>
           </fieldset>
     
           <fieldset id="fieldset-three">
-            <legend>Heizung</legend> <!-- Überschrift für das Fieldset Heizung -->
-            <label>
-              <input id="checkbox" type="checkbox" value="1"> Ich möchte mit Gas heizen
-            </label>
-            <label>
-              <input id="checkbox" type="checkbox" value="2"> Ich möchte mit Strom heizen
-            </label>
-            <label>
-              <input id="checkbox" type="checkbox" value="3"> Ich möchte mit Diesel heizen
-            </label>
+            <!-- Options for heating -->
+            <legend>Heating</legend>
+            <label><input id="checkbox" type="checkbox" value="1"> Gas heating</label>
+            <label><input id="checkbox" type="checkbox" value="2"> Electric heating</label>
+            <label><input id="checkbox" type="checkbox" value="3"> Diesel heating</label>
           </fieldset>
     
           <fieldset id="fieldset-four">
-            <legend>Kochen</legend> <!-- Überschrift für das Fieldset Kochen -->
-            <label>
-              <input id="checkbox" type="checkbox" value="1"> Ich möchte mit Gas kochen
-            </label>
-            <label>
-              <input id="checkbox" type="checkbox" value="2"> Ich möchte mit Strom kochen
-            </label>
+            <!-- Options for cooking -->
+            <legend>Cooking</legend>
+            <label><input id="checkbox" type="checkbox" value="1"> Gas cooking</label>
+            <label><input id="checkbox" type="checkbox" value="2"> Electric cooking</label>
           </fieldset>
     
           <fieldset id="fieldset-five">
-            <legend>Solar</legend> <!-- Überschrift für das Fieldset Solar -->
-            <label>
-              <input id="radio" type="radio" value="1" name="solar-type"> mit Solar
-            </label>
-            <label>
-              <input id="radio" type="radio" value="2" name="solar-type"> ohne Solar
-            </label>
+            <!-- Options for solar energy -->
+            <legend>Solar</legend>
+            <label><input id="radio" type="radio" value="1" name="solar-type"> With solar</label>
+            <label><input id="radio" type="radio" value="2" name="solar-type"> Without solar</label>
           </fieldset>
         </div>
         
         <div id="textarea">
-          <label for="description"><h3>Deine Vorstellung des Grundrisses:</h3><br></label> <!-- Beschreibung für das Textfeld -->
-          <textarea id="description" rows="21" cols="49" placeholder="Gib deinen Text ein"></textarea> <!-- Textarea für zusätzliche Informationen -->
+          <!-- Section for additional comments -->
+          <label for="description"><h3>Your layout ideas:</h3></label>
+          <textarea id="description" rows="21" cols="49" placeholder="Enter your text"></textarea>
+          <!-- Textarea for details about the camper layout -->
+          
           <div class="submit-container">
-            <input type="submit" value="Abschicken">
-            <span>Formular absenden</span> <!-- Sichtbarer Text -->
+            <!-- Section for the submit button -->
+            <input type="submit" value="Submit"> <!-- Submit button -->
+            <span>Submit the form</span> <!-- Informational text for users -->
           </div>
         </div>
-        
-        
-        
       </form>
     </section>
   </body>
 </html>
-
-
-<!--Erklärung der Hauptstruktur:
-
-    DOCTYPE (<!DOCTYPE html>): Definiert das Dokument als HTML5.
-
-    HTML-Tag (<html>): Öffnet das Dokument und ist der Container für alle HTML-Inhalte.
-
-    Kopfbereich (<head>): Beinhaltet Metadaten, den Titel der Seite und Links zu externen CSS-Dateien.
-
-    Metadaten:
-        <meta charset="utf-8">: Stellt die Zeichenkodierung auf UTF-8 ein, um verschiedene Zeichen und Symbole korrekt darzustellen.
-
-    Titel (<title>): Der Titel der Seite, der im Browser-Tab angezeigt wird.
-
-    Stylesheet-Link (<link rel="stylesheet" href="styles.css">): Verknüpft die externe CSS-Datei "styles.css", die das Styling der Seite definiert.
-
-    Body-Tag (<body>): Enthält den sichtbaren Inhalt der Webseite.
-
-    Hauptüberschrift (<h1 id="title">): Die Überschrift für das Umfrageformular.
-
-    Formular (<form>):
-        method="post": Gibt an, dass die Formulardaten per POST-Methode an die angegebene URL gesendet werden.
-        action: Die URL, an die die Daten gesendet werden, in diesem Fall für die Umfrage.
-
-    Fieldsets (<fieldset>):
-        Erstes Fieldset: Enthält Eingabefelder für persönliche Informationen (Name, E-Mail und Alter). Jedes Eingabefeld hat ein zugehöriges Label, das die Benutzerfreundlichkeit verbessert.
-        Weitere Fieldsets: Behandeln spezifische Themen wie Batterietyp, Heizung, Kochen und Solaroptionen. Jedes Fieldset hat eine Legende (<legend>), die den Inhalt beschreibt.
-
-    Eingabefelder:
-        Textfelder (<input type="text">, <input type="email">, <input type="number">): Zum Eingeben von Text, E-Mail und Zahlen mit Validierung für Pflichtfelder und Alter.
-        Dropdown-Menü (<select>): Ermöglicht die Auswahl einer Konfiguration des Campers.
-        Checkboxen (<input type="checkbox">): Für die Auswahl mehrerer Optionen bezüglich Batterietypen, Heizungsarten und Kochmethoden.
-        Radiobuttons (<input type="radio">): Zur Auswahl zwischen den Optionen für Solar- oder Nicht-Solarbetrieb.
-
-    Textarea (<textarea>): Bietet Platz für Benutzer, um zusätzliche Informationen über ihre Vorstellung des Grundrisses einzugeben.
-
-    Submit-Button (<input id="submit" type="submit" value="Submit">): Ein Button, um das Formular abzusenden.
-
-Anmerkungen:
-
-    Das Formular ist übersichtlich strukturiert, was die Benutzerführung erleichtert.
-    Die Verwendung von required in den Eingabefeldern stellt sicher, dass wichtige Informationen bereitgestellt werden, bevor das Formular abgeschickt wird.
-    Eine klare Trennung der Abschnitte durch Fieldsets verbessert die Benutzererfahrung, indem verwandte Informationen gruppiert werden.
-    Es wäre hilfreich, weitere Validierungen (z. B. für E-Mail-Formate) durchzuführen, um sicherzustellen, dass die ge
-
-    sendeten Daten korrekt sind.
-
--->

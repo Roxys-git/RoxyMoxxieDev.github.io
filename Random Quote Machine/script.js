@@ -1,6 +1,4 @@
-// script.js
-
-// Array mit zufälligen Zitaten und Autoren
+// Array containing random quotes and authors
 const quotes = [
   { text: "The only limit to our realization of tomorrow is our doubts of today.", author: "Franklin D. Roosevelt" },
   { text: "In the middle of every difficulty lies opportunity.", author: "Albert Einstein" },
@@ -9,26 +7,27 @@ const quotes = [
   { text: "Your time is limited, don't waste it living someone else's life.", author: "Steve Jobs" },
 ];
 
-// Funktion, um ein zufälliges Zitat zu erhalten
+// Function to get a random quote from the quotes array
 function getRandomQuote() {
+  // Generates a random index to pick a random quote
   const randomIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[randomIndex];
+  return quotes[randomIndex]; // Returns the randomly selected quote
 }
 
-// Funktion, um das Zitat und den Autor im DOM anzuzeigen
+// Function to display the quote and author in the DOM
 function displayQuote() {
-  const quote = getRandomQuote();
-  document.getElementById("text").innerText = quote.text;
-  document.getElementById("author").innerText = `- ${quote.author}`;
+  const quote = getRandomQuote(); // Get a random quote from the array
+  document.getElementById("text").innerText = quote.text; // Sets the quote text in the DOM
+  document.getElementById("author").innerText = `- ${quote.author}`; // Sets the author in the DOM
 
-  // Aktualisiere den Twitter-Link
+  // Update the Twitter sharing link
   const tweetLink = document.getElementById("tweet-quote");
-  const tweetText = `${quote.text} ${quote.author}`;
-  tweetLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+  const tweetText = `${quote.text} ${quote.author}`; // Constructs the tweet text
+  tweetLink.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`; // Updates the tweet link with the quote text
 }
 
-// Event-Listener für den "New Quote"-Button
+// Event listener for the "New Quote" button, triggering the displayQuote function
 document.getElementById("new-quote").addEventListener("click", displayQuote);
 
-// Beim Laden der Seite ein Zitat anzeigen
+// Display a quote when the page is loaded
 window.onload = displayQuote;

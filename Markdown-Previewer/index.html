@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta charset="utf-8" />
+    <!-- Ensures that all characters are encoded in UTF-8 -->
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Allows the page to be responsive and scales it for different screen sizes -->
+
+    <meta name="description" content="Markdown-Previewer" />
+    <!-- Provides a description of the page, which will appear in search results -->
+
+    <meta name="author" content="RoxyMoxxieDev" />
+    <!-- Specifies the author of the page, shown in search results -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures compatibility with the latest versions of web browsers -->
+    
     <link rel="stylesheet" href="styles.css">
+    <!-- Links the external CSS file for styling -->
+
     <title>Markdown-Previewer</title>
+    <!-- Sets the title of the webpage, shown in the browser tab -->
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Links to the TailwindCSS CDN for utility-first CSS framework -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.0.1/marked.min.js"></script>
+    <!-- Links to the Marked.js library for parsing and rendering Markdown -->
   </head>
   <body>
     <div id="app">
+      <!-- Main container for the application -->
       <header>
+        <!-- Page header with title -->
         <h1>Markdown Previewer</h1>
       </header>
       <main>
+        <!-- Main content section -->
         <section>
           <!-- Editor Section -->
           <div>
             <div id="editor-title">Editor</div>
+            <!-- Title for the editor section -->
             <div id="title">
+              <!-- Link to the developer's GitHub page -->
               <a href="https://roxymoxxiedev.github.io">RoxyMoxxie Dev</a>
             </div>
             <textarea id="editor"></textarea>
+            <!-- Textarea where users can input their Markdown text -->
           </div>
           
           <!-- Previewer Section -->
           <div>
             <div id="previewer-title">Previewer</div>
+            <!-- Title for the previewer section -->
             <div id="preview"></div>
+            <!-- The area where the rendered Markdown preview will appear -->
           </div>
         </section>
       </main>
     </div>
-    <footer>&#169 RoxyMoxxie Dev (Roxana Zwicky) 2024<br>Roxana Zwicky</footer>
+    <footer>
+      <!-- Footer with copyright information -->
+      &#169 RoxyMoxxie Dev (Roxana Zwicky) 2024<br>Roxana Zwicky
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.0.1/marked.min.js"></script>
+    <!-- Linking the Marked.js library again for any necessary functionality -->
+    
     <script src="script.js"></script>
+    <!-- External JavaScript file to handle the logic for rendering the preview -->
   </body>
 </html>

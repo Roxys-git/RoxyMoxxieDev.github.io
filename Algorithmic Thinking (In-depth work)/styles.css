@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* 
+   Universal selector to apply styles to all elements and their pseudo-elements ::before and ::after.
+   `box-sizing: border-box` ensures that width and height include padding and borders, simplifying layout calculations.
+   `margin: 0` and `padding: 0` reset all margins and padding to avoid inconsistencies in default browser styles.
+*/
+
+:root {
+  --dark-grey: #1b1b32;
+  --light-grey: #f5f6f7;
+  --black: #000;
+  --white: #fff;
+  --grey: #3b3b4f;
+  --golden-yellow: #fecc4c;
+  --yellow: #ffcc4c;
+  --gold: #feac32;
+  --orange: #ffac33;
+  --dark-orange: #f89808;
+  --viewport-height: 100vh;
+}
+/* 
+   Defines global CSS variables, making it easier to manage color schemes and other reusable values.
+   These variables can be adjusted in one place and applied throughout the stylesheet.
+*/
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --viewport-height: 100vh;
+}
+/* 
+   Sets the HTML element to use Flexbox for centering its content both vertically and horizontally.
+   `--viewport-height` is set to 100vh (viewport height).
+*/
+
+body {
+  background-color: var(--dark-grey);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vh;
+}
+/* 
+   Sets the background color of the body using a CSS variable and defines the font family and size.
+   The font size is set in viewport height (vh) for responsive scaling.
+*/
+
+header {
+  color: var(--light-grey);
+  text-align: center;
+}
+/* 
+   Sets the text color of the header to light grey and centers the header text.
+*/
+
+h1 {
+  font-size: 4vh;
+  margin: 1vh;
+}
+/* 
+   Sets the font size of the main header (h1) to 4vh, and adds vertical margins to create space around it.
+*/
+
+.rules-container {
+  display: none;
+  background-color: var(--light-grey);
+  color: var(--black);
+  width: 40vw;
+  margin: 2vh auto;
+  border-radius: 4vh;
+  overflow-y: scroll;
+}
+/* 
+   A container for displaying the rules:
+   - Initially hidden with `display: none`.
+   - Sets the background and text colors using variables.
+   - The width is set to 40% of the viewport width, and the container is centered with `margin: auto`.
+   - Rounded corners and vertical scrolling are enabled with `overflow-y: scroll`.
+*/
+
+.rules-container ul {
+  list-style-type: none;
+}
+/* Removes the default bullet points for unordered lists within the `.rules-container`. */
+
+.points {
+  margin-top: 1vh;
+  font-size: 2vh;
+}
+/* 
+   Adds top margin and sets font size for elements with the `.points` class.
+*/
+
+main {
+  background-color: var(--light-grey);
+  padding: 7vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+  gap: 1vh;
+  justify-items: center;
+  width: 70vw;
+  border-radius: 4vh;
+}
+/* 
+   Defines the layout for the main content:
+   - Uses `grid` display for flexibility.
+   - `grid-template-columns` ensures the columns are responsive, adjusting based on available space.
+   - `gap` adds space between grid items.
+   - Centered content with `justify-items: center` and sets the width to 70% of the viewport width.
+   - Rounded corners are applied with `border-radius`.
+*/
+
+#dice {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5vh;
+}
+/* 
+   Uses Flexbox to display the dice and space them evenly with `justify-content: space-around`.
+   Adds a bottom margin for spacing below the dice container.
+*/
+
+.die {
+  width: 4vw;
+  text-align: center;
+  margin-right: 1.5vw;
+  border: 0.2vh solid var(--black);
+  padding: 2vh;
+  border-radius: 1vh;
+  font-size: 2vh;
+}
+/* 
+   Defines the appearance of individual dice:
+   - Fixed width and padding to ensure consistent size.
+   - Centers text within the dice container.
+   - Adds a border and rounded corners.
+*/
+
+.rounds-text {
+  text-align: center;
+}
+/* Centers text within elements with the `.rounds-text` class. */
+
+input[type="radio"]:disabled + label {
+  color: var(--grey);
+}
+/* 
+   Changes the text color of labels for disabled radio buttons to grey.
+   The `+ label` targets the label immediately following the disabled radio input.
+*/
+
+#score-history {
+  margin-top: 1.5vh;
+  text-align: center;
+  list-style-position: inside;
+}
+/* 
+   Adds top margin to the score history section and centers the text.
+   Positions list markers inside the list (within the content area).
+*/
+
+.btn {
+  cursor: pointer;
+  width: 25vw;
+  margin: 2vh 2vw;
+  color: var(--black);
+  background-color: var(--gold);
+  background-image: linear-gradient(var(--golden-yellow), var(--orange));
+  border-color: var(--gold);
+  border-width: 0.25vw;
+  border-radius: 1vh;
+  font-size: 3vh;
+}
+/* 
+   Defines button styling:
+   - `cursor: pointer` shows a hand cursor on hover.
+   - Background is a gradient from `golden-yellow` to `orange`.
+   - Adds border with specified color, width, and rounded corners.
+*/
+
+.btn:hover:enabled {
+  background-image: linear-gradient(var(--yellow), var(--dark-orange));
+}
+/* 
+   Changes the background gradient on hover for enabled buttons.
+   The gradient shifts from `yellow` to `dark-orange`.
+*/
+
+@media (max-width: 1400px) and (orientation: landscape) {
+  main {
+    padding: 2vh;
+    width: 80vw;
+  }
+  
+  .btn {
+    width: 31vw;
+  }
+}
+/* 
+   Media query for devices with a screen width of 1400px or less in landscape orientation.
+   Adjusts the padding and width of the main container and buttons for better responsiveness.
+*/
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .rules-container {
+    width: 80vw;
+  }
+  
+  main {
+    padding: 2vh;
+    width: 80vw;
+  }
+
+  .die {
+    width: 8vw;
+  }
+  
+  .btn {
+    vertical-align: middle;
+    width: 31vw;
+    height: 8vh;
+  }
+}
+/* 
+   Media query for devices with a screen width of 1024px or less in portrait orientation.
+   Adjusts the layout, width of dice, and button sizes for better mobile experience.
+*/
+
+@media (max-width: 950px) and (orientation: landscape) {
+  html {
+    --viewport-height: 100vh;
+  }
+  
+  body {
+    font-size: 5vh;
+  }
+
+  h1 {
+    font-size: 9vh;
+  }
+  
+  .rules-container {
+    width: 80vw;
+  }
+
+  .extend-viewport {
+    --viewport-height: 160vh; 
+  }
+  
+  .reduce-viewport {
+    --viewport-height: 100vh;
+  }
+
+  main {
+    padding: 2vh;
+    width: 80vw;
+  }
+
+  .die {
+    width: 8vw;
+    font-size: 5vh;
+  }
+  
+  .btn {
+    width: 33vw;
+    font-size: 5vh;
+  }
+}
+/* 
+   Media query for devices with a screen width of 950px or less in landscape orientation.
+   Adjusts text sizes, container widths, and button sizes for a more suitable layout.
+*/
+
+@media (max-width: 600px) and (orientation: portrait) {
+  main {
+    margin: auto;
+    padding: 5vw;
+  }
+
+  .btn {
+    width: 70vw;
+    font-size: 2vh;
+    margin: auto auto;
+  }
+
+  .die {
+    width: 12vw;
+  }
+}
+/* 
+   Media query for devices with a screen width of 600px or less in portrait orientation.
+   Focuses on making elements more compact and readable on smaller screens.
+*/

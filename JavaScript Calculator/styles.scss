@@ -1,16 +1,17 @@
-$clear-button: #BF0606;
-$operator-button: #E6ED13;
-$equal-button: #4DFF00;
-$decimal-button: #004DFF;
-$number-button: #E700EA;
-$button-text: #510052;
-$button-border: #FFFFFF;
-$text: #CFC6CF;
-$background: $button-text;
-$calculator: $text;
-$display: $button-border;
+/* Color Variables */
+$clear-button: #BF0606; /* Red for clear button */
+$operator-button: #E6ED13; /* Yellow for operator buttons */
+$equal-button: #4DFF00; /* Green for equal button */
+$decimal-button: #004DFF; /* Blue for decimal button */
+$number-button: #E700EA; /* Purple for number buttons */
+$button-text: #510052; /* Dark purple for button text */
+$button-border: #FFFFFF; /* White border for buttons */
+$text: #CFC6CF; /* Light gray for text */
+$background: $button-text; /* Background color is the same as button text */
+$calculator: $text; /* Calculator background color is light gray */
+$display: $button-border; /* Display border color is white */
 
-
+/* Universal Reset */
 *,
 *::after,
 *::before {
@@ -19,11 +20,13 @@ $display: $button-border;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   background-color: $background;
   font-family: "Cyberchild CE", sans-serif;
 }
 
+/* Heading Styling */
 h1 {
   text-align: center;
   margin: 5vh;
@@ -31,6 +34,7 @@ h1 {
   font-size: 4vw;
 }
 
+/* Main Container Styling */
 main {
   display: flex;
   flex-direction: column;
@@ -38,6 +42,7 @@ main {
   justify-content: center;
 }
 
+/* Calculator Styling */
 #calculator {
   background-color: $calculator;
   width: 31vw;
@@ -47,6 +52,7 @@ main {
   height: 70vh;
 }
 
+/* Display Styling */
 #display {
   background-color: $display;
   height: 10vh;
@@ -61,6 +67,7 @@ main {
   border-radius: 0.5vw;
 }
 
+/* Button Grid Layout */
 #buttons {
   display: grid;
   grid-template-areas: "clear clear clear operators" "numbers numbers numbers operators";
@@ -69,12 +76,14 @@ main {
   gap: 1vh;
 }
 
+/* Clear Button Row Styling */
 .row {
   grid-area: clear;
   display: flex;
   justify-content: center;
 }
 
+/* Number Button Grid Layout */
 #numbers-grid {
   grid-area: numbers;
   display: grid;
@@ -83,6 +92,7 @@ main {
   gap: 1vh;
 }
 
+/* Operators Column Styling */
 #operators-column {
   grid-area: operators;
   display: flex;
@@ -90,14 +100,17 @@ main {
   justify-content: space-between;
   margin-left: 1vw;
 }
+
 #operators-column button {
   flex: 1;
   margin-bottom: 1vh;
 }
+
 #operators-column button:last-child {
   margin-bottom: 0;
 }
 
+/* Button Styling */
 button {
   border: 0.11vw solid $button-border;
   border-radius: 0.25vw;
@@ -110,27 +123,35 @@ button {
   color: $button-text;
 }
 
+/* Clear Button Styling */
 #clear {
   background-color: $clear-button;
   width: 52.3vw;
 }
 
+/* Number Buttons Styling */
 #numbers-grid > button:not(#decimal):not(#equals) {
   background-color: $number-button;
 }
 
+/* Decimal Button Styling */
 #decimal {
   background-color: $decimal-button;
 }
 
+/* Equals Button Styling */
 #equals {
   background-color: $equal-button;
 }
 
+/* Operator Buttons Styling */
 #operators-column > button {
   background-color: $operator-button;
 }
 
+/* Media Queries */
+
+/* Landscape Mode (max-width: 1370px) */
 @media (max-width: 1370px) and (orientation: landscape) {
   #calculator {
     background-color: $calculator;
@@ -146,14 +167,10 @@ button {
     border-radius: 1vw;
     padding: 4vh 0.9vw;
     font-size: 2vw;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: background-color 0.3s ease;
-    font-family: "Cyberchild CE", sans-serif;
-    color: $button-text;
   }
 }
 
+/* Portrait Mode (max-width: 1024px) */
 @media (max-width: 1024px) and (orientation: portrait) {
   h1 {
     text-align: center;
@@ -190,14 +207,10 @@ button {
     border-radius: 2vw;
     padding: 3.5vh 0.9vw;
     font-size: 4vw;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: background-color 0.3s ease;
-    font-family: "Cyberchild CE", sans-serif;
-    color: $button-text;
   }
 }
 
+/* Landscape Mode (max-width: 1024px) */
 @media (max-width: 1024px) and (orientation: landscape) {
   #calculator {
     background-color: $calculator;
@@ -213,14 +226,10 @@ button {
     border-radius: 1vw;
     padding: 3vh 0.9vw;
     font-size: 2vw;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: background-color 0.3s ease;
-    font-family: "Cyberchild CE", sans-serif;
-    color: $button-text;
   }
 }
 
+/* Smaller Portrait Screens (max-width: 768px) */
 @media (max-width: 768px) and (orientation: portrait) {
   h1 {
     text-align: center;
@@ -257,10 +266,5 @@ button {
     border-radius: 2vw;
     padding: 3.5vh 0.9vw;
     font-size: 7vw;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: background-color 0.3s ease;
-    font-family: "Cyberchild CE", sans-serif;
-    color: $button-text;
   }
 }

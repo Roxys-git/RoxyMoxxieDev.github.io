@@ -1,88 +1,88 @@
-// Referenziert das Eingabefeld und den Suchbutton im HTML-Dokument
-const searchInput = document.getElementById('search-input'); // Referenz zum Eingabefeld für die Suche
-const searchButton = document.getElementById('search-button'); // Referenz zum Button für die Suchausführung
+// References the input field and search button in the HTML document
+const searchInput = document.getElementById('search-input'); // Reference to the input field for the search
+const searchButton = document.getElementById('search-button'); // Reference to the button for executing the search
 
-// Funktion, um die aktuellen Ergebnisse auf der Seite zu leeren
+// Function to clear the current results on the page
 function clearResults() {
-    // Definiert eine Liste mit IDs der zu leerenden HTML-Elemente
+    // Defines a list of IDs of the HTML elements to be cleared
     const elements = [
         'pokemon-name', 'pokemon-id', 'weight', 'height', 
         'types', 'hp', 'attack', 'defense', 
         'special-attack', 'special-defense', 'speed'
     ];
     
-    // Iteriert über die IDs und leert den Textinhalt jedes Elements
+    // Loops through the IDs and clears the text content of each element
     elements.forEach(id => {
-        const element = document.getElementById(id); // Holt das Element mit der aktuellen ID
-        if (element) { // Überprüft, ob das Element existiert
-            element.textContent = ''; // Setzt den Textinhalt auf leer
+        const element = document.getElementById(id); // Gets the element by its current ID
+        if (element) { // Checks if the element exists
+            element.textContent = ''; // Sets the text content to empty
         }
     });
 
-    // Holt das Typen-Element und entfernt alle Kind-Elemente, falls vorhanden
+    // Gets the types element and removes all child elements, if any
     const typesCell = document.getElementById('types');
-    while (typesCell.firstChild) { // Überprüft, ob das Element Kind-Elemente hat
-        typesCell.removeChild(typesCell.firstChild); // Entfernt das erste Kind-Element
+    while (typesCell.firstChild) { // Checks if the element has child elements
+        typesCell.removeChild(typesCell.firstChild); // Removes the first child element
     }
 
-    // Entfernt das Sprite-Bild, falls es existiert
+    // Removes the sprite image, if it exists
     const existingSprite = document.getElementById('sprite');
-    if (existingSprite) { // Überprüft, ob ein Element mit der ID 'sprite' existiert
-        existingSprite.remove(); // Entfernt das Sprite-Bild
+    if (existingSprite) { // Checks if an element with the ID 'sprite' exists
+        existingSprite.remove(); // Removes the sprite image
     }
 }
 
-// Funktion, die ein neues Typen-Element für das Pokémon erzeugt
+// Function to create a new type element for the Pokémon
 function createTypeElement(type) {
-    const typeSpan = document.createElement('span'); // Erzeugt ein neues <span>-Element
-    typeSpan.textContent = type.toUpperCase(); // Setzt den Textinhalt des Spans auf den Großbuchstaben-Wert des Typs
-    return typeSpan; // Gibt das erzeugte <span>-Element zurück
+    const typeSpan = document.createElement('span'); // Creates a new <span> element
+    typeSpan.textContent = type.toUpperCase(); // Sets the text content of the span to the uppercase value of the type
+    return typeSpan; // Returns the created <span> element
 }
 
-// Funktion, die Pokémon-Informationen auf der Webseite anzeigt
+// Function to display Pokémon information on the webpage
 function updatePokemonInfo(data) {
-    clearResults(); // Bereinigt vorhandene Ergebnisse, bevor neue Daten angezeigt werden
+    clearResults(); // Clears existing results before displaying new data
 
-    // Interne Hilfsfunktion zur Aktualisierung eines Elements anhand seiner ID und eines Wertes
+    // Internal helper function to update an element by its ID and a value
     const updateElement = (id, value) => {
-        const element = document.getElementById(id); // Holt das Element anhand der ID
-        if (element) { // Überprüft, ob das Element existiert
-            element.textContent = value; // Setzt den Textinhalt des Elements auf den gegebenen Wert
+        const element = document.getElementById(id); // Gets the element by its ID
+        if (element) { // Checks if the element exists
+            element.textContent = value; // Sets the text content of the element to the given value
         }
     };
 
-    // Setzt grundlegende Informationen zum Pokémon
-    updateElement('pokemon-name', data.name.toUpperCase()); // Pokémon-Name in Großbuchstaben
-    updateElement('pokemon-id', `#${data.id}`); // Pokémon-ID mit vorangestelltem "#"
-    updateElement('weight', `Weight: ${data.weight}`); // Gewicht des Pokémon
-    updateElement('height', `Height: ${data.height}`); // Höhe des Pokémon
+    // Sets basic information about the Pokémon
+    updateElement('pokemon-name', data.name.toUpperCase()); // Pokémon name in uppercase
+    updateElement('pokemon-id', `#${data.id}`); // Pokémon ID with a leading "#"
+    updateElement('weight', `Weight: ${data.weight}`); // Pokémon weight
+    updateElement('height', `Height: ${data.height}`); // Pokémon height
 
-    // Zeigt die Typen des Pokémon an
-    const typesCell = document.getElementById('types'); // Holt das Zellen-Element für Typen
-    data.types.forEach((type, index) => { // Iteriert über alle Typen
-        const typeElement = createTypeElement(type.type.name); // Erzeugt ein <span>-Element für jeden Typ
-        typesCell.appendChild(typeElement); // Fügt das Typ-<span> zur Zelle hinzu
-        if (index < data.types.length - 1) { // Falls es nicht der letzte Typ ist
-            typesCell.appendChild(document.createTextNode(' ')); // Fügt ein Leerzeichen zwischen den Typen ein
+    // Displays the types of the Pokémon
+    const typesCell = document.getElementById('types'); // Gets the cell element for types
+    data.types.forEach((type, index) => { // Loops through all types
+        const typeElement = createTypeElement(type.type.name); // Creates a <span> element for each type
+        typesCell.appendChild(typeElement); // Appends the type <span> to the cell
+        if (index < data.types.length - 1) { // If it's not the last type
+            typesCell.appendChild(document.createTextNode(' ')); // Adds a space between types
         }
     });
 
-    // Setzt die Basis-Statistiken des Pokémon
-    updateElement('hp', data.stats[0].base_stat); // HP-Wert
-    updateElement('attack', data.stats[1].base_stat); // Angriff
-    updateElement('defense', data.stats[2].base_stat); // Verteidigung
-    updateElement('special-attack', data.stats[3].base_stat); // Spezialangriff
-    updateElement('special-defense', data.stats[4].base_stat); // Spezialverteidigung
-    updateElement('speed', data.stats[5].base_stat); // Geschwindigkeit
+    // Sets the base stats of the Pokémon
+    updateElement('hp', data.stats[0].base_stat); // HP stat
+    updateElement('attack', data.stats[1].base_stat); // Attack stat
+    updateElement('defense', data.stats[2].base_stat); // Defense stat
+    updateElement('special-attack', data.stats[3].base_stat); // Special attack stat
+    updateElement('special-defense', data.stats[4].base_stat); // Special defense stat
+    updateElement('speed', data.stats[5].base_stat); // Speed stat
 
-    // Fügt das Sprite-Bild des Pokémon hinzu
-    const sprite = document.createElement('img'); // Erzeugt ein <img>-Element
-    sprite.id = 'sprite'; // Setzt die ID des Bildes auf 'sprite'
-    sprite.src = data.sprites.front_default; // Setzt die Bildquelle auf das Standard-Sprite des Pokémon
-    document.querySelector('main').appendChild(sprite); // Fügt das Bild zum Hauptbereich der Seite hinzu
+    // Adds the sprite image of the Pokémon
+    const sprite = document.createElement('img'); // Creates an <img> element
+    sprite.id = 'sprite'; // Sets the ID of the image to 'sprite'
+    sprite.src = data.sprites.front_default; // Sets the image source to the default sprite of the Pokémon
+    document.querySelector('main').appendChild(sprite); // Appends the image to the main section of the page
 }
 
-// Testfunktion für vorgefertigte Pokémon-Daten (z. B. Pikachu)
+// Test function for predefined Pokémon data (e.g., Pikachu)
 function getPikachuData() {
     return {
         name: 'PIKACHU',
@@ -92,11 +92,11 @@ function getPikachuData() {
         types: [{ type: { name: 'electric' } }],
         stats: [
             { base_stat: 35 },  // HP
-            { base_stat: 55 },  // Angriff
-            { base_stat: 40 },  // Verteidigung
-            { base_stat: 50 },  // Spezialangriff
-            { base_stat: 50 },  // Spezialverteidigung
-            { base_stat: 90 }   // Geschwindigkeit
+            { base_stat: 55 },  // Attack
+            { base_stat: 40 },  // Defense
+            { base_stat: 50 },  // Special attack
+            { base_stat: 50 },  // Special defense
+            { base_stat: 90 }   // Speed
         ],
         sprites: {
             front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png'
@@ -104,7 +104,7 @@ function getPikachuData() {
     };
 }
 
-// Testfunktion für vorgefertigte Pokémon-Daten (z. B. Gengar)
+// Test function for predefined Pokémon data (e.g., Gengar)
 function getGengarData() {
     return {
         name: 'GENGAR',
@@ -117,11 +117,11 @@ function getGengarData() {
         ],
         stats: [
             { base_stat: 60 },  // HP
-            { base_stat: 65 },  // Angriff
-            { base_stat: 60 },  // Verteidigung
-            { base_stat: 130 }, // Spezialangriff
-            { base_stat: 75 },  // Spezialverteidigung
-            { base_stat: 110 }  // Geschwindigkeit
+            { base_stat: 65 },  // Attack
+            { base_stat: 60 },  // Defense
+            { base_stat: 130 }, // Special attack
+            { base_stat: 75 },  // Special defense
+            { base_stat: 110 }  // Speed
         ],
         sprites: {
             front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png'
@@ -129,51 +129,41 @@ function getGengarData() {
     };
 }
 
-// Funktion, die den Suchvorgang ausführt und das Pokémon-Daten-Objekt aktualisiert
+// Function that executes the search and updates the Pokémon data object
 async function handleSearch() {
-    const searchTerm = searchInput.value.trim(); // Holt den eingegebenen Suchbegriff und entfernt Leerzeichen
+    const searchTerm = searchInput.value.trim(); // Gets the entered search term and trims any spaces
 
-    // Überprüft auf bestimmte Suchbegriffe für Demo-Zwecke
+    // Checks for specific search terms for demo purposes
     if (searchTerm.toLowerCase() === 'red') {
-        alert('Pokémon not found'); // Warnung, falls Pokémon nicht gefunden wird
+        alert('Pokémon not found'); // Alerts if Pokémon not found
         clearResults();
         return;
     }
     if (searchTerm.toLowerCase() === 'pikachu') {
-        updatePokemonInfo(getPikachuData()); // Pikachu-Daten verwenden
+        updatePokemonInfo(getPikachuData()); // Uses Pikachu data
         return;
     }
     if (searchTerm === '94') {
-        updatePokemonInfo(getGengarData()); // Gengar-Daten verwenden
+        updatePokemonInfo(getGengarData()); // Uses Gengar data
         return;
     }
 
-    // Fetch-Anfrage an die Pokémon-API
+    // Fetch request to the Pokémon API
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchTerm.toLowerCase()}`);
-        if (!response.ok) throw new Error('Pokemon not found'); // Fehlermeldung, falls die Anfrage fehlschlägt
-        const data = await response.json(); // Konvertiert die Antwort in JSON
-        updatePokemonInfo(data); // Aktualisiert die Seite mit den neuen Pokémon-Daten
+        if (!response.ok) throw new Error('Pokemon not found'); // Error if the request fails
+        const data = await response.json(); // Converts the response to JSON
+        updatePokemonInfo(data); // Updates the page with the new Pokémon data
     } catch (error) {
-        alert('Pokémon not found'); // Zeigt eine Warnung bei Fehlern
+        alert('Pokémon not found'); // Alerts if an error occurs
         clearResults();
     }
 }
 
-// Event-Listener für den Suchbutton und das "Enter"-Drücken im Eingabefeld
-searchButton.addEventListener('click', handleSearch); // Ruft handleSearch bei Klick auf
-searchInput.addEventListener('keypress', (event) => { // Überprüft bei Tasteneingabe
-    if (event.key === 'Enter') { // Bei Enter-Taste wird Suche ausgelöst
+// Event listeners for the search button and "Enter" key press in the input field
+searchButton.addEventListener('click', handleSearch); // Triggers handleSearch when the button is clicked
+searchInput.addEventListener('keypress', (event) => { // Checks for keypress events
+    if (event.key === 'Enter') { // Executes search when "Enter" is pressed
         handleSearch();
     }
 });
-
-/*
-Erläuterungen zu Schlüsselkonzepten und Syntax:
-
-    DOM-Zugriffe: document.getElementById holt ein Element anhand seiner ID.
-    Funktionen: function definiert benannte Funktionen. Die async-Funktion handleSearch erlaubt die Verwendung von await.
-    Pseudodaten: getPikachuData und getGengarData liefern Datenobjekte, die als API-Ersatz dienen.
-    API-Anfrage: fetch führt eine HTTP-Anfrage aus, und .json() extrahiert JSON-Daten aus der Antwort.
-    Event-Listener: addEventListener setzt die Funktionen für Benutzerinteraktionen wie `
-*/

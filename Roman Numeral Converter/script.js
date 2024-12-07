@@ -1,89 +1,74 @@
 // Zuweisung von HTML-Elementen zu JavaScript-Variablen
 const convertBtn = document.getElementById('convert-btn');
-/* Speichert den Button mit der ID 'convert-btn' in der Variablen convertBtn,
-   sodass wir diesen später mit JavaScript ansteuern können */
+/* Saves the button with the ID 'convert-btn' into the variable convertBtn,
+   so we can control it with JavaScript later */
 
 const numberInput = document.getElementById('number');
-/* Speichert das Eingabefeld mit der ID 'number' in der Variablen numberInput,
-   um den eingegebenen Wert für die Konvertierung abzurufen */
+/* Saves the input field with the ID 'number' into the variable numberInput,
+   to retrieve the entered value for conversion */
 
 const outputElement = document.getElementById('output');
-/* Speichert das Ausgabe-Element mit der ID 'output' in der Variablen outputElement,
-   um das Ergebnis oder Fehlermeldungen anzuzeigen */
+/* Saves the output element with the ID 'output' into the variable outputElement,
+   to display the result or error messages */
 
-// Funktion zur Umwandlung einer Zahl in eine römische Zahl
+// Function to convert a number to Roman numeral
 function toRoman(num) {
-    // Array mit römischen Zahlen und deren entsprechenden Werten
+    // Array of Roman numerals and their corresponding values
     const romanNumerals = [
         ["M", 1000], ["CM", 900], ["D", 500], ["CD", 400],
         ["C", 100], ["XC", 90], ["L", 50], ["XL", 40],
         ["X", 10], ["IX", 9], ["V", 5], ["IV", 4], ["I", 1]
     ];
-    /* Jedes Element im Array enthält ein römisches Zahlensymbol und den dazugehörigen Wert.
-       Diese Liste ist von großen zu kleinen Werten sortiert, um eine korrekte Umwandlung zu ermöglichen */
+    /* Each element in the array contains a Roman numeral symbol and its associated value.
+       This list is sorted from largest to smallest values to allow correct conversion */
 
-    let result = ''; // Speichert das Endergebnis, also die römische Zahl, als String
+    let result = ''; // Stores the final result, the Roman numeral, as a string
 
     for (const [roman, value] of romanNumerals) {
-        /* Iteriert über jedes Element im Array. Dabei wird jedes Mal das Symbol und der Wert
-           der römischen Zahl ausgelesen */
+        /* Iterates over each element in the array. On each iteration, the Roman symbol and the value
+           of the Roman numeral are read */
 
         while (num >= value) {
-            /* Überprüft, ob die Zahl noch größer oder gleich dem aktuellen Wert ist.
-               Wenn ja, wird das römische Symbol dem Ergebnis-String hinzugefügt und
-               der Wert vom num-Wert subtrahiert */
+            /* Checks if the number is greater than or equal to the current value.
+               If yes, the Roman symbol is added to the result string, and the value is subtracted from num */
 
             result += roman;
-            // Fügt das römische Symbol zum Ergebnis hinzu
+            // Adds the Roman symbol to the result
 
             num -= value;
-            // Reduziert die Zahl um den Wert des römischen Symbols
+            // Subtracts the value of the Roman symbol from the number
         }
     }
 
-    return result; // Gibt das vollständige römische Zahlenergebnis zurück
+    return result; // Returns the full Roman numeral result
 }
 
-// Event-Listener für den Klick auf den Konvertierungsbutton
+// Event listener for click on the convert button
 convertBtn.addEventListener('click', () => {
     const inputValue = numberInput.value.trim();
-    /* Holt den Wert aus dem Eingabefeld, entfernt führende und nachfolgende Leerzeichen,
-       und speichert ihn in inputValue */
+    /* Gets the value from the input field, removes leading and trailing spaces,
+       and stores it in inputValue */
 
     const number = parseInt(inputValue, 10);
-    /* Konvertiert inputValue in eine Ganzzahl im Dezimalsystem und speichert das Ergebnis
-       in der Variablen number */
+    /* Converts inputValue into an integer in decimal system and stores the result
+       in the variable number */
 
-    // Überprüft verschiedene Bedingungen für die Eingabe und zeigt entsprechende Nachrichten an
+    // Checks different conditions for the input and shows appropriate messages
     if (inputValue === '') {
         outputElement.textContent = "Please enter a valid number";
-        /* Wenn kein Wert eingegeben wurde (leerer String), wird eine Fehlermeldung angezeigt */
+        /* If no value is entered (empty string), an error message is shown */
     } 
     else if (number < 1) {
         outputElement.textContent = "Please enter a number greater than or equal to 1";
-        /* Wenn die Zahl kleiner als 1 ist, wird der Benutzer aufgefordert, eine Zahl ≥ 1 einzugeben */
+        /* If the number is less than 1, the user is asked to enter a number ≥ 1 */
     } 
     else if (number > 3999) {
         outputElement.textContent = "Please enter a number less than or equal to 3999";
-        /* Wenn die Zahl größer als 3999 ist, wird der Benutzer aufgefordert, eine Zahl ≤ 3999 einzugeben */
+        /* If the number is greater than 3999, the user is asked to enter a number ≤ 3999 */
     } 
     else {
         outputElement.textContent = toRoman(number);
-        /* Wenn alle Bedingungen erfüllt sind, wird die Zahl in eine römische Zahl umgewandelt
-           und das Ergebnis im Ausgabe-Element angezeigt */
+        /* If all conditions are met, the number is converted to a Roman numeral
+           and the result is displayed in the output element */
     }
 });
-
-/*
-Zusammenfassung
-
-    Variableninitialisierung:
-        convertBtn, numberInput, und outputElement speichern die HTML-Elemente zur späteren Verwendung.
-
-    toRoman-Funktion:
-        Diese Funktion übernimmt die Konvertierung von arabischen Zahlen in römische Zahlen.
-        Sie iteriert über die romanNumerals-Liste, reduziert die Zahl und fügt die entsprechenden Symbole dem Ergebnis-String hinzu.
-
-    Event-Listener für Button:
-        Der click-Event ruft eine anonyme Funktion auf, die die Benutzereingabe überprüft und entweder eine Fehlermeldung oder das Ergebnis der Konvertierung anzeigt.
-*/ 

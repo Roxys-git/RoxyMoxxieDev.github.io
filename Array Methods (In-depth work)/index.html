@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Declares the document type as HTML5 to ensure proper rendering in browsers. -->
+  
+  <head>
+    <meta charset="utf-8" />
+    <!-- Ensures that all characters are encoded in UTF-8. -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the page responsive by setting the viewport width and initial scale for different screen sizes. -->
+
+    <meta name="description" content="Statistics Calculator" />
+    <!-- Provides a description of the page for search engine results. -->
+
+    <meta name="author" content="RoxyMoxxieDev" />
+    <!-- Specifies the author of the page, which is displayed in search results. -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Ensures the page works well with the latest versions of Internet Explorer and other modern browsers. -->
+    
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Links an external CSS file for styling the page. -->
+
+    <script src="./script.js"></script>
+    <!-- Links an external JavaScript file for handling the calculations. -->
+
+    <title>Statistics Calculator</title>
+    <!-- Sets the title of the page, which appears in the browser tab. -->
+  </head>
+
+  <body>
+    <!-- Main content of the page begins here. -->
+    
+    <h1>Statistics Calculator</h1>
+    <!-- Main heading of the page, indicating the purpose of the site (Statistics Calculator). -->
+
+    <p>Enter a list of comma-separated numbers.</p>
+    <!-- Provides a brief instruction for the user to input numbers. -->
+
+    <form onsubmit="calculate(); return false;">
+      <!-- Form to input the numbers. The "onsubmit" attribute triggers the "calculate()" function from the JavaScript file and prevents page reload with "return false". -->
+      
+      <label for="numbers">Numbers:</label>
+      <!-- Label for the input field, linked to the input via the "for" attribute. -->
+
+      <input type="text" name="numbers" id="numbers" />
+      <!-- Input field for entering the list of numbers, connected to the label with the ID "numbers". -->
+
+      <button type="submit">Calculate</button>
+      <!-- Button that triggers the form submission to start the calculation. -->
+    </form>
+
+    <div class="results">
+      <!-- Container to display the calculation results. The class "results" can be styled via CSS. -->
+      
+      <p>
+        The <dfn>mean</dfn> of a list of numbers is the average, calculated by
+        taking the sum of all numbers and dividing that by the count of numbers.
+      </p>
+      <!-- Explanation of the mean calculation. The <dfn> tag defines the term "mean". -->
+      
+      <p class="bold">Mean: <span id="mean"></span></p>
+      <!-- Displays the calculated mean value. The <span> element with ID "mean" will be updated by JavaScript. -->
+
+      <p>
+        The <dfn>median</dfn> of a list of numbers is the number that appears in
+        the middle of the list, when sorted from least to greatest.
+      </p>
+      <!-- Explanation of the median calculation. -->
+      
+      <p class="bold">Median: <span id="median"></span></p>
+      <!-- Displays the calculated median value. The <span> element with ID "median" will be updated by JavaScript. -->
+
+      <p>
+        The <dfn>mode</dfn> of a list of numbers is the number that appears most
+        often in the list.
+      </p>
+      <!-- Explanation of the mode calculation. -->
+      
+      <p class="bold">Mode: <span id="mode"></span></p>
+      <!-- Displays the calculated mode value. The <span> element with ID "mode" will be updated by JavaScript. -->
+
+      <p>
+        The <dfn>range</dfn> of a list of numbers is the difference between the
+        largest and smallest numbers in the list.
+      </p>
+      <!-- Explanation of the range calculation. -->
+      
+      <p class="bold">Range: <span id="range"></span></p>
+      <!-- Displays the calculated range value. The <span> element with ID "range" will be updated by JavaScript. -->
+
+      <p>
+        The <dfn>variance</dfn> of a list of numbers measures how far the values
+        are from the mean, on average.
+      </p>
+      <!-- Explanation of the variance calculation. -->
+      
+      <p class="bold">Variance: <span id="variance"></span></p>
+      <!-- Displays the calculated variance value. The <span> element with ID "variance" will be updated by JavaScript. -->
+
+      <p>
+        The <dfn>standard deviation</dfn> of a list of numbers is the square
+        root of the variance.
+      </p>
+      <!-- Explanation of the standard deviation calculation. -->
+      
+      <p class="bold">
+        Standard Deviation: <span id="standardDeviation"></span>
+      </p>
+      <!-- Displays the calculated standard deviation value. The <span> element with ID "standardDeviation" will be updated by JavaScript. -->
+    </div>
+  </body>
+</html>

@@ -3,9 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/drum-machine/',
-  build: {
-    outDir: 'drum-machine',
-  },
+  base: '/RoxyMoxxieDev.github.io/drum-machine/',
   plugins: [react()],
 })

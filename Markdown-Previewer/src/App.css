@@ -57,6 +57,8 @@ h1 {
 /* Title links styling */
 #title > a {
   letter-spacing: 1.75vw; /* Increased letter spacing */
+  text-decoration: none;
+  color: #0B033A;
 }
 
 /* Previewer title section */
@@ -106,6 +108,8 @@ h1 {
 /* Title links styling from JavaScript section */
 #title-from-js > a {
   letter-spacing: 3vw; /* Increased letter spacing */
+  text-decoration: none;
+  color: #0B033A;
 }
 
 /* Styling for images */
@@ -118,6 +122,11 @@ img {
 /* Paragraph text styling */
 p {
   font-size: 3vh; /* Font size relative to viewport height */
+}
+
+p > a {
+  text-decoration: none;
+  color: #0B033A;
 }
 
 /* Footer visibility */

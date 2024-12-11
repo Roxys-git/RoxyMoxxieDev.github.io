@@ -15,60 +15,15 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Ensures compatibility with the latest versions of web browsers -->
-    
-    <link rel="stylesheet" href="styles.css">
-    <!-- Links the external CSS file for styling -->
 
+    <link rel="icon" type="image/png" href="/public/Logo Entwurf 1 150 px.png" />
+    
     <title>Markdown-Previewer</title>
     <!-- Sets the title of the webpage, shown in the browser tab -->
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Links to the TailwindCSS CDN for utility-first CSS framework -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.0.1/marked.min.js"></script>
-    <!-- Links to the Marked.js library for parsing and rendering Markdown -->
   </head>
   <body>
-    <div id="app">
-      <!-- Main container for the application -->
-      <header>
-        <!-- Page header with title -->
-        <h1>Markdown Previewer</h1>
-      </header>
-      <main>
-        <!-- Main content section -->
-        <section>
-          <!-- Editor Section -->
-          <div>
-            <div id="editor-title">Editor</div>
-            <!-- Title for the editor section -->
-            <div id="title">
-              <!-- Link to the developer's GitHub page -->
-              <a href="https://roxymoxxiedev.github.io">RoxyMoxxie Dev</a>
-            </div>
-            <textarea id="editor"></textarea>
-            <!-- Textarea where users can input their Markdown text -->
-          </div>
-          
-          <!-- Previewer Section -->
-          <div>
-            <div id="previewer-title">Previewer</div>
-            <!-- Title for the previewer section -->
-            <div id="preview"></div>
-            <!-- The area where the rendered Markdown preview will appear -->
-          </div>
-        </section>
-      </main>
-    </div>
-    <footer>
-      <!-- Footer with copyright information -->
-      &#169 RoxyMoxxie Dev (Roxana Zwicky) 2024<br>Roxana Zwicky
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.0.1/marked.min.js"></script>
-    <!-- Linking the Marked.js library again for any necessary functionality -->
-    
-    <script src="script.js"></script>
-    <!-- External JavaScript file to handle the logic for rendering the preview -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -47,13 +47,16 @@ section {
 
 #welcome-section {
   min-height: 100vh; /* Sets the minimum height of the section to 100% of the viewport height */
-  display: flex; /* Uses Flexbox for layout */
-  flex-direction: column; /* Aligns items vertically */
+  display: flex; /* Uses Flexbox for layout */ /* Aligns items vertically */
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   padding: 0.5vw; /* Adds padding inside the section */
   margin-top: 4vh; /* Adds space for the fixed navbar */
   font-style: italic; /* Sets the font style to italic */
+}
+
+#profile-picture {
+  width: 20vw;
 }
 
 h1 {
